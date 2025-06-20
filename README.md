@@ -21,17 +21,20 @@ A mobile app for building and managing armies for the [Middle-earth Strategy Bat
 ## Getting Started
 
 1. **Clone the repo:**
+
    ```sh
    git clone https://github.com/yourusername/mesbg-comp.git
    cd mesbg-comp
    ```
 
 2. **Install dependencies:**
+
    ```sh
    npm install
    ```
 
 3. **Run the app:**
+
    ```sh
    npx expo start
    ```
