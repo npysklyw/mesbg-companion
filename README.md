@@ -2,6 +2,15 @@
 
 A mobile app for building and managing armies for the [Middle-earth Strategy Battle Game (MESBG)](https://www.warhammer.com/en-GB/middle-earth-lp?srsltid=AfmBOoqF0tVA4gDURWAuOWQ2P9HSGjMKb94V3g-6HLc1D9luBdupCK1F) by Games Workshop.
 
+## Demo
+
+<https://github.com/npysklyw/mesbg-companion/blob/master/Simulator%20Screen%20Recording%20-%20iPhone%2016%20Plus%20-%202025-06-21%20at%2010.28.06.mp4>
+
+<!-- Or embed a YouTube video: -->
+<!--
+[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+-->
+
 ## Features
 
 - **Create and edit armies** for MESBG
