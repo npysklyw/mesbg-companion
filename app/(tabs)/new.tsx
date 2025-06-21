@@ -2,11 +2,14 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { useThemeColor } from "@/hooks/useThemeColor";
 import { Button } from "@rneui/themed";
 import { Link } from "expo-router";
 import { StyleSheet } from "react-native";
 
 export default function TabTwoScreen() {
+  const primaryColor = useThemeColor({}, "button");
+  const textColor = useThemeColor({}, "buttonText");
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -27,14 +30,24 @@ export default function TabTwoScreen() {
         href={{ pathname: "/armyList", params: { armyType: "good" } }}
         asChild
       >
-        <Button>Good Army</Button>
+        <Button
+          buttonStyle={{ backgroundColor: primaryColor }} // for "Reset" or destructive actions
+          titleStyle={{ color: textColor }}
+        >
+          Good Army
+        </Button>
       </Link>
 
       <Link
         href={{ pathname: "/armyList", params: { armyType: "evil" } }}
         asChild
       >
-        <Button color={"error"}>Evil Army</Button>
+        <Button
+          buttonStyle={{ backgroundColor: primaryColor }} // for "Reset" or destructive actions
+          titleStyle={{ color: textColor }}
+        >
+          Evil Army
+        </Button>
       </Link>
     </ParallaxScrollView>
   );

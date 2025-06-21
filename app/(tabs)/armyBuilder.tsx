@@ -3,6 +3,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Hero } from "@/components/ui/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { useThemeColor } from "@/hooks/useThemeColor";
 import { Button } from "@rneui/base";
 import * as FileSystem from "expo-file-system";
 import { useLocalSearchParams } from "expo-router";
@@ -41,6 +42,10 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
   const [point, setPoints] = useState(0);
   const [editableArmyName, setEditableArmyName] = useState("");
+
+  const primaryColor = useThemeColor({}, "button");
+  const textColor = useThemeColor({}, "buttonText");
+  const errorColor = "#c00"; // or use a themed error color if you have one
 
   // Find the correct army template
   const armyList = armyType === "good" ? goodArmies : evilArmies;
@@ -222,8 +227,8 @@ export default function HomeScreen() {
             style={{
               fontSize: 22,
               fontWeight: "bold",
-              color: "#333",
-              backgroundColor: "#eee",
+              color: textColor,
+              backgroundColor: primaryColor,
               borderRadius: 6,
               paddingHorizontal: 8,
               marginRight: 8,
@@ -249,12 +254,14 @@ export default function HomeScreen() {
           <ThemedText type="subtitle">{totalPoints} pts</ThemedText>
         </ThemedView>
         <Button
-          color="error"
+          buttonStyle={{ backgroundColor: primaryColor }} // for "Reset" or destructive actions
+          titleStyle={{ color: textColor }}
           style={{ marginVertical: 12 }}
           onPress={handleReset}
         >
           Reset
         </Button>
+
         {activeArmy.heroes.map((hero, idx) => {
           const selectedHeroes = activeArmy.heroes.filter((h) => h.selected);
           const warbandNumber = hero.selected
@@ -278,7 +285,13 @@ export default function HomeScreen() {
           );
         })}
       </ThemedView>
-      <Button onPress={handleSaveArmy}>Save</Button>
+      <Button
+        buttonStyle={{ backgroundColor: primaryColor }}
+        titleStyle={{ color: textColor }}
+        onPress={handleSaveArmy}
+      >
+        Save
+      </Button>
     </ParallaxScrollView>
   );
 }

@@ -39,6 +39,8 @@ export function Hero({
 }: HeroProps) {
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");
+  const buttonColor = useThemeColor({}, "button");
+  const buttonTextColor = useThemeColor({}, "buttonText");
   const [expanded, setExpanded] = React.useState(false);
 
   const tierLabels = {
@@ -200,11 +202,11 @@ export function Hero({
             title={checked ? "-" : "+"}
             onPress={setSelectedHero}
             buttonStyle={{
-              backgroundColor: checked ? "#c00" : "#080",
+              backgroundColor: buttonColor,
               paddingHorizontal: 12,
               paddingVertical: 6,
             }}
-            titleStyle={{ fontSize: 14 }}
+            titleStyle={{ fontSize: 14, color: buttonTextColor }}
           />
         </ListItem>
       ) : (
