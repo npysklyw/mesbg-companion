@@ -4,7 +4,7 @@ A mobile app for building and managing armies for the [Middle-earth Strategy Bat
 
 ## Demo
 
-<https://github.com/npysklyw/mesbg-companion/blob/master/Simulator%20Screen%20Recording%20-%20iPhone%2016%20Plus%20-%202025-06-21%20at%2010.28.06.mp4>
+<https://github.com/npysklyw/mesbg-companion/blob/master/demo.mp4>
 
 <!-- Or embed a YouTube video: -->
 <!--
