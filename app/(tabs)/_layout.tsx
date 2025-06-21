@@ -10,21 +10,30 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const themeColors = Colors[colorScheme ?? "light"];
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: themeColors.tint,
+        tabBarInactiveTintColor: themeColors.tabIconDefault,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: "absolute",
+            backgroundColor: themeColors.tabBarBackground,
+            borderTopColor: themeColors.border,
           },
-          default: {},
+          default: {
+            backgroundColor: themeColors.tabBarBackground,
+            borderTopColor: themeColors.border,
+          },
         }),
+        tabBarLabelStyle: {
+          color: themeColors.text,
+        },
       }}
     >
       <Tabs.Screen

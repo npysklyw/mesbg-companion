@@ -1,5 +1,4 @@
 import { ListItem } from "@rneui/themed";
-import { useRouter } from "expo-router";
 import TouchableScale from "react-native-touchable-scale";
 
 import { useThemeColor } from "@/hooks/useThemeColor";
@@ -9,6 +8,8 @@ type SavedListProps = {
   points?: number;
   modelCount?: number;
   faction?: string;
+  onDelete?: () => void;
+  onEdit?: () => void;
 };
 
 export default function SavedList({
@@ -16,8 +17,9 @@ export default function SavedList({
   points,
   modelCount,
   faction,
+  onDelete,
+  onEdit,
 }: SavedListProps) {
-  const router = useRouter();
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");
 
@@ -27,27 +29,20 @@ export default function SavedList({
       friction={90}
       tension={100}
       activeScale={0.95}
-      onPress={() => {
-        router.push("/armyBuilder");
-      }}
+      onPress={onEdit}
       containerStyle={{ backgroundColor }}
     >
       <ListItem.Content>
         <ListItem.Title style={{ color: textColor }}>{name}</ListItem.Title>
         <ListItem.Subtitle style={{ color: textColor }}>
-          {points} pts, {modelCount} models, {faction}
+          {points ?? 0} pts &nbsp;|&nbsp; {modelCount ?? 0} models
+          {faction ? ` • ${faction}` : ""}
         </ListItem.Subtitle>
       </ListItem.Content>
       <ListItem.ButtonGroup
         onPress={(action) => {
-          console.log("Button pressed:", action);
-          if (action === 0) {
-            // Handle edit action
-            router.push("/armyBuilder");
-          } else if (action === 1) {
-            // Handle delete action
-            console.log("Delete action triggered");
-          }
+          if (action === 0 && onEdit) onEdit();
+          if (action === 1 && onDelete) onDelete();
         }}
         buttons={["Edit", "Delete"]}
       />

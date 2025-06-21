@@ -5,8 +5,10 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ListItem } from "@rneui/themed";
-import { Link, useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import TouchableScale from "react-native-touchable-scale";
+
+import { useThemeColor } from "@/hooks/useThemeColor";
 
 import evilArmies from "../data/evilArmies.json";
 import goodArmies from "../data/goodArmies.json";
@@ -202,8 +204,13 @@ type Wargear = {
 
 export default function HomeScreen() {
   const { armyType } = useLocalSearchParams();
+  const router = useRouter();
 
   const armiesToRender = armyType === "good" ? goodArmies : evilArmies;
+
+  // Get themed colors
+  const backgroundColor = useThemeColor({}, "background");
+  const textColor = useThemeColor({}, "text");
 
   return (
     <ParallaxScrollView
@@ -223,23 +230,25 @@ export default function HomeScreen() {
             {armyType === "good" ? "Armies of Good" : "Armies of Evil"}
           </ThemedText>
         </ThemedView>
-        {armiesToRender.map((army) => (
+        {armiesToRender.map((army, idx) => (
           <ListItem
-            key={army.name}
+            key={`${army.name}-${idx}`}
             Component={TouchableScale}
             friction={90}
             tension={100}
             activeScale={0.95}
+            onPress={() =>
+              router.push({
+                pathname: "/armyBuilder",
+                params: { armyName: army.name, armyType },
+              })
+            }
+            containerStyle={{ backgroundColor }} // <-- Themed background
           >
             <ListItem.Content>
-              <Link
-                href={{
-                  pathname: "/armyBuilder",
-                  params: { armyName: army.name, armyType },
-                }}
-              >
-                <ListItem.Title>{army.name}</ListItem.Title>
-              </Link>
+              <ListItem.Title style={{ color: textColor }}>
+                {army.name}
+              </ListItem.Title>
             </ListItem.Content>
           </ListItem>
         ))}

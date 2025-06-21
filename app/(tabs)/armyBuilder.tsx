@@ -1,25 +1,15 @@
-import * as FileSystem from "expo-file-system";
-import { useLocalSearchParams } from "expo-router";
-import { StyleSheet, TextInput } from "react-native";
-
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Hero } from "@/components/ui/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Button } from "@rneui/base";
-import React, { useState } from "react";
+import * as FileSystem from "expo-file-system";
+import { useLocalSearchParams } from "expo-router";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, TextInput } from "react-native";
 import evilArmies from "../data/evilArmies.json";
 import goodArmies from "../data/goodArmies.json";
-
-type Wargear = {
-  name?: string;
-  cost?: number;
-};
-
-type SelectedWargear = { name: string; cost: number };
-
-type HeroTier = "legend" | "valour" | "fortitude";
 
 type ActiveWarriorOption = {
   name: string;
@@ -35,7 +25,7 @@ type ActiveHero = {
   wargear: { name: string; cost: number }[];
   wargearChecks: { [option: string]: boolean };
   selected: boolean;
-  warband: ActiveWarriorOption[]; // <-- Each hero gets their own warband
+  warband: ActiveWarriorOption[];
 };
 
 type ActiveArmy = {
@@ -45,201 +35,52 @@ type ActiveArmy = {
   warbandOptions: ActiveWarriorOption[];
 };
 
-const armyTemplate = {
-  name: "Mordor Horde",
-  faction: "Mordor",
-  heroes: [
-    {
-      name: "The Witch-king of Angmar",
-      points: 150,
-      tier: "legend",
-      wargear: [
-        { name: "Crown of Morgul", cost: 25 },
-        { name: "Fell Beast", cost: 50 },
-      ],
-    },
-    {
-      name: "Gothmog",
-      points: 120,
-      tier: "valour",
-      wargear: [
-        { name: "Warg", cost: 10 },
-        { name: "Shield", cost: 5 },
-      ],
-    },
-    {
-      name: "Orc Captain",
-      points: 45,
-      tier: "fortitude",
-      wargear: [
-        { name: "Shield", cost: 5 },
-        { name: "Warg", cost: 10 },
-      ],
-    },
-    {
-      name: "Shagrat",
-      points: 90,
-      tier: "valour",
-      wargear: [{ name: "Shield", cost: 5 }],
-    },
-    {
-      name: "Gorbag",
-      points: 60,
-      tier: "fortitude",
-      wargear: [{ name: "Shield", cost: 5 }],
-    },
-    // ...other heroes
-  ],
-  warbandOptions: [
-    {
-      name: "Mordor Orc Warrior",
-      baseCost: 5,
-      availableWargear: [
-        { name: "Shield", cost: 1 },
-        { name: "Spear", cost: 1 },
-        { name: "Bow", cost: 1 },
-      ],
-    },
-    {
-      name: "Morannon Orc",
-      baseCost: 6,
-      availableWargear: [
-        { name: "Shield", cost: 1 },
-        { name: "Spear", cost: 1 },
-      ],
-    },
-    {
-      name: "Black Númenórean",
-      baseCost: 9,
-      availableWargear: [],
-    },
-    {
-      name: "Warg Rider",
-      baseCost: 11,
-      availableWargear: [
-        { name: "Throwing Spear", cost: 1 },
-        { name: "Shield", cost: 1 },
-      ],
-    },
-    {
-      name: "Morgul Stalker",
-      baseCost: 8,
-      availableWargear: [],
-    },
-    // ...other warriors
-  ],
-};
-
-// const armyTemplate = {
-//   name: "Walls of Minas Tirith",
-//   faction: "Gondor",
-//   heroes: [
-//     {
-//       name: "Aragorn",
-//       points: 200,
-//       tier: "legend",
-//       wargear: [
-//         { name: "horse", cost: 20 },
-//         { name: "lance", cost: 20 } as Wargear,
-//       ],
-//     },
-
-//     {
-//       name: "Ingold",
-//       points: 65,
-//       tier: "fortitude",
-//       wargear: [{} as Wargear],
-//     },
-//     {
-//       name: "Boromir",
-//       points: 165,
-//       tier: "valour",
-//       wargear: [{ name: "shield", cost: 5 } as Wargear],
-//     },
-//     {
-//       name: "Faramir",
-//       tier: "valour",
-//       points: 80,
-//       wargear: [{ name: "bow", cost: 10 } as Wargear],
-//     },
-//     {
-//       name: "Damrod",
-//       points: 50,
-//       wargear: [{} as Wargear],
-//     },
-//     {
-//       name: "Madril",
-//       points: 60,
-//       wargear: [{} as Wargear],
-//     },
-//     {
-//       name: "Madril (Armored)",
-//       points: 70,
-//       wargear: [{} as Wargear],
-//     },
-//     // ...other heroes
-//   ],
-//   warbandOptions: [
-//     {
-//       name: "Minas Tirith Warrior",
-//       baseCost: 8,
-//       availableWargear: [
-//         { name: "Shield", cost: 1 } as Wargear,
-//         { name: "Spear and Shield", cost: 2 } as Wargear,
-//         { name: "Bow", cost: 1 } as Wargear,
-//       ],
-//     },
-//     {
-//       name: "Ithilien Ranger",
-//       baseCost: 8,
-//       availableWargear: [{ name: "Spear", cost: 1 } as Wargear],
-//     },
-//     {
-//       name: "Gondor Knight",
-//       baseCost: 14,
-//       availableWargear: [{} as Wargear],
-//     },
-//     {
-//       name: "Fountain Guard",
-//       baseCost: 10,
-//       availableWargear: [{} as Wargear],
-//     },
-//     {
-//       name: "Citadel Guard",
-//       baseCost: 9,
-//       availableWargear: [
-//         { name: "Bow", cost: 1 },
-//         { name: "Spear", cost: 1 } as Wargear,
-//       ],
-//     },
-//     // ...other warriors
-//   ],
-// };
-
 export default function HomeScreen() {
-  const { armyName, armyType } = useLocalSearchParams();
+  const { savedArmyIdx, armyName, armyType } = useLocalSearchParams();
+  const [activeArmy, setActiveArmy] = useState<ActiveArmy | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [point, setPoints] = useState(0);
+  const [editableArmyName, setEditableArmyName] = useState("");
 
   // Find the correct army template
   const armyList = armyType === "good" ? goodArmies : evilArmies;
   const selectedArmy = armyList.find((a) => a.name === armyName);
   const templateArmy = selectedArmy || armyList[0] || goodArmies[0];
 
-  // If no army is available, show a message instead of rendering the builder
-  if (!templateArmy) {
-    return (
-      <ThemedView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ThemedText type="title">No army data available.</ThemedText>
-      </ThemedView>
-    );
-  }
+  useEffect(() => {
+    const loadArmy = async () => {
+      if (savedArmyIdx !== undefined) {
+        // Load from saved armies
+        const fileUri = FileSystem.documentDirectory + "saved-army.json";
+        const fileInfo = await FileSystem.getInfoAsync(fileUri);
+        if (fileInfo.exists) {
+          const content = await FileSystem.readAsStringAsync(fileUri);
+          const armies = JSON.parse(content);
+          const idx = parseInt(savedArmyIdx as string, 10);
+          if (!isNaN(idx) && armies[idx]) {
+            setActiveArmy(armies[idx]);
+            setEditableArmyName(armies[idx].name);
+            setPoints(
+              armies[idx].heroes.reduce(
+                (sum: number, hero: ActiveHero) => sum + hero.points,
+                0
+              )
+            );
+          } else {
+            setActiveArmy(null);
+          }
+        }
+      } else {
+        // Fallback to template logic
+        setActiveArmy(createActiveArmyFromTemplate(templateArmy));
+        setEditableArmyName(templateArmy.name);
+      }
+      setLoading(false);
+    };
+    loadArmy();
+  }, [savedArmyIdx, armyName, armyType]);
 
-  const [army, setArmy] = React.useState(templateArmy);
-  const [point, setPoints] = React.useState(0);
-  const [activeArmy, setActiveArmy] = useState<ActiveArmy>(
-    createActiveArmyFromTemplate(templateArmy)
-  );
-
-  function createActiveArmyFromTemplate(template: typeof armyTemplate) {
+  function createActiveArmyFromTemplate(template: typeof templateArmy) {
     return {
       name: template.name,
       faction: template.faction,
@@ -278,36 +119,90 @@ export default function HomeScreen() {
     };
   }
 
-  const incrementPoints = (value: number) => {
-    setPoints((prevPoints) => prevPoints + value);
-  };
-  const decrementPoints = (value: number) => {
-    setPoints((prevPoints) => Math.max(prevPoints - value, 0));
-  };
-
-  // Add state for editable army name
-  const [editableArmyName, setEditableArmyName] = useState(templateArmy.name);
-
-  // When resetting, also reset the editable name
   const handleReset = () => {
     setPoints(0);
+    // Reset to a fresh template of the current army type (not Isengard or any default)
     setActiveArmy(createActiveArmyFromTemplate(templateArmy));
     setEditableArmyName(templateArmy.name);
   };
 
-  // Save active army as JSON locally on device
   const handleSaveArmy = async () => {
     try {
       const fileUri = FileSystem.documentDirectory + "saved-army.json";
+      let armies = [];
+      try {
+        const fileInfo = await FileSystem.getInfoAsync(fileUri);
+        if (fileInfo.exists) {
+          const content = await FileSystem.readAsStringAsync(fileUri);
+          armies = JSON.parse(content);
+          if (!Array.isArray(armies)) armies = [armies];
+        }
+      } catch {}
+      // Calculate totals before saving
+      const { totalPoints, totalModels } = getArmyTotals(activeArmy);
+      armies.push({
+        ...activeArmy,
+        name: editableArmyName,
+        points: totalPoints,
+        modelCount: totalModels,
+      });
       await FileSystem.writeAsStringAsync(
         fileUri,
-        JSON.stringify({ ...activeArmy, name: editableArmyName }, null, 2)
+        JSON.stringify(armies, null, 2)
       );
       alert("Army saved to device!");
     } catch (e) {
       alert("Failed to save army: " + e);
     }
   };
+
+  // Helper to calculate total points and model count
+  function getArmyTotals(army: ActiveArmy | null) {
+    if (!army) return { totalPoints: 0, totalModels: 0 };
+    let totalPoints = 0;
+    let totalModels = 0;
+    for (const hero of army.heroes) {
+      if (hero.selected) {
+        totalPoints += hero.points;
+        // Add hero's wargear points if any
+        if (hero.wargear && hero.wargearChecks) {
+          for (const wg of hero.wargear) {
+            if (wg.name && hero.wargearChecks[wg.name]) {
+              totalPoints += wg.cost || 0;
+            }
+          }
+        }
+        // Count hero
+        totalModels += 1;
+        // Count warriors in warband
+        for (const w of hero.warband) {
+          if (w.wargearCounts) {
+            totalModels += Object.values(w.wargearCounts).reduce(
+              (a, b) => a + b,
+              0
+            );
+            // Add warrior points
+            for (const [wgName, count] of Object.entries(w.wargearCounts)) {
+              if (wgName === "Base") {
+                totalPoints += (w.baseCost || 0) * count;
+              } else {
+                const wg = w.availableWargear.find((g) => g.name === wgName);
+                if (wg) {
+                  totalPoints += ((w.baseCost || 0) + (wg.cost || 0)) * count;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return { totalPoints, totalModels };
+  }
+
+  const { totalPoints, totalModels } = getArmyTotals(activeArmy);
+
+  if (loading) return <ThemedText>Loading...</ThemedText>;
+  if (!activeArmy) return <ThemedText>No army found.</ThemedText>;
 
   return (
     <ParallaxScrollView
@@ -340,7 +235,18 @@ export default function HomeScreen() {
             placeholder="Army Name"
             maxLength={40}
           />
-          <ThemedText type="title">- {point} pts</ThemedText>
+        </ThemedView>
+        {/* Model count and points just below the title */}
+        <ThemedView
+          style={{
+            flexDirection: "row",
+            gap: 16,
+            marginBottom: 8,
+            marginTop: 4,
+          }}
+        >
+          <ThemedText type="subtitle">{totalModels} models</ThemedText>
+          <ThemedText type="subtitle">{totalPoints} pts</ThemedText>
         </ThemedView>
         <Button
           color="error"
@@ -350,7 +256,6 @@ export default function HomeScreen() {
           Reset
         </Button>
         {activeArmy.heroes.map((hero, idx) => {
-          // Find the warband number for this hero among selected heroes
           const selectedHeroes = activeArmy.heroes.filter((h) => h.selected);
           const warbandNumber = hero.selected
             ? selectedHeroes.findIndex((h) => h.name === hero.name) + 1
@@ -368,7 +273,7 @@ export default function HomeScreen() {
               setPoints={setPoints}
               warbandNumber={warbandNumber}
               tier={hero.tier}
-              warband={hero.warband} // <-- pass the hero's own warband
+              warband={hero.warband}
             />
           );
         })}
@@ -383,17 +288,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 150,
-    width: 400,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
   },
   headerImage: {
     color: "#808080",

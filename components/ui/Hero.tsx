@@ -12,11 +12,6 @@ type WarbandOption = {
   baseCost?: number;
 };
 
-type Army = {
-  warbandOptions?: WarbandOption[];
-  heroes?: any[];
-};
-
 type HeroProps = {
   name: string;
   points?: number;
@@ -27,7 +22,7 @@ type HeroProps = {
   setPoints?: React.Dispatch<React.SetStateAction<number>>;
   warbandNumber?: number | null;
   tier?: "legend" | "valour" | "fortitude";
-  warband: any[]; // <-- pass the hero's own warband
+  warband: any[];
 };
 
 export function Hero({
@@ -240,11 +235,25 @@ export function Hero({
             isExpanded={expanded}
             onPress={() => setExpanded(!expanded)}
           >
+            {/* Remove hero button */}
+            <Button
+              title="Remove Hero"
+              type="solid"
+              color="error"
+              onPress={setSelectedHero}
+              buttonStyle={{
+                backgroundColor: "#c00",
+                marginTop: 8,
+                paddingHorizontal: 12,
+                paddingVertical: 6,
+              }}
+              titleStyle={{ fontSize: 14 }}
+            />
             {/* Hero wargear buttons inside the accordion */}
             <View style={{ marginLeft: 5, marginBottom: 8 }}>
               {wargear?.map(([option, cost], index) => (
                 <Button
-                  key={option + "-" + index}
+                  key={option + index} // <-- Use option as key if unique
                   title={`${option} (${cost} pts)`}
                   onPress={() => handleToggleWargear(option, cost)}
                   buttonStyle={{
@@ -259,7 +268,10 @@ export function Hero({
             </View>
             <View style={{ marginLeft: 5 }}>
               {warband.map((warrior, warriorIdx) => (
-                <View style={{ marginLeft: 16 }} key={warrior.name}>
+                <View
+                  style={{ marginLeft: 16 }}
+                  key={warrior.name + "-" + warriorIdx}
+                >
                   <Warrior
                     name={warrior.name}
                     baseCost={warrior.baseCost}
@@ -281,18 +293,6 @@ export function Hero({
                 </View>
               ))}
             </View>
-            {/* Remove hero button */}
-            <Button
-              title="-"
-              onPress={setSelectedHero}
-              buttonStyle={{
-                backgroundColor: "#c00",
-                marginTop: 8,
-                paddingHorizontal: 12,
-                paddingVertical: 6,
-              }}
-              titleStyle={{ fontSize: 14 }}
-            />
           </ListItem.Accordion>
         </View>
       )}
