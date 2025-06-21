@@ -1,0 +1,343 @@
+[
+  {
+    "name": "Isengard Assault",
+    "faction": "Isengard",
+    "heroes": [
+      {
+        "name": "Saruman the White",
+        "points": 170,
+        "tier": "legend",
+        "wargear": [
+          { "name": "Horse", "cost": 10 },
+          { "name": "Staff of Power", "cost": 0 }
+        ]
+      },
+      {
+        "name": "Lurtz",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Shield", "cost": 5 },
+          { "name": "Bow", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Uglúk",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [{ "name": "Sword", "cost": 0 }]
+      },
+      {
+        "name": "Uruk-hai Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Heavy Armour", "cost": 5 },
+          { "name": "Shield", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Sharku",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Warg", "cost": 10 }]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Uruk-hai Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Pike", "cost": 1 },
+          { "name": "Crossbow", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Uruk-hai Berserker",
+        "baseCost": 11,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Warg Rider",
+        "baseCost": 10,
+        "availableWargear": [
+          { "name": "Throwing Spear", "cost": 1 },
+          { "name": "Shield", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Isengard Troll",
+        "baseCost": 85,
+        "availableWargear": [{ "name": "Spear", "cost": 5 }]
+      }
+    ]
+  },
+  {
+    "name": "Mordor Legion",
+    "faction": "Mordor",
+    "heroes": [
+      {
+        "name": "The Witch-king of Angmar",
+        "points": 85,
+        "tier": "legend",
+        "wargear": [
+          { "name": "Crown of Morgul", "cost": 25 },
+          { "name": "Armoured Fell Beast", "cost": 50 },
+          { "name": "Morgul Blade", "cost": 10 }
+        ]
+      },
+      {
+        "name": "Gothmog",
+        "points": 120,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Warg", "cost": 10 },
+          { "name": "Shield", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Shield", "cost": 5 },
+          { "name": "Warg", "cost": 10 }
+        ]
+      },
+      {
+        "name": "Shagrat",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [{}]
+      },
+      {
+        "name": "Gorbag",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{}]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Mordor Orc",
+        "baseCost": 5,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Morannon Orc",
+        "baseCost": 6,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Black Guard of Barad-dûr",
+        "baseCost": 9,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Mordor Troll",
+        "baseCost": 100,
+        "availableWargear": [
+          { "name": "Troll Chain", "cost": 5 },
+          { "name": "Spear", "cost": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Angmar Host",
+    "faction": "Angmar",
+    "heroes": [
+      {
+        "name": "Buhrdûr, Troll Chieftain",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [{}]
+      },
+      {
+        "name": "Shade",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Barrow-wight",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Angmar Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Shield", "cost": 5 }]
+      },
+      {
+        "name": "Wild Warg Chieftain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{}]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Orc Warrior",
+        "baseCost": 5,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Two-handed Weapon", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Warg Rider",
+        "baseCost": 10,
+        "availableWargear": [
+          { "name": "Throwing Spear", "cost": 1 },
+          { "name": "Shield", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Barrow-wight",
+        "baseCost": 50,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Angmar Troll",
+        "baseCost": 90,
+        "availableWargear": [{}]
+      }
+    ]
+  },
+  {
+    "name": "Moria Horde",
+    "faction": "Moria",
+    "heroes": [
+      {
+        "name": "The Balrog",
+        "points": 300,
+        "tier": "legend",
+        "wargear": [{ "name": "Flame of Udûn", "cost": 0 }]
+      },
+      {
+        "name": "Gothmog, Lieutenant of Morgul",
+        "points": 120,
+        "tier": "valour",
+        "wargear": [{ "name": "Shield", "cost": 5 }]
+      },
+      {
+        "name": "Moria Goblin Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Shield", "cost": 5 }]
+      },
+      {
+        "name": "Moria Goblin Shaman",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": []
+      },
+      {
+        "name": "Moria Cave Troll",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": []
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Moria Goblin Warrior",
+        "baseCost": 4,
+        "availableWargear": [
+          { "name": "Spear", "cost": 1 },
+          { "name": "Shield", "cost": 1 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Moria Goblin Archer",
+        "baseCost": 5,
+        "availableWargear": [{ "name": "Spear", "cost": 1 }]
+      },
+      {
+        "name": "Moria Goblin Prowler",
+        "baseCost": 6,
+        "availableWargear": [{ "name": "Two-handed Weapon", "cost": 1 }]
+      },
+      {
+        "name": "Moria Troll",
+        "baseCost": 100,
+        "availableWargear": [{ "name": "Spear", "cost": 5 }]
+      }
+    ]
+  },
+  {
+    "name": "Harad Raiders",
+    "faction": "Harad",
+    "heroes": [
+      {
+        "name": "Mahûd King",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [{ "name": "Armoured Horse", "cost": 10 }]
+      },
+      {
+        "name": "Serpent Lord",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": []
+      },
+      {
+        "name": "Haradrim Captain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Shield", "cost": 5 }]
+      },
+      {
+        "name": "Haradrim Warrior",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": []
+      },
+      {
+        "name": "Haradrim Archer",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": []
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Mahûd Warrior",
+        "baseCost": 6,
+        "availableWargear": [
+          { "name": "Spear", "cost": 1 },
+          { "name": "Shield", "cost": 1 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Mahûd Archer",
+        "baseCost": 7,
+        "availableWargear": [{ "name": "Spear", "cost": 1 }]
+      },
+      {
+        "name": "Serpent Guard",
+        "baseCost": 8,
+        "availableWargear": [{ "name": "Two-handed Weapon", "cost": 1 }]
+      },
+      {
+        "name": "Haradrim Chieftain",
+        "baseCost": 60,
+        "availableWargear": [{ "name": "Shield", "cost": 5 }]
+      }
+    ]
+  }
+]

@@ -1,5 +1,6 @@
 import * as FileSystem from "expo-file-system";
-import { StyleSheet } from "react-native";
+import { useLocalSearchParams } from "expo-router";
+import { StyleSheet, TextInput } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -8,6 +9,8 @@ import { Hero } from "@/components/ui/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Button } from "@rneui/base";
 import React, { useState } from "react";
+import evilArmies from "../data/evilArmies.json";
+import goodArmies from "../data/goodArmies.json";
 
 type Wargear = {
   name?: string;
@@ -214,10 +217,26 @@ const armyTemplate = {
 // };
 
 export default function HomeScreen() {
-  const [army, setArmy] = React.useState(armyTemplate);
+  const { armyName, armyType } = useLocalSearchParams();
+
+  // Find the correct army template
+  const armyList = armyType === "good" ? goodArmies : evilArmies;
+  const selectedArmy = armyList.find((a) => a.name === armyName);
+  const templateArmy = selectedArmy || armyList[0] || goodArmies[0];
+
+  // If no army is available, show a message instead of rendering the builder
+  if (!templateArmy) {
+    return (
+      <ThemedView style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ThemedText type="title">No army data available.</ThemedText>
+      </ThemedView>
+    );
+  }
+
+  const [army, setArmy] = React.useState(templateArmy);
   const [point, setPoints] = React.useState(0);
   const [activeArmy, setActiveArmy] = useState<ActiveArmy>(
-    createActiveArmyFromTemplate(armyTemplate)
+    createActiveArmyFromTemplate(templateArmy)
   );
 
   function createActiveArmyFromTemplate(template: typeof armyTemplate) {
@@ -266,13 +285,23 @@ export default function HomeScreen() {
     setPoints((prevPoints) => Math.max(prevPoints - value, 0));
   };
 
+  // Add state for editable army name
+  const [editableArmyName, setEditableArmyName] = useState(templateArmy.name);
+
+  // When resetting, also reset the editable name
+  const handleReset = () => {
+    setPoints(0);
+    setActiveArmy(createActiveArmyFromTemplate(templateArmy));
+    setEditableArmyName(templateArmy.name);
+  };
+
   // Save active army as JSON locally on device
   const handleSaveArmy = async () => {
     try {
       const fileUri = FileSystem.documentDirectory + "saved-army.json";
       await FileSystem.writeAsStringAsync(
         fileUri,
-        JSON.stringify(activeArmy, null, 2)
+        JSON.stringify({ ...activeArmy, name: editableArmyName }, null, 2)
       );
       alert("Army saved to device!");
     } catch (e) {
@@ -292,19 +321,31 @@ export default function HomeScreen() {
         />
       }
     >
-      {/* Reset Button at the top */}
-
       <ThemedView>
         <ThemedView style={styles.titleContainer}>
-          <ThemedText type="title">Minas Tirith Army - {point} pts</ThemedText>
+          <TextInput
+            style={{
+              fontSize: 22,
+              fontWeight: "bold",
+              color: "#333",
+              backgroundColor: "#eee",
+              borderRadius: 6,
+              paddingHorizontal: 8,
+              marginRight: 8,
+              minWidth: 120,
+              flex: 1,
+            }}
+            value={editableArmyName}
+            onChangeText={setEditableArmyName}
+            placeholder="Army Name"
+            maxLength={40}
+          />
+          <ThemedText type="title">- {point} pts</ThemedText>
         </ThemedView>
         <Button
           color="error"
           style={{ marginVertical: 12 }}
-          onPress={() => {
-            setPoints(0);
-            setActiveArmy(createActiveArmyFromTemplate(armyTemplate)); // <-- Reset active army to empty
-          }}
+          onPress={handleReset}
         >
           Reset
         </Button>

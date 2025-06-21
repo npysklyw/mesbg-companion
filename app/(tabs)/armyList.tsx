@@ -5,10 +5,206 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ListItem } from "@rneui/themed";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import TouchableScale from "react-native-touchable-scale";
 
+import evilArmies from "../data/evilArmies.json";
+import goodArmies from "../data/goodArmies.json";
+
+type Wargear = {
+  name?: string;
+  cost?: number;
+};
+
+// const goodArmiesa = [
+//   {
+//     name: "Walls of Minas Tirith",
+//     faction: "Gondor",
+//     heroes: [
+//       {
+//         name: "Aragorn",
+//         points: 200,
+//         tier: "legend",
+//         wargear: [
+//           { name: "horse", cost: 20 },
+//           { name: "lance", cost: 20 } as Wargear,
+//         ],
+//       },
+
+//       {
+//         name: "Ingold",
+//         points: 65,
+//         tier: "fortitude",
+//         wargear: [{} as Wargear],
+//       },
+//       {
+//         name: "Boromir",
+//         points: 165,
+//         tier: "valour",
+//         wargear: [{ name: "shield", cost: 5 } as Wargear],
+//       },
+//       {
+//         name: "Faramir",
+//         tier: "valour",
+//         points: 80,
+//         wargear: [{ name: "bow", cost: 10 } as Wargear],
+//       },
+//       {
+//         name: "Damrod",
+//         points: 50,
+//         wargear: [{} as Wargear],
+//       },
+//       {
+//         name: "Madril",
+//         points: 60,
+//         wargear: [{} as Wargear],
+//       },
+//       {
+//         name: "Madril (Armored)",
+//         points: 70,
+//         wargear: [{} as Wargear],
+//       },
+//       // ...other heroes
+//     ],
+//     warbandOptions: [
+//       {
+//         name: "Minas Tirith Warrior",
+//         baseCost: 8,
+//         availableWargear: [
+//           { name: "Shield", cost: 1 } as Wargear,
+//           { name: "Spear and Shield", cost: 2 } as Wargear,
+//           { name: "Bow", cost: 1 } as Wargear,
+//         ],
+//       },
+//       {
+//         name: "Ithilien Ranger",
+//         baseCost: 8,
+//         availableWargear: [{ name: "Spear", cost: 1 } as Wargear],
+//       },
+//       {
+//         name: "Gondor Knight",
+//         baseCost: 14,
+//         availableWargear: [{} as Wargear],
+//       },
+//       {
+//         name: "Fountain Guard",
+//         baseCost: 10,
+//         availableWargear: [{} as Wargear],
+//       },
+//       {
+//         name: "Citadel Guard",
+//         baseCost: 9,
+//         availableWargear: [
+//           { name: "Bow", cost: 1 },
+//           { name: "Spear", cost: 1 } as Wargear,
+//         ],
+//       },
+//       // ...other warriors
+//     ],
+//   },
+//   {
+//     name: "Mirkwood Host",
+//     faction: "Mirkwood",
+//     heroes: [
+//       {
+//         name: "Thranduil, King of the Woodland Realm",
+//         points: 140,
+//         tier: "legend",
+//         wargear: [
+//           { name: "Heavy Armour", cost: 10 },
+//           { name: "Elven Cloak", cost: 5 },
+//           { name: "Circlet of Kings", cost: 25 },
+//           { name: "Horse", cost: 10 },
+//           { name: "Elk", cost: 20 },
+//           { name: "Sword", cost: 0 },
+//           { name: "Bow", cost: 5 },
+//         ],
+//       },
+//       {
+//         name: "Legolas Greenleaf",
+//         points: 100,
+//         tier: "valour",
+//         wargear: [
+//           { name: "Elven Cloak", cost: 10 },
+//           { name: "Armoured Horse", cost: 15 },
+//           { name: "Knife", cost: 0 },
+//         ],
+//       },
+//       {
+//         name: "Tauriel",
+//         points: 85,
+//         tier: "valour",
+//         wargear: [
+//           { name: "Elven Cloak", cost: 5 },
+//           { name: "Bow", cost: 5 },
+//           { name: "Knife", cost: 0 },
+//         ],
+//       },
+//       {
+//         name: "Palace Guard Captain",
+//         points: 60,
+//         tier: "fortitude",
+//         wargear: [
+//           { name: "Shield", cost: 5 },
+//           { name: "Spear", cost: 1 },
+//           { name: "Elven Cloak", cost: 5 },
+//         ],
+//       },
+//       {
+//         name: "Mirkwood Captain",
+//         points: 70,
+//         tier: "fortitude",
+//         wargear: [
+//           { name: "Bow", cost: 5 },
+//           { name: "Elven Cloak", cost: 5 },
+//           { name: "Sword", cost: 0 },
+//         ],
+//       },
+//     ],
+//     warbandOptions: [
+//       {
+//         name: "Palace Guard",
+//         baseCost: 11,
+//         availableWargear: [
+//           { name: "Shield", cost: 1 },
+//           { name: "Spear", cost: 1 },
+//           { name: "Elven Cloak", cost: 2 },
+//         ],
+//       },
+//       {
+//         name: "Mirkwood Elf Warrior",
+//         baseCost: 9,
+//         availableWargear: [
+//           { name: "Bow", cost: 1 },
+//           { name: "Spear", cost: 1 },
+//           { name: "Elven Cloak", cost: 2 },
+//         ],
+//       },
+//       {
+//         name: "Mirkwood Cavalry",
+//         baseCost: 18,
+//         availableWargear: [
+//           { name: "Shield", cost: 1 },
+//           { name: "Elven Cloak", cost: 2 },
+//         ],
+//       },
+//       {
+//         name: "Mirkwood Ranger",
+//         baseCost: 8,
+//         availableWargear: [
+//           { name: "Bow", cost: 1 },
+//           { name: "Elven Cloak", cost: 2 },
+//         ],
+//       },
+//     ],
+//   },
+// ];
+
 export default function HomeScreen() {
+  const { armyType } = useLocalSearchParams();
+
+  const armiesToRender = armyType === "good" ? goodArmies : evilArmies;
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -23,30 +219,30 @@ export default function HomeScreen() {
     >
       <ThemedView>
         <ThemedView style={styles.titleContainer}>
-          <ThemedText type="title">Armies of Good</ThemedText>
+          <ThemedText type="title">
+            {armyType === "good" ? "Armies of Good" : "Armies of Evil"}
+          </ThemedText>
         </ThemedView>
-        <ListItem
-          Component={TouchableScale}
-          friction={90} //
-          tension={100} // These props are passed to the parent component (here TouchableScale)
-          activeScale={0.95} //
-        >
-          <ListItem.Content>
-            <ListItem.Title>Walls of Minas Tirith</ListItem.Title>
-          </ListItem.Content>
-        </ListItem>
-        <ListItem
-          Component={TouchableScale}
-          friction={90} //
-          tension={100} // These props are passed to the parent component (here TouchableScale)
-          activeScale={0.95} //
-        >
-          <ListItem.Content>
-            <Link href="/armyBuilder">
-              <ListItem.Title>Defenders of Mirkwood</ListItem.Title>
-            </Link>
-          </ListItem.Content>
-        </ListItem>
+        {armiesToRender.map((army) => (
+          <ListItem
+            key={army.name}
+            Component={TouchableScale}
+            friction={90}
+            tension={100}
+            activeScale={0.95}
+          >
+            <ListItem.Content>
+              <Link
+                href={{
+                  pathname: "/armyBuilder",
+                  params: { armyName: army.name, armyType },
+                }}
+              >
+                <ListItem.Title>{army.name}</ListItem.Title>
+              </Link>
+            </ListItem.Content>
+          </ListItem>
+        ))}
       </ThemedView>
     </ParallaxScrollView>
   );

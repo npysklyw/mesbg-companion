@@ -1,0 +1,459 @@
+[
+  {
+    "name": "Walls of Minas Tirith",
+    "faction": "Gondor",
+    "heroes": [
+      {
+        "name": "Aragorn",
+        "points": 200,
+        "tier": "legend",
+        "wargear": [
+          { "name": "horse", "cost": 20 },
+          { "name": "lance", "cost": 20 }
+        ]
+      },
+      {
+        "name": "Ingold",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Boromir",
+        "points": 165,
+        "tier": "valour",
+        "wargear": [{ "name": "shield", "cost": 5 }]
+      },
+      {
+        "name": "Faramir",
+        "tier": "valour",
+        "points": 80,
+        "wargear": [{ "name": "bow", "cost": 10 }]
+      },
+      {
+        "name": "Damrod",
+        "points": 50,
+        "wargear": [{}]
+      },
+      {
+        "name": "Madril",
+        "points": 60,
+        "wargear": [{}]
+      },
+      {
+        "name": "Madril (Armored)",
+        "points": 70,
+        "wargear": [{}]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Minas Tirith Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear and Shield", "cost": 2 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Ithilien Ranger",
+        "baseCost": 8,
+        "availableWargear": [{ "name": "Spear", "cost": 1 }]
+      },
+      {
+        "name": "Gondor Knight",
+        "baseCost": 14,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Fountain Guard",
+        "baseCost": 10,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Citadel Guard",
+        "baseCost": 9,
+        "availableWargear": [
+          { "name": "Bow", "cost": 1 },
+          { "name": "Spear", "cost": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mirkwood Host",
+    "faction": "Mirkwood",
+    "heroes": [
+      {
+        "name": "Thranduil, King of the Woodland Realm",
+        "points": 140,
+        "tier": "legend",
+        "wargear": [
+          { "name": "Heavy Armour", "cost": 10 },
+          { "name": "Elven Cloak", "cost": 5 },
+          { "name": "Circlet of Kings", "cost": 25 },
+          { "name": "Horse", "cost": 10 },
+          { "name": "Elk", "cost": 20 },
+          { "name": "Sword", "cost": 0 },
+          { "name": "Bow", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Elven Cloak", "cost": 10 },
+          { "name": "Armoured Horse", "cost": 15 },
+          { "name": "Knife", "cost": 0 }
+        ]
+      },
+      {
+        "name": "Tauriel",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Elven Cloak", "cost": 5 },
+          { "name": "Bow", "cost": 5 },
+          { "name": "Knife", "cost": 0 }
+        ]
+      },
+      {
+        "name": "Palace Guard Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Shield", "cost": 5 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Mirkwood Captain",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Bow", "cost": 5 },
+          { "name": "Elven Cloak", "cost": 5 },
+          { "name": "Sword", "cost": 0 }
+        ]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Palace Guard",
+        "baseCost": 11,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Mirkwood Elf Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          { "name": "Bow", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Mirkwood Cavalry",
+        "baseCost": 18,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Mirkwood Ranger",
+        "baseCost": 8,
+        "availableWargear": [
+          { "name": "Bow", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Moria Horde",
+    "faction": "Moria",
+    "heroes": [
+      {
+        "name": "Durbûrz",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Groblog",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Moria Goblin Captain",
+        "points": 35,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Shield", "cost": 5 }]
+      },
+      {
+        "name": "Moria Goblin Shaman",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Dragon",
+        "points": 250,
+        "tier": "legend",
+        "wargear": [
+          { "name": "Fly", "cost": 50 },
+          { "name": "Breath Fire", "cost": 25 }
+        ]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Moria Goblin Warrior",
+        "baseCost": 4,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Moria Goblin Blackshield",
+        "baseCost": 6,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Warg Marauder",
+        "baseCost": 18,
+        "availableWargear": [{}]
+      },
+      {
+        "name": "Cave Troll",
+        "baseCost": 75,
+        "availableWargear": [
+          { "name": "Spear", "cost": 5 },
+          { "name": "Chain", "cost": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rohan Riders",
+    "faction": "Rohan",
+    "heroes": [
+      {
+        "name": "Éomer, Marshal of the Riddermark",
+        "points": 100,
+        "tier": "legend",
+        "wargear": [
+          { "name": "Armoured Horse", "cost": 15 },
+          { "name": "Shield", "cost": 5 },
+          { "name": "Throwing Spear", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Éowyn",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Armoured Horse", "cost": 10 },
+          { "name": "Throwing Spear", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Merry (Rohan)",
+        "points": 25,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Gambling",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{ "name": "Royal Standard of Rohan", "cost": 25 }]
+      },
+      {
+        "name": "Rohan Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Horse", "cost": 10 },
+          { "name": "Shield", "cost": 5 },
+          { "name": "Throwing Spear", "cost": 5 }
+        ]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Warrior",
+        "baseCost": 7,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Throwing Spear", "cost": 2 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Rohan Royal Guard",
+        "baseCost": 10,
+        "availableWargear": [
+          { "name": "Horse", "cost": 6 },
+          { "name": "Throwing Spear", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [{ "name": "Throwing Spear", "cost": 2 }]
+      },
+      {
+        "name": "Outrider of Rohan",
+        "baseCost": 8,
+        "availableWargear": [
+          { "name": "Bow", "cost": 1 },
+          { "name": "Horse", "cost": 6 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lothlórien Patrol",
+    "faction": "Lothlórien",
+    "heroes": [
+      {
+        "name": "Galadriel, Lady of Light",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [{ "name": "Mirror of Galadriel", "cost": 25 }]
+      },
+      {
+        "name": "Celeborn",
+        "points": 120,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Heavy Armour", "cost": 10 },
+          { "name": "Shield", "cost": 5 },
+          { "name": "Elven Cloak", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Haldir",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Heavy Armour", "cost": 5 },
+          { "name": "Bow", "cost": 5 }
+        ]
+      },
+      {
+        "name": "Galadhrim Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          { "name": "Bow", "cost": 5 },
+          { "name": "Shield", "cost": 5 }
+        ]
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Galadhrim Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          { "name": "Shield", "cost": 1 },
+          { "name": "Spear", "cost": 1 },
+          { "name": "Bow", "cost": 1 }
+        ]
+      },
+      {
+        "name": "Wood Elf Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          { "name": "Spear", "cost": 1 },
+          { "name": "Bow", "cost": 1 },
+          { "name": "Elven Cloak", "cost": 2 }
+        ]
+      },
+      {
+        "name": "Galadhrim Knight",
+        "baseCost": 15,
+        "availableWargear": [{ "name": "Shield", "cost": 1 }]
+      }
+    ]
+  },
+  {
+    "name": "Fellowship of the Ring",
+    "faction": "Fellowship",
+    "heroes": [
+      {
+        "name": "Gandalf the Grey",
+        "points": 170,
+        "tier": "legend",
+        "wargear": [{ "name": "Horse", "cost": 10 }]
+      },
+      {
+        "name": "Aragorn (Fellowship)",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [{ "name": "Andúril", "cost": 0 }]
+      },
+      {
+        "name": "Legolas (Fellowship)",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [{}]
+      },
+      {
+        "name": "Gimli (Fellowship)",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [{}]
+      },
+      {
+        "name": "Boromir (Fellowship)",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          { "name": "Shield", "cost": 5 },
+          { "name": "Horn of Gondor", "cost": 10 }
+        ]
+      },
+      {
+        "name": "Sam",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Frodo",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Merry",
+        "points": 25,
+        "tier": "fortitude",
+        "wargear": [{}]
+      },
+      {
+        "name": "Pippin",
+        "points": 25,
+        "tier": "fortitude",
+        "wargear": [{}]
+      }
+    ],
+    "warbandOptions": []
+  }
+]

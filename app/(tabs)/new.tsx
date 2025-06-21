@@ -5,6 +5,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Button } from "@rneui/themed";
 import { Link } from "expo-router";
 import { StyleSheet } from "react-native";
+
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
@@ -22,13 +23,19 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Create New Army</ThemedText>
       </ThemedView>
 
-      <Button>
-        <Link href="/armyList">Good Army</Link>
-      </Button>
+      <Link
+        href={{ pathname: "/armyList", params: { armyType: "good" } }}
+        asChild
+      >
+        <Button>Good Army</Button>
+      </Link>
 
-      <Button color={"error"}>
-        <Link href="/armyList">Evil Army</Link>
-      </Button>
+      <Link
+        href={{ pathname: "/armyList", params: { armyType: "evil" } }}
+        asChild
+      >
+        <Button color={"error"}>Evil Army</Button>
+      </Link>
     </ParallaxScrollView>
   );
 }
