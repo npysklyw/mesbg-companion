@@ -4,12 +4,12 @@ A mobile app for building and managing armies for the [Middle-earth Strategy Bat
 
 ## Demo
 
-<https://github.com/npysklyw/mesbg-companion/blob/master/demo.mp4>
+
 
 <!-- Or embed a YouTube video: -->
-<!--
-[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/YOUR_VIDEO_ID)
--->
+
+[![Watch the demo](https://img.youtube.com/vi/wost05aqULY/maxresdefault.jpg)](https://youtu.be/wost05aqULY)
+
 
 ## Features
 
