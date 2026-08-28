@@ -1,0 +1,4126 @@
+[
+  {
+    "name": "The Last Alliance",
+    "faction": "The Last Alliance",
+    "heroes": [
+      {
+        "name": "Erestor",
+        "points": 85,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Noldorin Daggers",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Gil-Galad, High King of the Noldor",
+        "points": 175,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Aiglos",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Elrond, Master of Rivendell",
+        "points": 170,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Rivendell Captain",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse, Elf bow and Elven lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Elendil, High King of Gondor and Arnor",
+        "points": 175,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Narsil",
+            "cost": 0
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Numenor",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isildur, Prince of Numenor",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rivendell Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven-made hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and Elven spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "King's Guard",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Numenor",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Longbow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Realms of Men",
+    "faction": "Realms of Men",
+    "heroes": [
+      {
+        "name": "King's Huntsman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Knight of the White Tower",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "White Sword of Gondor",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dol Amroth",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Arnor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dale",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Windlance",
+        "points": 70,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "King of Men (Gondor)",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "King of Men (Rohan)",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "King of Men (Arnor)",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "King of Men (Dale)",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "King of Men (Numenor)",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Numenor",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gondor Avenger Bolt Thrower",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Gondor Battlecry Trebuchet",
+        "points": 100,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Outrider",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Man-at-arms of Dol Amroth",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pike",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Blackroot Vale Archer",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Clansman of Lamedon",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dol Amroth",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse and banner",
+            "cost": 33
+          },
+          {
+            "name": "Armoured horse and war horn",
+            "cost": 33
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Armoured horse and lance",
+            "cost": 9
+          }
+        ]
+      },
+      {
+        "name": "Axeman of Lossarnach",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Axe of Lossarnach",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Arnor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Swap shield and spear for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Knight of Arnor",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Arnor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rohirrim Traitor",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Gondor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Osgiliath Veteran",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Dale",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Esgaroth Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dale",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Numenor",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Longbow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Minas Tirith",
+    "faction": "Minas Tirith",
+    "heroes": [
+      {
+        "name": "Cirion, Lieutenant of Amon Barad",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Knight of the White Tower",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "White Sword of Gondor",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "H\u00farin the Tall, Warden of the Keys",
+        "points": 80,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "The Warden's Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Ingold, Warden of the Rammas Echor",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Beregond, Guard of the Citadel",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Boromir, Captain of the White Tower",
+        "points": 160,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horn of Gondor",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 6,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Faramir, Captain of Gondor",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield (Without Bow)",
+            "cost": 5
+          },
+          {
+            "name": "Exchange armour and bow for heavy armour",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Denethor, Steward of Gondor",
+        "points": 50,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Irolas, Captain of the Guard",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gondor Avenger Bolt Thrower",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Garrison of Ithilien",
+    "faction": "Garrison of Ithilien",
+    "heroes": [
+      {
+        "name": "Mablung, Ranger of Ithilien",
+        "points": 40,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Anborn, Ranger of Ithilien",
+        "points": 40,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Faramir, Captain of Gondor",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Damrod, Ranger of Ithilien",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Frodo Baggins (Garrison of Ithilien)",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The One Ring",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Samwise Gamgee (Garrison of Ithilien)",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Smeagol",
+        "points": 30,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Strangling Fingers",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 0,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Madril, Captain of Ithilien",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Gondor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Osgiliath Veteran",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Atop the Wall",
+    "faction": "Atop the Wall",
+    "heroes": [
+      {
+        "name": "Knight of the White Tower",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "White Sword of Gondor",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "H\u00farin the Tall, Warden of the Keys",
+        "points": 80,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "The Warden's Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Beregond, Guard of the Citadel",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Gandalf the White",
+        "points": 200,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Pippin",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Irolas, Captain of the Guard",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gondor Avenger Bolt Thrower",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Gondor Battlecry Trebuchet",
+        "points": 100,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven cloak",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defenders of the Pelennor",
+    "faction": "Defenders of the Pelennor",
+    "heroes": [
+      {
+        "name": "Knight of the White Tower",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "White Sword of Gondor",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "D\u00e9orwine, Chief of the King's Knights",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elfhelm, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "H\u00farin the Tall, Warden of the Keys",
+        "points": 80,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "The Warden's Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Angbor the Fearless",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Duinhir, Lord of the Blackroot Vale",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dol Amroth",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Forlong the Fat",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "The Horn of Lossarnach",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Elladan",
+        "points": 160,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elrohir",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Prince Imrahil",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Halbarad",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Banner of Arwen Evenstar",
+            "cost": 40
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Snowmane with Armour",
+            "cost": 25
+          },
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Guthwine",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eowyn, Shieldmaiden of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Merry",
+            "cost": 25
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Ingold, Warden of the Rammas Echor",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Beregond, Guard of the Citadel",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Anduril, Flame of the West",
+            "cost": 40
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gandalf the White",
+        "points": 200,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Pippin",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Elven cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "The King of the Dead",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Herald of the Dead",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Pennant of the Dead",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Irolas, Captain of the Guard",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gondor Avenger Bolt Thrower",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Gondor Battlecry Trebuchet",
+        "points": 100,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Man-at-arms of Dol Amroth",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pike",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Blackroot Vale Archer",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Clansman of Lamedon",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dol Amroth",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse and banner",
+            "cost": 33
+          },
+          {
+            "name": "Armoured horse and war horn",
+            "cost": 33
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Armoured horse and lance",
+            "cost": 9
+          }
+        ]
+      },
+      {
+        "name": "Axeman of Lossarnach",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Axe of Lossarnach",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven cloak",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Warrior of the Dead",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of the Dead",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spectral Steed",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Fiefdoms",
+    "faction": "The Fiefdoms",
+    "heroes": [
+      {
+        "name": "Angbor the Fearless",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Duinhir, Lord of the Blackroot Vale",
+        "points": 65,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dol Amroth",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Forlong the Fat",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "The Horn of Lossarnach",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Prince Imrahil",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Man-at-arms of Dol Amroth",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pike",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Blackroot Vale Archer",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Clansman of Lamedon",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dol Amroth",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse and banner",
+            "cost": 33
+          },
+          {
+            "name": "Armoured horse and war horn",
+            "cost": 33
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Armoured horse and lance",
+            "cost": 9
+          }
+        ]
+      },
+      {
+        "name": "Axeman of Lossarnach",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Axe of Lossarnach",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Men of the West",
+    "faction": "Men of the West",
+    "heroes": [
+      {
+        "name": "Captain of Dol Amroth",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Elladan",
+        "points": 160,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elrohir",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Prince Imrahil",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Firefoot",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Meriadoc Brandybuck, Esquire of Rohan",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Beregond, Guard of the Citadel",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Gandalf the White",
+        "points": 200,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Pippin",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Aragorn, King Elessar",
+        "points": 225,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Anduril, Flame of the West",
+            "cost": 0
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Ring of Barahir",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Elven cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gwaihir",
+        "points": 150,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Man-at-arms of Dol Amroth",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pike",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dol Amroth",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse and banner",
+            "cost": 33
+          },
+          {
+            "name": "Armoured horse and war horn",
+            "cost": 33
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Armoured horse and lance",
+            "cost": 9
+          }
+        ]
+      },
+      {
+        "name": "Meriadoc Brandybuck, Esquire of Rohan",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Peregrin Took, Guard of the Citadel",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven cloak",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Grey Company",
+    "faction": "The Grey Company",
+    "heroes": [
+      {
+        "name": "Elladan",
+        "points": 160,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elrohir",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Ranger of the North",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Halbarad",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Banner of Arwen Evenstar",
+            "cost": 40
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Anduril, Flame of the West",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 5
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Ranger of the North",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Return of the King",
+    "faction": "Return of the King",
+    "heroes": [
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Anduril, Flame of the West",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "The King of the Dead",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Herald of the Dead",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Pennant of the Dead",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of the Dead",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of the Dead",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spectral Steed",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reclamation of Osgiliath",
+    "faction": "Reclamation of Osgiliath",
+    "heroes": [
+      {
+        "name": "Boromir, Captain of the White Tower",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Banner of Minas Tirith",
+            "cost": 40
+          }
+        ],
+        "wounds": 3,
+        "might": 6,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Faramir, Captain of Gondor",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Madril, Captain of Ithilien",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Gondor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Osgiliath Veteran",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Numenor",
+    "faction": "Numenor",
+    "heroes": [
+      {
+        "name": "Elendil, High King of Gondor and Arnor",
+        "points": 175,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Narsil",
+            "cost": 0
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Numenor",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isildur, Prince of Numenor",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Numenor",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Longbow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Garrison of Minas Tirith",
+    "faction": "Garrison of Minas Tirith",
+    "heroes": [],
+    "warbandOptions": [
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      }
+    ]
+  }
+]

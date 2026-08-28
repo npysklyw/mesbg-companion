@@ -1,0 +1,294 @@
+[
+  {
+    "name": "Ravagers of the Shire",
+    "faction": "Ravagers of the Shire",
+    "heroes": [
+      {
+        "name": "Golfimbul, Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": true,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 0
+      },
+      {
+        "name": "Mordor Orc Shaman",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Warg",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Mordor Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Mordor Orc Warrior",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Mordor Warg Rider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Warg",
+            "cost": 0
+          },
+          {
+            "name": "Shield & throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Hill Troll",
+        "baseCost": 75,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sharkey's Rogues",
+    "faction": "Sharkey's Rogues",
+    "heroes": [
+      {
+        "name": "Bill Ferny",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Sid Briarthorn",
+        "points": 50,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Rowan Thistlewood",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Sharkey & Worm",
+        "points": 60,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Ted Sandyman",
+        "points": 30,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Lotho Sackville-Baggins",
+        "points": 30,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 4,
+        "fate": 1
+      },
+      {
+        "name": "No Hero (Sharkey)",
+        "points": 0,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 0,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Ruffian",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Whip",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  }
+]

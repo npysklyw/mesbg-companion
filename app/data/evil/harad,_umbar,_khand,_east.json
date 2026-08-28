@@ -1,0 +1,2951 @@
+[
+  {
+    "name": "Grand Army of the South",
+    "faction": "Grand Army of the South",
+    "heroes": [
+      {
+        "name": "Khandish Chieftain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Khandish King",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Mah\u00fbd Tribesmaster",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Mah\u00fbd King",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "The Golden King of Abrakhan",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Golden Throne",
+            "cost": 0
+          }
+        ],
+        "wounds": 4,
+        "might": 2,
+        "will": 6,
+        "fate": 2
+      },
+      {
+        "name": "Haradrim King",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "The Knight of Umbar",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour of the Sundered Land",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 14,
+        "fate": 2
+      },
+      {
+        "name": "The Betrayer",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 14,
+        "fate": 2
+      },
+      {
+        "name": "Kham\u00fbl the Easterling",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 12,
+        "fate": 2
+      },
+      {
+        "name": "Haradrim Taskmaster",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Delgamar, Gatemaster of Umbar",
+        "points": 75,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Raza, Fang of the Serpent",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Hasharin",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 3
+      },
+      {
+        "name": "Dalamyr, Fleetmaster of Umbar",
+        "points": 100,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Smoke Bombs",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Suladan, The Serpent Lord",
+        "points": 120,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Serpent Banner",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Easterling War Priest",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Amdur, Lord of Blades",
+        "points": 135,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Durtuz, the Silver Falchion",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "points": 70,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Easterling Kataphrakt Captain",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Easterling Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Haradrim Chieftain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Bo'sun",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Mumak War Leader",
+        "points": 400,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Long-bladed spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "War Mumak of Harad",
+        "points": 250,
+        "tier": "fortitude",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Corsair Reaver",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Khandish Charioteer",
+        "baseCost": 40,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand-and-a-half weapon for bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Khandish Horseman",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Khandish Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand-and-a-half weapon for bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Half Troll",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand weapon for two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Mah\u00fbd Raider",
+        "baseCost": 17,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "War Camel",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 1
+          },
+          {
+            "name": "War spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Mah\u00fbd Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Watcher of K\u00e2rna",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Twin Blades",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Abrakhan Merchant Guard",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Raider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Bow & war spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "War spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Corsair Crossbowman",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Crossbow",
+            "cost": 0
+          },
+          {
+            "name": "Pavise",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Dragon Cult Acolyte",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Easterling Kataphrakt",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Exchange shield for war drum",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "War Drake of Rhun",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Claws and teeth (hand weapons)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Black Dragon Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange shield for banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Easterling Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd and shield",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Warrior",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Corsair of Umbar",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Light shield and throwing weapons",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Variags of Khand",
+    "faction": "Variags of Khand",
+    "heroes": [
+      {
+        "name": "Khandish Chieftain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Khandish King (Leader)",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Khandish King",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Khandish Charioteer",
+        "baseCost": 40,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand-and-a-half weapon for bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Khandish Horseman",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Khandish Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand-and-a-half weapon for bow",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Far Harad",
+    "faction": "Far Harad",
+    "heroes": [
+      {
+        "name": "Mah\u00fbd Tribesmaster",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Mah\u00fbd King",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Mumak",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [],
+        "wounds": 10,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Half Troll",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange hand weapon for two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Mah\u00fbd Raider",
+        "baseCost": 17,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "War Camel",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 1
+          },
+          {
+            "name": "War spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Mah\u00fbd Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Harad",
+    "faction": "Harad",
+    "heroes": [
+      {
+        "name": "The Golden King of Abrakhan",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Golden Throne",
+            "cost": 0
+          }
+        ],
+        "wounds": 4,
+        "might": 2,
+        "will": 6,
+        "fate": 2
+      },
+      {
+        "name": "Haradrim King",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "The Betrayer",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 14,
+        "fate": 2
+      },
+      {
+        "name": "Haradrim Taskmaster",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Haradrim Chieftain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Mumak War Leader",
+        "points": 400,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Long-bladed spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "War Mumak of Harad",
+        "points": 250,
+        "tier": "fortitude",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Watcher of K\u00e2rna",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Twin Blades",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Abrakhan Merchant Guard",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Raider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Bow & war spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "War spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Warrior",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Serpent Horde",
+    "faction": "The Serpent Horde",
+    "heroes": [
+      {
+        "name": "Haradrim King",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "The Betrayer",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 14,
+        "fate": 2
+      },
+      {
+        "name": "Haradrim Taskmaster",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Raza, Fang of the Serpent",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Suladan, The Serpent Lord",
+        "points": 120,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Serpent Banner",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Haradrim Chieftain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "War Mumak of Harad",
+        "points": 250,
+        "tier": "fortitude",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Haradrim Raider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Bow & war spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "War spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Warrior",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Umbar",
+    "faction": "Umbar",
+    "heroes": [
+      {
+        "name": "The Knight of Umbar",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour of the Sundered Land",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 14,
+        "fate": 2
+      },
+      {
+        "name": "Black N\u00famen\u00f3rean Marshal",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Delgamar, Gatemaster of Umbar",
+        "points": 75,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Hasharin",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 3
+      },
+      {
+        "name": "Dalamyr, Fleetmaster of Umbar",
+        "points": 100,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Smoke Bombs",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Haradrim Chieftain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Bo'sun",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Corsair Reaver",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Black Numenorean Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Haradrim Warrior",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Corsair of Umbar",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Light shield and throwing weapons",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Easterlings",
+    "faction": "The Easterlings",
+    "heroes": [
+      {
+        "name": "Kham\u00fbl the Easterling",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 2,
+        "will": 12,
+        "fate": 2
+      },
+      {
+        "name": "Easterling War Priest",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Amdur, Lord of Blades",
+        "points": 135,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Durtuz, the Silver Falchion",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "points": 70,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Easterling Kataphrakt Captain",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Easterling Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Dragon Cult Acolyte",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Easterling Kataphrakt",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Exchange shield for war drum",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "War Drake of Rhun",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Claws and teeth (hand weapons)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Black Dragon Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange shield for banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Easterling Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd and shield",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Expedition to the East",
+    "faction": "Expedition to the East",
+    "heroes": [
+      {
+        "name": "M\u00farin",
+        "points": 140,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Kalaz\u00e2l",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dr\u00e1r",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Cirion, Lieutenant of Amon Barad",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Gondor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Dwarf Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Axe",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Dwarf Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Dwarf Ranger",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf longbow",
+            "cost": 1
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Corsair Fleets",
+    "faction": "Corsair Fleets",
+    "heroes": [
+      {
+        "name": "Delgamar, Gatemaster of Umbar",
+        "points": 75,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Dalamyr, Fleetmaster of Umbar",
+        "points": 100,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Smoke Bombs",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Corsair Ballista",
+        "points": 70,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 4,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Corsair Captain Leader",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon and throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Corsair Bo'sun",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Corsair Reaver",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Corsair Crossbowman",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Crossbow",
+            "cost": 0
+          },
+          {
+            "name": "Pavise",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Corsair Siege Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Corsair of Umbar",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Light shield and throwing weapons",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Host of the Dragon Emperor",
+    "faction": "Host of the Dragon Emperor",
+    "heroes": [
+      {
+        "name": "Easterling War Priest",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "The Dragon Emperor of Rhun",
+        "points": 200,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Helm of the Dragon Emperor",
+            "cost": 0
+          },
+          {
+            "name": "Royal Palanquin",
+            "cost": 0
+          },
+          {
+            "name": "The Dragon Emperor's Glaive",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Brorgir the Conjurer",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 5,
+        "fate": 2
+      },
+      {
+        "name": "Rutabi, General of the Dragon Legion",
+        "points": 120,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "points": 70,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Easterling Kataphrakt Captain",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Easterling Captain",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Dragon Cult Acolyte",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Easterling Kataphrakt",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Exchange shield for war drum",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "War Drake of Rhun",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Claws and teeth (hand weapons)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Black Dragon Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Exchange shield for banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Easterling Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Easterling Halberd and shield",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  }
+]

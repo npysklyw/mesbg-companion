@@ -1,0 +1,1045 @@
+[
+  {
+    "name": "Battle of Bywater",
+    "faction": "Battle of Bywater",
+    "heroes": [
+      {
+        "name": "Fredegar `Fatty` Bolger",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Paladin Took, Thain of the Shire",
+        "points": 30,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Holfoot Bracegirdle, Shirriff-Leader",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Robin Smallburrow, Hobbit Shirriff",
+        "points": 25,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Frodo of the Nine Fingers",
+        "points": 70,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Mithril Coat",
+            "cost": 0
+          },
+          {
+            "name": "Pony",
+            "cost": 0
+          },
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Folco Boffin",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Farmer Tolman Cotton",
+        "points": 35,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Pitchfork",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Baldo Tulpenny",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Will Whitfoot, Mayor of Michel Delving",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Samwise the Brave",
+        "points": 60,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Sting",
+            "cost": 0
+          },
+          {
+            "name": "Pony",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Meriadoc Brandybuck, Captain of the Shire",
+        "points": 60,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pony",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Riddermark",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Peregrin Took, Captain of the Shire",
+        "points": 60,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pony",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Farmer Maggot",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Grip, Fang, and Wolf",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Lobelia Sackville-Baggins",
+        "points": 20,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Umbrella",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 4,
+        "fate": 1
+      },
+      {
+        "name": "Rosie Cotton",
+        "points": 20,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Hamfast 'Gaffer' Gamgee",
+        "points": 35,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Folco Boffin",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Hobbit Militia",
+        "baseCost": 4,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Battlin' Brandybuck",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Lobelia Sackville-Baggins",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Umbrella",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Hobbit Archer",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Short bow",
+            "cost": 0
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Tookish Hunter",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rosie Cotton",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Shire",
+    "faction": "The Shire",
+    "heroes": [
+      {
+        "name": "Fredegar `Fatty` Bolger",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Paladin Took, Thain of the Shire",
+        "points": 30,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Lotho Sackville-Baggins",
+        "points": 30,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 4,
+        "fate": 1
+      },
+      {
+        "name": "Folco Boffin",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Farmer Tolman Cotton",
+        "points": 35,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Pitchfork",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Will Whitfoot, Mayor of Michel Delving",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Frodo Baggins",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The One Ring",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Samwise Gamgee",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Frying Pan",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Meriadoc Brandybuck",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 2
+      },
+      {
+        "name": "Peregrin Took",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 2
+      },
+      {
+        "name": "Gandalf the Grey",
+        "points": 170,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Gandalf's Cart",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Bilbo Baggins, Ageing Hobbit",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "The One Ring",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Farmer Maggot",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Grip, Fang, and Wolf",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Lobelia Sackville-Baggins",
+        "points": 20,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Umbrella",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 4,
+        "fate": 1
+      },
+      {
+        "name": "Rosie Cotton",
+        "points": 20,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Hamfast 'Gaffer' Gamgee",
+        "points": 35,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Fredegar `Fatty` Bolger",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Folco Boffin",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Hobbit Militia",
+        "baseCost": 4,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Battlin' Brandybuck",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Lobelia Sackville-Baggins",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Umbrella",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Hobbit Archer",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Short bow",
+            "cost": 0
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Tookish Hunter",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rosie Cotton",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Meriadoc Brandybuck",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Peregrin Took",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Battle of Greenfields",
+    "faction": "Battle of Greenfields",
+    "heroes": [
+      {
+        "name": "Ranger of the North",
+        "points": 25,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Bandobras Took",
+        "points": 50,
+        "tier": "valour",
+        "legacy": true,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Hand weapon and horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Hobbit Militia",
+        "baseCost": 4,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Battlin' Brandybuck",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Hobbit Archer",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Short bow",
+            "cost": 0
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Tookish Hunter",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Radagast's Alliance",
+    "faction": "Radagast's Alliance",
+    "heroes": [
+      {
+        "name": "Radagast the Brown",
+        "points": 145,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Exchange Staff of Power for Great Eagle",
+            "cost": 55
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Gwaihir",
+        "points": 150,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Beorn",
+        "points": 200,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Beorn (Man)",
+        "points": 0,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Two-handed Axe",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Beorn the Bear",
+        "points": 0,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Teeth and Claws",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Great Eagle",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Fledgeling Great Eagle",
+        "baseCost": 75,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Three Trolls",
+    "faction": "Trollshaws",
+    "heroes": [
+      {
+        "name": "Bill the Troll",
+        "points": 150,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Club or fork (counts as dagger)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Bert the Troll",
+        "points": 130,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Tom the Troll",
+        "points": 120,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": []
+  },
+  {
+    "name": "Defenders of the Shire",
+    "faction": "Defenders of the Shire",
+    "heroes": [],
+    "warbandOptions": [
+      {
+        "name": "Rosie Cotton",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  }
+]

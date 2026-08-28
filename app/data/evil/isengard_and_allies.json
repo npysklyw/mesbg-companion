@@ -1,0 +1,1675 @@
+[
+  {
+    "name": "Army of the White Hand",
+    "faction": "Army of the White Hand",
+    "heroes": [
+      {
+        "name": "Dunlending Chieftain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Fr\u00edda Tallspear",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Gor\u00fblf Ironskin",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Thrydan Wolfsbane",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Vrask\u00fb",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Crossbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Orc Shaman",
+        "points": 50,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Warg",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-hai Shaman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Saruman",
+        "points": 170,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          },
+          {
+            "name": "Palantir",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Uruk-Hai Scout Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Grima Wormtongue",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Wild Man Chieftain",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "The Wild Man Oathmaker",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Dunlending Horseman",
+        "baseCost": 12,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Dunlending Warrior",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Feral Uruk-hai",
+        "baseCost": 13,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Isengard Troll",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Swap shield for war drum (Isengard)",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Grima Wormtongue",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Isengard Orc Warrior",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Isengard Warg Rider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Warg",
+            "cost": 0
+          },
+          {
+            "name": "Shield & throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Scout",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Uruk-Hai Bow",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Wild Man of Dunland",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Light shield and Flaming Brand",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Flaming Brand",
+            "cost": 1
+          },
+          {
+            "name": "Light shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed axe",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Crebain",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Beaks and Claws (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lurtz's Scouts",
+    "faction": "Lurtz's Scouts",
+    "heroes": [
+      {
+        "name": "Mauh\u00far",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Lurtz, Uruk-hai Scout Captain",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Uruk-hai bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Ugluk, Uruk-hai Scout Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Scout Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Drummer",
+        "points": 35,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Uruk-Hai Drummer",
+        "baseCost": 35,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Scout",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Uruk-Hai Bow",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ugluk's Scouts",
+    "faction": "Ugluk's Scouts",
+    "heroes": [
+      {
+        "name": "Mauh\u00far",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Orc Shaman",
+        "points": 50,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Grishnakh, Orc Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Snaga, Orc Captain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Ugluk, Uruk-hai Scout Captain",
+        "points": 75,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Scout Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Drummer",
+        "points": 35,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Uruk-Hai Drummer",
+        "baseCost": 35,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Isengard Orc Warrior",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Scout",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Uruk-Hai Bow",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Muster of Isengard",
+    "faction": "Muster of Isengard",
+    "heroes": [
+      {
+        "name": "Vrask\u00fb",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Crossbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-hai Shaman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Saruman",
+        "points": 170,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          },
+          {
+            "name": "Palantir",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Uruk-Hai Scout Captain",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Drummer",
+        "points": 35,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 1
+      },
+      {
+        "name": "Grima Wormtongue",
+        "points": 25,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Uruk-Hai Captain",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Feral Uruk-hai",
+        "baseCost": 13,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Isengard Troll",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Swap shield for war drum (Isengard)",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Grima Wormtongue",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-Hai Drummer",
+        "baseCost": 35,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Scout",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Uruk-Hai Bow",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Pike",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Berserker",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Berserker Blade",
+            "cost": 0
+          },
+          {
+            "name": "Light armour",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wolves of Isengard",
+    "faction": "Wolves of Isengard",
+    "heroes": [
+      {
+        "name": "Isengard Orc Shaman",
+        "points": 50,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Warg",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Orc Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Warg",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Sharku, Warg Rider Captain",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Riding Dagger",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Warg",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Isengard Warg Rider",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Warg",
+            "cost": 0
+          },
+          {
+            "name": "Shield & throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Orc bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Isengard Warg",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Teeth and claws (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assault Upon Helm's Deep",
+    "faction": "Assault Upon Helm's Deep",
+    "heroes": [
+      {
+        "name": "Uruk-hai Shaman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-hai Captain Leader",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Assault Ballista",
+        "points": 75,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 4,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Uruk-Hai Captain",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Isengard Troll",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Swap shield for war drum (Isengard)",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Pike",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Berserker",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Berserker Blade",
+            "cost": 0
+          },
+          {
+            "name": "Light armour",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-Hai Demolition Team",
+        "baseCost": 80,
+        "availableWargear": []
+      }
+    ]
+  },
+  {
+    "name": "Isengard",
+    "faction": "Isengard",
+    "heroes": [
+      {
+        "name": "Snaga, Orc Captain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Isengard Assault Ballista",
+        "points": 75,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 4,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Lurtz, Uruk-hai Scout Captain",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Uruk-hai bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Ugluk, Uruk-hai Scout Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Whip",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Sharku, Warg Rider Captain",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Riding Dagger",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Warg",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Uruk-Hai Drummer",
+        "points": 35,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 1
+      },
+      {
+        "name": "The Wild Man Oathmaker",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Uruk-Hai Drummer",
+        "baseCost": 35,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War drum (Uruk-hai)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Uruk-hai Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Pike",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Uruk-Hai Demolition Team",
+        "baseCost": 80,
+        "availableWargear": []
+      }
+    ]
+  }
+]

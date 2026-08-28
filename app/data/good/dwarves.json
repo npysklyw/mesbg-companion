@@ -1,0 +1,2479 @@
+[
+  {
+    "name": "The Iron Hills",
+    "faction": "The Iron Hills",
+    "heroes": [
+      {
+        "name": "M\u00farin",
+        "points": 140,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Kalaz\u00e2l",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dr\u00e1r",
+        "points": 0,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dain Ironfoot, Lord of the Iron Hills",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "War boar",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Dwarf King",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Iron Hills Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Iron Hills Chariot",
+            "cost": 170
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Iron Hills Ballista",
+        "points": 130,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 4,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Iron Hills Chariot",
+        "baseCost": 170,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Rapid-fire Bolt Thrower",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner and shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Mattock",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Goat Rider",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "War goat",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Exchange War Spear for Mattock",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Dwarf Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Chariot Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reclamation of Moria",
+    "faction": "Reclamation of Moria",
+    "heroes": [
+      {
+        "name": "Dwarf Shieldbearer",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Balin the Dwarf, King of Moria",
+        "points": 110,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Durin's Axe",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Fl\u00f3i Stonehand",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "King's Champion Group",
+        "points": 140,
+        "tier": "fortitude",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Dwarf Captain",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Dwarf King",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Ori the Dwarf, Champion of Erebor",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Oin the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Dwarf Warrior",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Axe",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Dwarf Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Iron Guard",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Dwarf Ranger",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf longbow",
+            "cost": 1
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Army of Erebor",
+    "faction": "Army of Erebor",
+    "heroes": [
+      {
+        "name": "D\u00e1in Ironfoot, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Barazantath\u00fbl",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Thorin III Stonehelm",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Master-forged two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Dwarf King",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "points": 100,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Dwalin the Dwarf, Champion of Erebor",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bifur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Iron Hills Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Iron Hills Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner and shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Mattock",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Goat Rider",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "War goat",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Exchange War Spear for Mattock",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defenders of Erebor",
+    "faction": "Defenders of Erebor",
+    "heroes": [
+      {
+        "name": "D\u00e1in Ironfoot, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Barazantath\u00fbl",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Thorin III Stonehelm",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Bard II, Prince of Dale",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Brand, King of Dale",
+        "points": 110,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dale",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "points": 100,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Dwalin the Dwarf, Champion of Erebor",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bifur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Troll Brute",
+            "cost": 100
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Iron Hills Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Iron Hills Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner and shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Mattock",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Goat Rider",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "War goat",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Exchange War Spear for Mattock",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Dale",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Esgaroth Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dale",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Battle of Five Armies",
+    "faction": "The Battle of Five Armies",
+    "heroes": [
+      {
+        "name": "Dain Ironfoot, Lord of the Iron Hills",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "War boar",
+            "cost": 25
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gandalf the Grey",
+        "points": 170,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Ori the Dwarf, Champion of Erebor",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Oin the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "points": 100,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Thorin Oakenshield, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Orcrist",
+            "cost": 10
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Dwalin the Dwarf, Champion of Erebor",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Kili the Dwarf, Champion of Erebor",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Fili the Dwarf, Champion of Erebor",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Balin the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Bifur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Troll Brute",
+            "cost": 100
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bombur the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Flail",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Bard the Bowman",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Exchange great bow for armour and horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Alfrid the Councillor",
+        "points": 30,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Percy, Lake-town Archer",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Hilda-Bianca",
+        "points": 35,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Bilbo Baggins, Master Burglar",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "The One Ring",
+            "cost": 0
+          },
+          {
+            "name": "Mithril Coat",
+            "cost": 0
+          },
+          {
+            "name": "Sting",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Lake-town Militia Captain",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Thranduil, King of the Woodland Realm",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Elven hand-and-a-half weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf, Prince of Mirkwood",
+        "points": 105,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Orcrist",
+            "cost": 10
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Tauriel, Ranger of Mirkwood",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Mirkwood Elf Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Elven Glaive",
+            "cost": 0
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Radagast the Brown",
+        "points": 145,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Exchange Staff of Power for Great Eagle",
+            "cost": 55
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Iron Hills Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gwaihir",
+        "points": 150,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Beorn",
+        "points": 200,
+        "tier": "valour",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Beorn (Man)",
+        "points": 0,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Two-handed Axe",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Alfrid the Councillor",
+        "baseCost": 30,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner and shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Mattock",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Iron Hills Goat Rider",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "War goat",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Exchange War Spear for Mattock",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Lake-town Militia",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Light shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Mirkwood Elf Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven-made hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Glaive",
+            "cost": 2
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Mirkwood Elf Knight",
+        "baseCost": 16,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Great Eagle",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Fledgeling Great Eagle",
+        "baseCost": 75,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Erebor Reclaimed",
+    "faction": "Erebor Reclaimed",
+    "heroes": [
+      {
+        "name": "Dain Ironfoot, Lord of the Iron Hills",
+        "points": 160,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Ori the Dwarf, Champion of Erebor",
+        "points": 50,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Dori the Dwarf, Champion of Erebor",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Oin the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "points": 100,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Thorin Oakenshield, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Orcrist",
+            "cost": 10
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Dwalin the Dwarf, Champion of Erebor",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Kili the Dwarf, Champion of Erebor",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Fili the Dwarf, Champion of Erebor",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Balin the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Bifur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Troll Brute",
+            "cost": 100
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bombur the Dwarf, Champion of Erebor",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Flail",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Iron Hills Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Iron Hills Warrior",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner and shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Crossbow",
+            "cost": 2
+          },
+          {
+            "name": "Mattock",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Army of Thror",
+    "faction": "Army of Thror",
+    "heroes": [
+      {
+        "name": "Dwarf King",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Erebor Dwarf Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Thror, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Mithril armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Arkenstone",
+            "cost": 0
+          },
+          {
+            "name": "The Ring of Durin",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Thrain, Son of Thror",
+        "points": 130,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Master-forged two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Young Thorin Oakenshield",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Oakenshield",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Young Balin the Dwarf",
+        "points": 60,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Young Dwalin the Dwarf",
+        "points": 90,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Grim Hammer Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Grim Hammer Warrior",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Guardian of the King",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Erebor Dwarf Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield and Spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  }
+]

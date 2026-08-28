@@ -1,0 +1,2813 @@
+[
+  {
+    "name": "Kingdom of Rohan",
+    "faction": "Kingdom of Rohan",
+    "heroes": [
+      {
+        "name": "Erkenbrand, Captain of Rohan",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Hammerhand",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "King's Huntsman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Grimbold of Grimslade",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "D\u00e9orwine, Chief of the King's Knights",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elfhelm, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Snowmane with Armour",
+            "cost": 25
+          },
+          {
+            "name": "Snowmane",
+            "cost": 20
+          },
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Theodred, Prince of Rohan",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Firefoot",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eowyn, Shieldmaiden of Rohan",
+        "points": 60,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Hama, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Outrider",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Riders of Eomer",
+    "faction": "Riders of Eomer",
+    "heroes": [
+      {
+        "name": "Erkenbrand, Captain of Rohan",
+        "points": 90,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Hammerhand",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Guthwine",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Gandalf the White",
+        "points": 200,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Glamdring",
+            "cost": 0
+          },
+          {
+            "name": "Narya",
+            "cost": 0
+          },
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defenders of Helm's Deep",
+    "faction": "Defenders of Helm's Deep",
+    "heroes": [
+      {
+        "name": "King's Huntsman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Haldir, Galadhrim Captain",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": 10
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Galadhrim Captain",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Aldor, Rohan Archer",
+        "points": 20,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Haleth, Son of Hama",
+        "points": 30,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Aldor, Rohan Archer",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Haleth, Son of Hama",
+        "baseCost": 30,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Galadhrim Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven-made hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Elf Bow",
+            "cost": 27
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and Elven spear",
+            "cost": 2
+          },
+          {
+            "name": "Elven Spear",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Lorien Guard",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Army of Edoras",
+    "faction": "Army of Edoras",
+    "heroes": [
+      {
+        "name": "King's Huntsman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Haleth, Prince of Rohan",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Hama, Prince of Rohan",
+        "points": 70,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Frealaf, First Marshal of the Riddermark",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 2,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Hera, Daughter of Helm",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Spyglass",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Olwyn, Shieldmaiden of Rohan",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Lief, Page of Helm",
+        "points": 50,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Helm Hammerhand, King of Rohan",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-Handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Hammerhand",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fords of Isen",
+    "faction": "Fords of Isen",
+    "heroes": [
+      {
+        "name": "King's Huntsman",
+        "points": 55,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Longbow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Grimbold of Grimslade",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Elfhelm, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Theodred, Prince of Rohan",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Outrider",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Riders of Theoden",
+    "faction": "Riders of Theoden",
+    "heroes": [
+      {
+        "name": "D\u00e9orwine, Chief of the King's Knights",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elfhelm, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Snowmane with Armour",
+            "cost": 25
+          },
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Guthwine",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eowyn, Shieldmaiden of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Merry",
+            "cost": 25
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Grief of Eomer",
+    "faction": "The Grief of Eomer",
+    "heroes": [
+      {
+        "name": "H\u00farin the Tall, Warden of the Keys",
+        "points": 80,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "The Warden's Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dol Amroth",
+        "points": 65,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Prince Imrahil",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armoured horse and lance",
+            "cost": 30
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Guthwine",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Man-at-arms of Dol Amroth",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Pike",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dol Amroth",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armoured horse and banner",
+            "cost": 33
+          },
+          {
+            "name": "Armoured horse and war horn",
+            "cost": 33
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Armoured horse and lance",
+            "cost": 9
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defenders of the Hornburg",
+    "faction": "Defenders of the Hornburg",
+    "heroes": [
+      {
+        "name": "Hera, The Bride of Death",
+        "points": 125,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Olwyn, Shieldmaiden of Rohan",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Lief, Page of Helm",
+        "points": 50,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Helm Hammerhand, Wraith of the Hornburg",
+        "points": 180,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Hammerhand",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Rohan",
+        "baseCost": 6,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn, shield, and throwing spears",
+            "cost": 28
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and throwing spears",
+            "cost": 3
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Helmingas",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Usurpers of Edoras",
+    "faction": "Usurpers of Edoras",
+    "heroes": [
+      {
+        "name": "General Targg",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Lord Thorne of the Wold",
+        "points": 70,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Hill Tribes Chieftain",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Freca, Lord of the West March",
+        "points": 80,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Wulf, High Lord of the Hill Tribes",
+        "points": 110,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Hill Tribesman",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Flaming brand",
+            "cost": 1
+          },
+          {
+            "name": "Light shield",
+            "cost": 1
+          },
+          {
+            "name": "Light shield and flaming brand",
+            "cost": 2
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Crebain",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Beaks and Claws (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Besiegers of the Hornburg",
+    "faction": "Besiegers of the Hornburg",
+    "heroes": [
+      {
+        "name": "General Targg",
+        "points": 80,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Hill Tribes Chieftain",
+        "points": 40,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Shank & Wrot, Orc Scavengers",
+        "points": 150,
+        "tier": "independent",
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Shank",
+        "points": 0,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Orcish Halberd",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Wrot",
+        "points": 0,
+        "tier": "independent",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Wulf, High Lord of the Hill Tribes",
+        "points": 110,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Hill Tribesman",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Flaming brand",
+            "cost": 1
+          },
+          {
+            "name": "Light shield",
+            "cost": 1
+          },
+          {
+            "name": "Light shield and flaming brand",
+            "cost": 2
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Crebain",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Beaks and Claws (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ride Out",
+    "faction": "Ride Out",
+    "heroes": [
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Snowmane with Armour",
+            "cost": 25
+          },
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Brego",
+            "cost": 20
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Road to Helm's Deep",
+    "faction": "Road to Helm's Deep",
+    "heroes": [
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Snowmane",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Hama, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Brego",
+            "cost": 20
+          },
+          {
+            "name": "Bow",
+            "cost": 5
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Outrider",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Theodred's Guard",
+    "faction": "Theodred's Guard",
+    "heroes": [
+      {
+        "name": "Theodred, Prince of Rohan",
+        "points": 85,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Helm's Guard",
+    "faction": "Helm's Guard",
+    "heroes": [
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Helm Hammerhand, King of Rohan",
+        "points": 160,
+        "tier": "legend",
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Two-Handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horn of the Hammerhand",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  }
+]

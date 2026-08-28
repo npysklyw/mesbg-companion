@@ -1,0 +1,3369 @@
+[
+  {
+    "name": "Paths of the Druadan",
+    "faction": "Paths of the Druadan",
+    "heroes": [
+      {
+        "name": "D\u00e9orwine, Chief of the King's Knights",
+        "points": 70,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Elfhelm, Captain of Rohan",
+        "points": 60,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Ghan-buri-Ghan",
+        "points": 65,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Theoden, King of Rohan",
+        "points": 75,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Snowmane with Armour",
+            "cost": 25
+          },
+          {
+            "name": "Exchange armour for heavy armour",
+            "cost": 5
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Eomer, Marshal of the Riddermark",
+        "points": 110,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Guthwine",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Eowyn, Shieldmaiden of Rohan",
+        "points": 60,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Merry",
+            "cost": 25
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Gamling, Captain of Rohan",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Royal Standard of Rohan",
+            "cost": 40
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Rohan",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rohan Outrider",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Rider of Rohan",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Throwing spears",
+            "cost": 2
+          },
+          {
+            "name": "Westfold Redshield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Woses Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Blowpipe",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arnor",
+    "faction": "Arnor",
+    "heroes": [
+      {
+        "name": "Ranger of the North",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Arvedui, Last King of Arnor",
+        "points": 80,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Aranarth, First Chieftain of the Dunedain",
+        "points": 80,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Malbeth the Seer",
+        "points": 80,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Argadir, Captain of Arnor",
+        "points": 85,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Arnor",
+        "points": 60,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Arnor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Swap shield and spear for banner",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Knight of Arnor",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "War spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Ranger of Arnor",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War horn",
+            "cost": 25
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Ranger of the North",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Battle of Fornost",
+    "faction": "Battle of Fornost",
+    "heroes": [
+      {
+        "name": "Ranger of the North",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Earnur, Last King of Gondor",
+        "points": 110,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Glorfindel, Lord of the West",
+        "points": 160,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour of Gondolin",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Aranarth, First Chieftain of the Dunedain",
+        "points": 80,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Cirdan of the Grey Havens",
+        "points": 75,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 4,
+        "fate": 1
+      },
+      {
+        "name": "Rivendell Captain",
+        "points": 70,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven-made Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "points": 60,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Rivendell Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Elven-made hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and Elven spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "King's Guard",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Tirith",
+        "baseCost": 8,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "War horn and Shield",
+            "cost": 26
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Minas Tirith",
+        "baseCost": 15,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Lance",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 0
+          },
+          {
+            "name": "Exchange lance and shield for banner",
+            "cost": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arathorn's Stand",
+    "faction": "Arathorn's Stand",
+    "heroes": [
+      {
+        "name": "Ranger of the North",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Halbarad",
+        "points": 70,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Arathorn, Chieftain of the Dunedain",
+        "points": 80,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Ranger of the North",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 5
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Fellowship",
+    "faction": "The Fellowship",
+    "heroes": [
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "points": 100,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Master-forged two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "points": 100,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Boromir of Gondor",
+        "points": 95,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 6,
+        "will": 1,
+        "fate": 0
+      },
+      {
+        "name": "Frodo Baggins",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Sting",
+            "cost": 5
+          },
+          {
+            "name": "Mithril Coat",
+            "cost": 15
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Samwise Gamgee",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Frying Pan",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Meriadoc Brandybuck",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 2
+      },
+      {
+        "name": "Peregrin Took",
+        "points": 10,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 2
+      },
+      {
+        "name": "Bill the Pony",
+        "points": 25,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Iron-shod hooves (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Gandalf the Grey",
+        "points": 170,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Glamdring",
+            "cost": 0
+          },
+          {
+            "name": "Narya",
+            "cost": 0
+          },
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Bill the Pony",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Iron-shod hooves (hand weapon)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Meriadoc Brandybuck",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Peregrin Took",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Breaking of the Fellowship",
+    "faction": "Breaking of the Fellowship",
+    "heroes": [
+      {
+        "name": "Aragorn (Strider)",
+        "points": 160,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Bow",
+            "cost": 5
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Haldir, Galadhrim Captain",
+        "points": 70,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          },
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Gimli, Son of Gloin",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Master-forged two-handed weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Legolas Greenleaf",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 0
+          },
+          {
+            "name": "Elven hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Boromir of Gondor",
+        "baseCost": 95,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Horn of Gondor",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 5
+          }
+        ]
+      },
+      {
+        "name": "Samwise Gamgee",
+        "baseCost": 40,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Frying Pan",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Frodo Baggins",
+        "baseCost": 55,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The One Ring",
+            "cost": 0
+          },
+          {
+            "name": "Sting",
+            "cost": 5
+          },
+          {
+            "name": "Mithril Coat",
+            "cost": 15
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Meriadoc Brandybuck",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Peregrin Took",
+        "baseCost": 10,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elven Cloak",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Garrison of Dale",
+    "faction": "Garrison of Dale",
+    "heroes": [
+      {
+        "name": "Girion, Lord of Dale",
+        "points": 80,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Windlance",
+            "cost": 50
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dale",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Windlance",
+        "points": 70,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Dale",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Esgaroth Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dale",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Dale Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Erebor & Dale",
+    "faction": "Erebor & Dale",
+    "heroes": [
+      {
+        "name": "Girion, Lord of Dale",
+        "points": 80,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Captain of Dale",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Erebor Dwarf Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Thror, King Under the Mountain",
+        "points": 130,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Mithril armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Arkenstone",
+            "cost": 0
+          },
+          {
+            "name": "The Ring of Durin",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Thrain, Son of Thror",
+        "points": 130,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Master-forged two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Young Thorin Oakenshield",
+        "points": 110,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "The Oakenshield",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Young Balin the Dwarf",
+        "points": 60,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Young Dwalin the Dwarf",
+        "points": 90,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Grim Hammer Captain",
+        "points": 80,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of Dale",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "War Horn",
+            "cost": 25
+          },
+          {
+            "name": "Esgaroth Bow",
+            "cost": 2
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Knight of Dale",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Grim Hammer Warrior",
+        "baseCost": 11,
+        "availableWargear": [
+          {
+            "name": "Heavy Dwarf Armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          },
+          {
+            "name": "Guardian of the King",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Erebor Dwarf Warrior",
+        "baseCost": 9,
+        "availableWargear": [
+          {
+            "name": "Heavy Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield and Spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Army of Dale",
+    "faction": "The Army of Dale",
+    "heroes": [
+      {
+        "name": "Captain of Dale",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Windlance",
+        "points": 70,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Dale Siege Veteran",
+        "points": 0,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Dale Crew",
+        "baseCost": 0,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Dead of Dunharrow",
+    "faction": "The Dead of Dunharrow",
+    "heroes": [
+      {
+        "name": "The King of the Dead",
+        "points": 100,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Herald of the Dead",
+        "points": 70,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Pennant of the Dead",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 0,
+        "will": 3,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Warrior of the Dead",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Banner",
+            "cost": 25
+          },
+          {
+            "name": "Shield and spear",
+            "cost": 2
+          },
+          {
+            "name": "Shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "name": "Rider of the Dead",
+        "baseCost": 25,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spectral Steed",
+            "cost": 0
+          },
+          {
+            "name": "Sword",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Survivors of Lake-town",
+    "faction": "Survivors of Lake-town",
+    "heroes": [
+      {
+        "name": "Gandalf the Grey",
+        "points": 170,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 6,
+        "fate": 3
+      },
+      {
+        "name": "Bard the Bowman",
+        "points": 130,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Exchange great bow for armour and horse",
+            "cost": 20
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Alfrid the Councillor",
+        "points": 30,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Sigrid",
+        "points": 0,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Tilda",
+        "points": 0,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 0,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Percy, Lake-town Archer",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Hilda-Bianca",
+        "points": 35,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Bilbo Baggins, Master Burglar",
+        "points": 75,
+        "tier": "independent",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "The One Ring",
+            "cost": 0
+          },
+          {
+            "name": "Mithril Coat",
+            "cost": 0
+          },
+          {
+            "name": "Sting",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Lake-town Militia Captain",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Bilbo Baggins, Master Burglar",
+        "baseCost": 75,
+        "availableWargear": [
+          {
+            "name": "The One Ring",
+            "cost": 0
+          },
+          {
+            "name": "Mithril Coat",
+            "cost": 0
+          },
+          {
+            "name": "Sting",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Alfrid the Councillor",
+        "baseCost": 30,
+        "availableWargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Lake-town Militia",
+        "baseCost": 5,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Light shield",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rangers of Mirkwood",
+    "faction": "Rangers of Mirkwood",
+    "heroes": [
+      {
+        "name": "Ori the Dwarf",
+        "points": 40,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Sling",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Nori the Dwarf",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Dori the Dwarf",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Oin the Dwarf",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Gloin the Dwarf",
+        "points": 85,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Thorin Oakenshield",
+        "points": 100,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Orcrist",
+            "cost": 10
+          },
+          {
+            "name": "The Oakenshield",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Dwalin the Dwarf",
+        "points": 95,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 2
+      },
+      {
+        "name": "Kili the Dwarf",
+        "points": 50,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Fili the Dwarf",
+        "points": 50,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Balin the Dwarf",
+        "points": 40,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Bifur the Dwarf",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Boar Spear",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bombur the Dwarf",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Cleaver (counts as a sword)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 3,
+        "fate": 2
+      },
+      {
+        "name": "Bilbo Baggins",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Legolas Greenleaf, Prince of Mirkwood",
+        "points": 105,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elven Cloak",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Tauriel, Ranger of Mirkwood",
+        "points": 90,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Mirkwood Ranger Captain",
+        "points": 75,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elven hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elf bow",
+            "cost": 0
+          },
+          {
+            "name": "Elven cloak",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Mirkwood Ranger",
+        "baseCost": 14,
+        "availableWargear": [
+          {
+            "name": "Elven hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Elf bow",
+            "cost": 0
+          },
+          {
+            "name": "Elven cloak",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Army of Lake-town",
+    "faction": "Army of Lake-town",
+    "heroes": [
+      {
+        "name": "Oin the Dwarf",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 1,
+        "will": 5,
+        "fate": 1
+      },
+      {
+        "name": "Kili the Dwarf",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf bow",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Fili the Dwarf",
+        "points": 50,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bofur the Dwarf",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 2
+      },
+      {
+        "name": "Bard the Bowman",
+        "points": 130,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Windlance",
+            "cost": 50
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Alfrid the Councillor",
+        "points": 30,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 1,
+        "might": 1,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Lake-town Guard Captain",
+        "points": 45,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 1,
+        "fate": 1
+      },
+      {
+        "name": "Braga, Captain of the Guard",
+        "points": 55,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Armour",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 2,
+        "fate": 1
+      },
+      {
+        "name": "Tauriel, Ranger of Mirkwood",
+        "points": 90,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Elf Bow",
+            "cost": 5
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 3
+      },
+      {
+        "name": "Master of Lake-town",
+        "points": 70,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Unarmed",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 2,
+        "will": 4,
+        "fate": 2
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Lake-town Guard",
+        "baseCost": 7,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Bow",
+            "cost": 1
+          },
+          {
+            "name": "Spear",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thorin's Company",
+    "faction": "Thorin's Company",
+    "heroes": [
+      {
+        "name": "Thorin Oakenshield",
+        "points": 100,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Orcrist",
+            "cost": 10
+          },
+          {
+            "name": "The Oakenshield",
+            "cost": 5
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Gwaihir",
+        "points": 150,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Radagast the Brown",
+        "baseCost": 145,
+        "availableWargear": [
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Sebastian",
+            "cost": 0
+          },
+          {
+            "name": "Sleigh",
+            "cost": 35
+          }
+        ]
+      },
+      {
+        "name": "Ori the Dwarf",
+        "baseCost": 40,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Sling",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Oin the Dwarf",
+        "baseCost": 50,
+        "availableWargear": [
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          },
+          {
+            "name": "Hearing Trumpet",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Nori the Dwarf",
+        "baseCost": 55,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Kili the Dwarf",
+        "baseCost": 50,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Dwarf bow",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Gloin the Dwarf",
+        "baseCost": 85,
+        "availableWargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Fili the Dwarf",
+        "baseCost": 50,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          },
+          {
+            "name": "Throwing weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Dori the Dwarf",
+        "baseCost": 55,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapons",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Bombur the Dwarf",
+        "baseCost": 45,
+        "availableWargear": [
+          {
+            "name": "Cleaver (counts as a sword)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Bofur the Dwarf",
+        "baseCost": 45,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Mattock",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Bilbo Baggins",
+        "baseCost": 55,
+        "availableWargear": [
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Sting",
+            "cost": 5
+          },
+          {
+            "name": "The One Ring",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Bifur the Dwarf",
+        "baseCost": 45,
+        "availableWargear": [
+          {
+            "name": "Light armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          },
+          {
+            "name": "Boar Spear",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Gandalf the Grey (Thorin's Company)",
+        "baseCost": 170,
+        "availableWargear": [
+          {
+            "name": "Glamdring",
+            "cost": 0
+          },
+          {
+            "name": "Narya",
+            "cost": 0
+          },
+          {
+            "name": "Staff of Power",
+            "cost": 0
+          },
+          {
+            "name": "Horse",
+            "cost": 20
+          },
+          {
+            "name": "Gandalf's Cart",
+            "cost": 25
+          }
+        ]
+      },
+      {
+        "name": "Dwalin the Dwarf",
+        "baseCost": 95,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Grasper & Keeper",
+            "cost": 0
+          },
+          {
+            "name": "Two-handed weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Balin the Dwarf",
+        "baseCost": 40,
+        "availableWargear": [
+          {
+            "name": "Armour",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half weapon",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Great Eagle",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fangorn",
+    "faction": "Fangorn",
+    "heroes": [
+      {
+        "name": "Treebeard",
+        "points": 190,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": true,
+        "wargear": [
+          {
+            "name": "Roots and Branches (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 4,
+        "might": 3,
+        "will": 4,
+        "fate": 3
+      },
+      {
+        "name": "Beechbone",
+        "points": 150,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Roots and Branches (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 4,
+        "might": 3,
+        "will": 1,
+        "fate": 0
+      },
+      {
+        "name": "Birchseed",
+        "points": 150,
+        "tier": "fortitude",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Roots and Branches (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 1,
+        "will": 2,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Ent",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Roots and Branches (hand weapon)",
+            "cost": 0
+          },
+          {
+            "name": "Beech",
+            "cost": 0
+          },
+          {
+            "name": "Oak",
+            "cost": 0
+          },
+          {
+            "name": "Chestnut",
+            "cost": 0
+          },
+          {
+            "name": "Ash",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Eagles",
+    "faction": "The Eagles",
+    "heroes": [
+      {
+        "name": "Gwaihir",
+        "points": 150,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Great Eagle",
+        "baseCost": 100,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      },
+      {
+        "name": "Fledgeling Great Eagle",
+        "baseCost": 75,
+        "availableWargear": [
+          {
+            "name": "Claws and beak (hand weapon)",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Beornings",
+    "faction": "The Beornings",
+    "heroes": [
+      {
+        "name": "Grimbeorn",
+        "points": 200,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Beorn",
+        "points": 200,
+        "tier": "legend",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [],
+        "wounds": 1,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      },
+      {
+        "name": "Beorn (Man)",
+        "points": 0,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Two-handed Axe",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 3
+      },
+      {
+        "name": "Beorn the Bear",
+        "points": 0,
+        "tier": "valour",
+        "legacy": false,
+        "mustBeLeader": false,
+        "wargear": [
+          {
+            "name": "Teeth and Claws",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 0,
+        "will": 0,
+        "fate": 0
+      }
+    ],
+    "warbandOptions": [
+      {
+        "name": "Beorning",
+        "baseCost": 20,
+        "availableWargear": [
+          {
+            "name": "Axe",
+            "cost": 0
+          },
+          {
+            "name": "Hand-and-a-half axe",
+            "cost": 0
+          },
+          {
+            "name": "Swap hand-and-a-half weapon for great bow",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  }
+]
