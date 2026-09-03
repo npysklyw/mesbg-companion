@@ -5,6 +5,7 @@ import {
   Animated,
   Dimensions,
   ImageBackground,
+  ImageSourcePropType,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -13,14 +14,31 @@ import {
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
+type FantasyChoiceButtonProps = {
+  goodBackgroundImage?: ImageSourcePropType;
+  evilBackgroundImage?: ImageSourcePropType;
+  onGoodPress?: () => void;
+  onEvilPress?: () => void;
+  tabBarHeight?: number;
+};
+
+const hexToRgb = (color: string) => {
+  const expanded = color.replace(
+    /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
+    (_match: string, red: string, green: string, blue: string) =>
+      `#${red}${red}${green}${green}${blue}${blue}`,
+  );
+  return expanded.substring(1).match(/.{2}/g)?.map((value) => parseInt(value, 16)).join(", ") ?? "0, 0, 0";
+};
+
 const FantasyChoiceButton = ({
   goodBackgroundImage = require("../../../assets/good.png"), // Update with your image path
   evilBackgroundImage = require("../../../assets/bad.png"),
   onGoodPress = () => console.log("Good choice selected"),
   onEvilPress = () => console.log("Evil choice selected"),
   tabBarHeight = 80, // Pass the tab bar height as a prop
-}) => {
-  const [hoveredSection, setHoveredSection] = useState(null);
+}: FantasyChoiceButtonProps) => {
+  const [hoveredSection, setHoveredSection] = useState<"good" | "evil" | null>(null);
   const [goodScale] = useState(new Animated.Value(1));
   const [evilScale] = useState(new Animated.Value(1));
   const primaryColor = useThemeColor({}, "buttonGood");
@@ -88,15 +106,7 @@ const FantasyChoiceButton = ({
       backgroundColor:
         "rgba(" +
         String(
-          evilColor
-            .replace(
-              /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
-              (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`
-            )
-            .substring(1)
-            .match(/.{2}/g)
-            .map((x) => parseInt(x, 16))
-            .join(", ")
+          hexToRgb(evilColor)
         ) +
         ", 0.1)",
     },
@@ -104,15 +114,7 @@ const FantasyChoiceButton = ({
       backgroundColor:
         "rgba(" +
         String(
-          primaryColor
-            .replace(
-              /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
-              (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`
-            )
-            .substring(1)
-            .match(/.{2}/g)
-            .map((x) => parseInt(x, 16))
-            .join(", ")
+          hexToRgb(primaryColor)
         ) +
         ", 0.3)", // Blue overlay
     },
@@ -120,15 +122,7 @@ const FantasyChoiceButton = ({
       backgroundColor:
         "rgba(" +
         String(
-          evilColor
-            .replace(
-              /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
-              (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`
-            )
-            .substring(1)
-            .match(/.{2}/g)
-            .map((x) => parseInt(x, 16))
-            .join(", ")
+          hexToRgb(evilColor)
         ) +
         ", 0.3)", // Red overlay
     },
