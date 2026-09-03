@@ -3,16 +3,14 @@ import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
   Animated,
-  Dimensions,
   ImageBackground,
   ImageSourcePropType,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
-
-const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
 type FantasyChoiceButtonProps = {
   goodBackgroundImage?: ImageSourcePropType;
@@ -43,10 +41,10 @@ const FantasyChoiceButton = ({
   const [evilScale] = useState(new Animated.Value(1));
   const primaryColor = useThemeColor({}, "buttonGood");
   const evilColor = useThemeColor({}, "buttonEvil");
-  const textColor = useThemeColor({}, "buttonText");
+  const { height: windowHeight } = useWindowDimensions();
 
   // Calculate available height (screen height minus tab bar)
-  const availableHeight = screenHeight - tabBarHeight;
+  const availableHeight = Math.max(windowHeight - tabBarHeight, 480);
 
   const handleGoodPressIn = () => {
     setHoveredSection("good");
@@ -83,24 +81,32 @@ const FantasyChoiceButton = ({
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      height: availableHeight,
+      minHeight: 480,
       backgroundColor: "#1a1a1a",
       paddingBottom: 0, // Let the tab bar handle its own spacing
     },
     section: {
       flex: 1,
+      overflow: "hidden",
     },
     touchable: {
       flex: 1,
     },
     backgroundImage: {
       flex: 1,
+      width: "100%",
       justifyContent: "center",
       alignItems: "center",
+    },
+    choiceImage: {
+      transform: [{ scale: 1.55 }, { translateY: -100 }],
     },
     overlay: {
       ...StyleSheet.absoluteFillObject,
       justifyContent: "center",
       alignItems: "center",
+      backgroundColor: "rgba(0, 0, 0, 0.32)",
     },
     defaultOverlay: {
       backgroundColor:
@@ -127,7 +133,7 @@ const FantasyChoiceButton = ({
         ", 0.3)", // Red overlay
     },
     text: {
-      fontSize: availableHeight * 0.08, // 8% of available height (excluding tab bar)
+      fontSize: Math.min(56, Math.max(36, availableHeight * 0.07)),
       fontWeight: "bold",
       color: "white",
       textAlign: "center",
@@ -141,7 +147,7 @@ const FantasyChoiceButton = ({
       textShadowRadius: 8,
     },
     subtitle: {
-      fontSize: availableHeight * 0.025, // 2.5% of available height
+      fontSize: Math.min(20, Math.max(16, availableHeight * 0.024)),
       color: "rgba(255, 255, 255, 0.8)",
       textAlign: "center",
       fontFamily: "brioso",
@@ -176,6 +182,7 @@ const FantasyChoiceButton = ({
             <ImageBackground
               source={goodBackgroundImage}
               style={styles.backgroundImage}
+              imageStyle={styles.choiceImage}
               resizeMode="cover"
             >
               <View
@@ -224,6 +231,7 @@ const FantasyChoiceButton = ({
             <ImageBackground
               source={evilBackgroundImage}
               style={styles.backgroundImage}
+              imageStyle={styles.choiceImage}
               resizeMode="cover"
             >
               <View

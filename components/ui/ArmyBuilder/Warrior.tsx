@@ -1,5 +1,4 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
-import { ListItemButtonGroup } from "@rneui/base/dist/ListItem/ListItem.ButtonGroup";
 import { Text } from "@rneui/themed";
 import React from "react";
 import { Pressable, View } from "react-native";
@@ -22,21 +21,12 @@ export function Warrior({
   baseCost,
 }: WarriorProps) {
   const textColor = useThemeColor({}, "text");
-  const buttonTextColor = useThemeColor({}, "buttonText");
+  const backgroundColor = useThemeColor({}, "background");
+  const buttonColor = useThemeColor({}, "button");
+  const borderColor = useThemeColor({}, "tint");
   const buttonEvil = useThemeColor({}, "buttonEvil");
+  const buttonEvilText = useThemeColor({}, "buttonEvilText");
   const [expanded, setExpanded] = React.useState(false);
-
-  const cardTints = [
-    "rgba(47, 79, 79, 0.22)",
-    "rgba(72, 61, 139, 0.22)",
-    "rgba(60, 92, 156, 0.22)",
-    "rgba(46, 125, 50, 0.22)",
-    "rgba(93, 64, 55, 0.22)",
-  ];
-  const tintIndex =
-    Math.abs(name.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0)) %
-    cardTints.length;
-  const cardBackground = cardTints[tintIndex];
 
   const totalCount = Object.values(wargearCounts || {}).reduce(
     (a, b) => a + b,
@@ -90,7 +80,9 @@ export function Warrior({
   return (
     <View
       style={{
-        backgroundColor: cardBackground,
+        backgroundColor: buttonColor,
+        borderColor,
+        borderWidth: 1,
         borderRadius: 10,
         padding: 12,
         marginVertical: 6,
@@ -141,11 +133,12 @@ export function Warrior({
           style={{
             backgroundColor: buttonEvil,
             paddingHorizontal: 12,
-            paddingVertical: 6,
+            minHeight: 44,
             borderRadius: 6,
+            justifyContent: "center",
           }}
         >
-          <Text style={{ color: buttonTextColor, fontSize: 16 }}>
+          <Text style={{ color: buttonEvilText, fontSize: 16 }}>
             {expanded ? "Hide Gear" : "Configure Gear"}
           </Text>
         </Pressable>
@@ -156,7 +149,9 @@ export function Warrior({
           <View
             key={card.option}
             style={{
-              backgroundColor: "rgba(0,0,0,0.08)",
+              backgroundColor,
+              borderColor,
+              borderWidth: 1,
               borderRadius: 8,
               padding: 10,
             }}
@@ -204,80 +199,62 @@ export function Warrior({
                   Qty {card.count}
                 </Text>
               </View>
-              <ListItemButtonGroup
-                buttonContainerStyle={{
-                  backgroundColor: buttonEvil,
-                }}
-                onPress={(action) => {
-                  if (action === 0 && canAddWarrior) {
+              <View style={{ flexDirection: "row", gap: 8 }}>
+                <Pressable
+                  disabled={!canAddWarrior}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Add one ${card.label}`}
+                  onPress={() => {
+                    if (canAddWarrior) {
                     onToggleWargear(
                       card.option,
                       card.option === "Base" ? 0 : card.extraCost || 0,
                       1,
                     );
-                  } else if (action === 1) {
+                    }
+                  }}
+                  style={({ pressed }) => ({
+                    backgroundColor: buttonEvil,
+                    borderRadius: 6,
+                    minHeight: 44,
+                    minWidth: 76,
+                    paddingHorizontal: 10,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: !canAddWarrior ? 0.45 : pressed ? 0.7 : 1,
+                  })}
+                >
+                  <Text style={{ color: buttonEvilText, fontSize: 16 }}>
+                    Add one
+                  </Text>
+                </Pressable>
+                <Pressable
+                  disabled={card.count === 0}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Remove one ${card.label}`}
+                  onPress={() =>
                     onToggleWargear(
                       card.option,
                       card.option === "Base" ? 0 : card.extraCost || 0,
                       -1,
-                    );
+                    )
                   }
-                }}
-                buttons={[
-                  {
-                    element: () => (
-                      <Pressable
-                        android_ripple={{ color: "#ccc" }}
-                        style={({ pressed }) => [
-                          {
-                            opacity: canAddWarrior ? (pressed ? 0.6 : 1) : 0.3,
-                            paddingHorizontal: 6,
-                          },
-                        ]}
-                        disabled={!canAddWarrior}
-                        onPress={() => {
-                          if (canAddWarrior)
-                            onToggleWargear(
-                              card.option,
-                              card.option === "Base" ? 0 : card.extraCost || 0,
-                              1,
-                            );
-                        }}
-                      >
-                        <Text style={{ color: buttonTextColor, fontSize: 16 }}>
-                          +
-                        </Text>
-                      </Pressable>
-                    ),
-                  },
-                  {
-                    element: () => (
-                      <Pressable
-                        android_ripple={{ color: "#ccc" }}
-                        style={({ pressed }) => [
-                          {
-                            opacity: pressed ? 0.6 : 1,
-                            paddingHorizontal: 6,
-                          },
-                        ]}
-                        onPress={() =>
-                          onToggleWargear(
-                            card.option,
-                            card.option === "Base" ? 0 : card.extraCost || 0,
-                            -1,
-                          )
-                        }
-                      >
-                        <Text style={{ color: buttonTextColor, fontSize: 16 }}>
-                          -
-                        </Text>
-                      </Pressable>
-                    ),
-                  },
-                ]}
-                containerStyle={{ height: 24 }}
-                buttonStyle={{ paddingHorizontal: 6, height: 24 }}
-              />
+                  style={({ pressed }) => ({
+                    backgroundColor: buttonEvil,
+                    borderRadius: 6,
+                    minHeight: 44,
+                    minWidth: 92,
+                    paddingHorizontal: 10,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: card.count === 0 ? 0.45 : pressed ? 0.7 : 1,
+                  })}
+                >
+                  <Text style={{ color: buttonEvilText, fontSize: 16 }}>
+                    Remove one
+                  </Text>
+                </Pressable>
+              </View>
             </View>
           </View>
         ))}
@@ -293,12 +270,13 @@ export function Warrior({
               style={{
                 backgroundColor: buttonEvil,
                 paddingHorizontal: 12,
-                paddingVertical: 8,
+                minHeight: 44,
                 borderRadius: 6,
+                justifyContent: "center",
                 opacity: canAddWarrior ? 1 : 0.5,
               }}
             >
-              <Text style={{ color: buttonTextColor, fontSize: 16 }}>
+              <Text style={{ color: buttonEvilText, fontSize: 16 }}>
                 Add Base Model (+{baseCost} pts)
               </Text>
             </Pressable>
@@ -316,12 +294,13 @@ export function Warrior({
                   style={{
                     backgroundColor: buttonEvil,
                     paddingHorizontal: 12,
-                    paddingVertical: 8,
+                    minHeight: 44,
                     borderRadius: 6,
+                    justifyContent: "center",
                     opacity: canAddWarrior ? 1 : 0.5,
                   }}
                 >
-                  <Text style={{ color: buttonTextColor, fontSize: 16 }}>
+                  <Text style={{ color: buttonEvilText, fontSize: 16 }}>
                     Add {option} (+{baseCost + (cost || 0)} pts)
                   </Text>
                 </Pressable>

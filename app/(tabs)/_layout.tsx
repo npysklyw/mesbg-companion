@@ -21,18 +21,29 @@ export default function TabLayout() {
         tabBarStyle: Platform.select({
           ios: {
             position: "absolute",
-            backgroundColor: themeColors.background, // <-- use tabBarBackground here
+            backgroundColor: themeColors.background,
+            height: 64 + insets.bottom,
+            paddingTop: 6,
+            paddingBottom: Math.max(insets.bottom, 6),
           },
           android: {
-            backgroundColor: themeColors.background, // <-- use tabBarBackground here
-            paddingBottom: insets.bottom,
-            height: 60 + insets.bottom, // Adjust height for bottom padding
+            backgroundColor: themeColors.background,
+            paddingTop: 6,
+            paddingBottom: Math.max(insets.bottom, 6),
+            height: 64 + insets.bottom,
+          },
+          default: {
+            backgroundColor: themeColors.background,
+            height: 68,
+            paddingTop: 6,
+            paddingBottom: 8,
           },
         }),
         tabBarLabelStyle: {
           color: themeColors.text,
           fontFamily: "brioso",
-          fontSize: 14,
+          fontSize: 12,
+          lineHeight: 16,
         },
       }}
     >

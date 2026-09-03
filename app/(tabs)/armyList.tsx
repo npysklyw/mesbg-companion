@@ -35,8 +35,9 @@ export default function ArmyLists() {
   const router = useRouter();
 
   // Get themed colors
-  const goodColor = useThemeColor({}, "buttonEvil");
-  const buttontextColor = useThemeColor({}, "buttonText");
+  const rowColor = useThemeColor({}, "button");
+  const rowTextColor = useThemeColor({}, "text");
+  const borderColor = useThemeColor({}, "tint");
   const touchableScaleProps = {
     Component: TouchableScale as unknown as typeof React.Component,
     friction: 90,
@@ -101,13 +102,18 @@ export default function ArmyLists() {
                     })
                   }
                   containerStyle={{
-                    backgroundColor: goodColor,
-                  }} // <-- Themed background
+                    backgroundColor: rowColor,
+                    borderColor,
+                    borderWidth: 1,
+                    borderRadius: 8,
+                    minHeight: 52,
+                    paddingHorizontal: 16,
+                  }}
                 >
                   <ListItem.Content>
                     <ListItem.Title
                       style={{
-                        color: buttontextColor,
+                        color: rowTextColor,
                         fontFamily: "brioso",
                         fontSize: 20,
                       }}

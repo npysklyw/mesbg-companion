@@ -57,6 +57,10 @@ export function Hero({
   const textColor = useThemeColor({}, "text");
   const buttonColor = useThemeColor({}, "button");
   const buttonTextColor = useThemeColor({}, "buttonText");
+  const borderColor = useThemeColor({}, "tint");
+  const selectedColor = useThemeColor({}, "buttonGood");
+  const selectedTextColor = useThemeColor({}, "buttonGoodText");
+  const errorTextColor = useThemeColor({}, "buttonEvilText");
   const [expanded, setExpanded] = React.useState(false);
 
   const tierLabels = {
@@ -274,7 +278,16 @@ export function Hero({
   return (
     <>
       {!checked ? (
-        <ListItem containerStyle={{ backgroundColor }}>
+        <ListItem
+          containerStyle={{
+            backgroundColor,
+            borderColor,
+            borderWidth: 1,
+            borderRadius: 8,
+            marginVertical: 5,
+            minHeight: 64,
+          }}
+        >
           <ListItem.Content>
             <ListItem.Title
               style={{ color: textColor, fontFamily: "brioso", fontSize: 20 }}
@@ -301,7 +314,7 @@ export function Hero({
             </ListItem.Subtitle>
           </ListItem.Content>
           <Button
-            title={checked ? "-" : "+"}
+            title="Add hero"
             onPress={setSelectedHero}
             disabled={!checked && tier === "independent" && isAlreadySelected}
             buttonStyle={{
@@ -309,8 +322,9 @@ export function Hero({
                 !checked && tier === "independent" && isAlreadySelected
                   ? "#888"
                   : buttonColor,
+              minHeight: 44,
+              minWidth: 88,
               paddingHorizontal: 12,
-              paddingVertical: 6,
             }}
             titleStyle={{ fontSize: 16, color: buttonTextColor }}
           />
@@ -318,12 +332,19 @@ export function Hero({
       ) : (
         <View>
           <ListItem.Accordion
-            containerStyle={{ backgroundColor }}
+            containerStyle={{
+              backgroundColor: selectedColor,
+              borderColor,
+              borderWidth: 2,
+              borderRadius: 8,
+              marginTop: 5,
+              minHeight: 68,
+            }}
             content={
               <ListItem.Content>
                 <ListItem.Title
                   style={{
-                    color: textColor,
+                    color: selectedTextColor,
                     fontFamily: "brioso",
                     fontSize: 20,
                   }}
@@ -331,7 +352,7 @@ export function Hero({
                   {name}{" "}
                   <ListItem.Subtitle
                     style={{
-                      color: textColor,
+                      color: selectedTextColor,
                       fontWeight: "normal",
                       fontFamily: "brioso",
                       fontSize: 20,
@@ -345,7 +366,7 @@ export function Hero({
                 </ListItem.Title>
                 <ListItem.Subtitle
                   style={{
-                    color: textColor,
+                    color: selectedTextColor,
                     fontFamily: "brioso",
                     fontSize: 20,
                   }}
@@ -355,11 +376,34 @@ export function Hero({
                     ? ` • ${heroWargearCost} pts wargear`
                     : ""}
                 </ListItem.Subtitle>
+                <ListItem.Subtitle
+                  style={{
+                    color: selectedTextColor,
+                    fontFamily: "briosoBold",
+                    fontSize: 16,
+                    marginTop: 4,
+                  }}
+                >
+                  {expanded ? "Collapse details" : "Expand details"}
+                </ListItem.Subtitle>
               </ListItem.Content>
             }
             isExpanded={expanded}
             onPress={() => setExpanded(!expanded)}
+            noIcon
           >
+            <View
+              style={{
+                backgroundColor,
+                borderColor,
+                borderWidth: 1,
+                borderTopWidth: 0,
+                borderBottomLeftRadius: 8,
+                borderBottomRightRadius: 8,
+                padding: 12,
+                marginBottom: 8,
+              }}
+            >
             {/* Remove hero button */}
             <Button
               title={mustBeLeader ? "Leader Required" : "Remove Hero"}
@@ -372,15 +416,13 @@ export function Hero({
               onPress={setSelectedHero}
               disabled={mustBeLeader}
               buttonStyle={{
-                backgroundColor: mustBeLeader ? "#888" : buttonColor,
-
-                marginTop: 8,
+                backgroundColor: mustBeLeader ? "#767676" : errorColor,
+                minHeight: 44,
                 paddingHorizontal: 12,
-                paddingVertical: 6,
               }}
             />
             {/* Hero wargear buttons inside the accordion */}
-            <View style={{ marginLeft: 5, marginBottom: 8 }}>
+            <View style={{ marginTop: 12, marginBottom: 8, gap: 8 }}>
               {wargear?.map(([option, cost], index) => (
                 <Button
                   key={option + index} // <-- Use option as key if unique
@@ -390,24 +432,27 @@ export function Hero({
                     backgroundColor: wargearChecks[option]
                       ? errorColor
                       : buttonColor,
-                    marginVertical: 4,
+                    borderColor,
+                    borderWidth: wargearChecks[option] ? 2 : 1,
+                    minHeight: 44,
                     paddingHorizontal: 12,
-                    paddingVertical: 6,
                   }}
                   titleStyle={{
                     fontSize: 18,
                     fontFamily: "brioso",
-                    color: buttonTextColor,
+                    color: wargearChecks[option]
+                      ? errorTextColor
+                      : textColor,
                   }}
                 />
               ))}
             </View>
             {/* Only show warband units if hero is not independent (can actually lead troops) */}
             {tier !== "independent" && (
-              <View style={{ marginLeft: 5 }}>
+              <View style={{ marginTop: 8, gap: 10 }}>
                 {warband.map((warrior, warriorIdx) => (
                   <View
-                    style={{ marginLeft: 16 }}
+                    style={{ width: "100%" }}
                     key={warrior.name + "-" + warriorIdx}
                   >
                     <Warrior
@@ -446,6 +491,7 @@ export function Hero({
                 ))}
               </View>
             )}
+            </View>
           </ListItem.Accordion>
         </View>
       )}

@@ -89,7 +89,7 @@ export default function HomeScreen() {
   const { settings } = useSettings();
   const [activeArmy, setActiveArmy] = useState<ActiveArmy | null>(null);
   const [loading, setLoading] = useState(true);
-  const [point, setPoints] = useState(0);
+  const [, setPoints] = useState(0);
   const [editableArmyName, setEditableArmyName] = useState("");
   const armyCatalogues: Record<string, CatalogueArmy[]> = {
     dwarves: catalogue(dwarfArmy),
@@ -109,7 +109,9 @@ export default function HomeScreen() {
 
   const primaryColor = useThemeColor({}, "button");
   const textColor = useThemeColor({}, "buttonText");
-  const errorColor = useThemeColor({}, "buttonEvil"); // or use a themed error color if you have one
+  const borderColor = useThemeColor({}, "tint");
+  const saveColor = useThemeColor({}, "buttonGood");
+  const saveTextColor = useThemeColor({}, "buttonGoodText");
 
   const armyCategoryMap = {
     elves: [
@@ -512,7 +514,7 @@ export default function HomeScreen() {
             { text: "Ok" },
           ],
         );
-      } else if (totalPoints == 0) {
+      } else if (totalPoints === 0) {
         Alert.alert(
           "Army Workshop",
           "This army is empty, are you sure you want to save it?",
@@ -605,6 +607,8 @@ export default function HomeScreen() {
   }
 
   const { totalPoints, totalModels } = getArmyTotals(activeArmy);
+  const pluralize = (value: number, singular: string) =>
+    `${value} ${singular}${value === 1 ? "" : "s"}`;
 
   if (loading) return <ThemedText>Loading...</ThemedText>;
   if (!activeArmy) return <ThemedText>No army found.</ThemedText>;
@@ -641,49 +645,31 @@ export default function HomeScreen() {
             maxLength={40}
           />
         </ThemedView>
-        {/* Model count and points just below the title */}
-        <ThemedView
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: 16,
-            marginBottom: 8,
-            marginTop: 4,
-          }}
-        >
-          <ThemedText
-            type="subtitle"
-            style={{ fontFamily: "brioso", fontSize: 22 }}
-          >
-            {totalModels} models
-          </ThemedText>
-          <ThemedText
-            type="subtitle"
-            style={{ fontFamily: "brioso", fontSize: 22 }}
-          >
-            {totalModels === 0 ? 0 : Math.floor(totalModels / 2) + 1} break
-          </ThemedText>
-
-          <ThemedText
-            type="subtitle"
-            style={{ fontFamily: "brioso", fontSize: 22 }}
-          >
-            {totalModels === 0 ? 0 : Math.floor(totalModels / 3)} bows
-          </ThemedText>
-          <ThemedText
-            type="subtitle"
-            style={{ fontFamily: "brioso", fontSize: 22 }}
-          >
-            {totalPoints} pts
-          </ThemedText>
+        <ThemedView style={styles.summaryRow}>
+          {[
+            pluralize(totalModels, "model"),
+            `Break at ${totalModels === 0 ? 0 : Math.floor(totalModels / 2) + 1}`,
+            pluralize(totalModels === 0 ? 0 : Math.floor(totalModels / 3), "bow"),
+            pluralize(totalPoints, "point"),
+          ].map((label) => (
+            <ThemedView
+              key={label}
+              style={[styles.summaryItem, { borderColor }]}
+            >
+              <ThemedText type="subtitle" style={styles.summaryText}>
+                {label}
+              </ThemedText>
+            </ThemedView>
+          ))}
         </ThemedView>
         <Button
-          buttonStyle={{ backgroundColor: primaryColor }} // for "Reset" or destructive actions
-          titleStyle={{ color: textColor, fontFamily: "brioso", fontSize: 22 }}
-          style={{ marginVertical: 12 }}
+          type="outline"
+          buttonStyle={[styles.secondaryButton, { borderColor }]}
+          titleStyle={{ color: borderColor, fontFamily: "brioso", fontSize: 20 }}
+          containerStyle={styles.actionSpacing}
           onPress={handleReset}
         >
-          Reset
+          Reset army
         </Button>
 
         {(settings.legacyProfilesEnabled
@@ -745,11 +731,16 @@ export default function HomeScreen() {
         })}
       </ThemedView>
       <Button
-        buttonStyle={{ backgroundColor: primaryColor }}
-        titleStyle={{ color: textColor, fontFamily: "brioso" }}
+        buttonStyle={[styles.primaryButton, { backgroundColor: saveColor }]}
+        titleStyle={{
+          color: saveTextColor,
+          fontFamily: "briosoBold",
+          fontSize: 20,
+        }}
+        containerStyle={styles.actionSpacing}
         onPress={handleSaveArmy}
       >
-        Save
+        Save army
       </Button>
     </ParallaxScrollView>
   );
@@ -760,6 +751,35 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
+  },
+  summaryRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginBottom: 8,
+    marginTop: 4,
+  },
+  summaryItem: {
+    borderWidth: 1,
+    borderRadius: 8,
+    minWidth: "47%",
+    flexGrow: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  summaryText: {
+    fontFamily: "briosoBold",
+    fontSize: 18,
+  },
+  actionSpacing: {
+    marginVertical: 8,
+  },
+  secondaryButton: {
+    minHeight: 48,
+    borderWidth: 2,
+  },
+  primaryButton: {
+    minHeight: 48,
   },
   headerImage: {
     color: "#808080",
