@@ -10,6 +10,7 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
+    "audit:catalogue": "node ./scripts/audit-catalogue.mjs",
     "verify:web": "expo export --platform web"
   },
   "dependencies": {
