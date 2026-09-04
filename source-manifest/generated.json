@@ -1,0 +1,2013 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-04T17:29:19.711Z",
+  "entries": [
+    {
+      "key": "middle-earth:73",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 73,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Meriaboc BrRandysuck, + FrReDEeGAR ‘FATTY’ BOLGeR.",
+          "points": 110,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "caprtain of the shire",
+          "points": 60,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "PereGRrin Took, + LoBelizi SACKVIlle-BAGGINS",
+          "points": 20,
+          "tier": "independent",
+          "confidence": "high"
+        },
+        {
+          "name": "captain of the shire",
+          "points": 60,
+          "tier": "independent",
+          "confidence": "high"
+        },
+        {
+          "name": "FrODO Of The Nine FiNGers",
+          "points": 70,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "SAMWisSe The BRAVE",
+          "points": 60,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "pAlAbiN Took, Thain of The shire",
+          "points": 30,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MAayor of Michel DelViNgG",
+          "points": 40,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:75",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 75,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "arathorw, + RANGeR Of The NORTh",
+          "points": 25,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Chieftain of The DUNEDAIM",
+          "points": 30,
+          "tier": "valour",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Arathorn",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Arathorn",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:77",
+      "armyName": "The Grey COmpany \\",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "ARAGORM (STRIDER)",
+          "points": 160,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "LAS GREENLEAS",
+          "points": 100,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Gimli, SON Of GLOIM",
+          "points": 100,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "ellabaN AND €IRONIR",
+          "points": 160,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "RANGeR Of The NORTh",
+          "points": 25,
+          "tier": "valour",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:79",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 79,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "BEORN, .",
+          "points": 200,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "GRIMBEORM",
+          "points": 200,
+          "tier": "valour",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:81",
+      "armyName": "ForOs of Isen",
+      "bookId": "middle-earth",
+      "pdfPage": 81,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Théobred, priuce of Rohan",
+          "points": 90,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Brego.",
+          "points": 20,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "lfhelm, captain of RohaAM",
+          "points": 60,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CAPTAIN Of RONAM",
+          "points": 45,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Horse. 20 polnts Banner.",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Exchange armour for heavy armour .",
+          "points": 5,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "RONZAN ROYAL GUARD",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Horse.",
+          "points": 5,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for RONZAN ROYAL GUARD",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:83",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 83,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Théobew, King of Rohan",
+          "points": 110,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "WITH FIREFOOT WITH ARMOUR « Riber of Rohzn",
+          "points": 14,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "GhAN-BURI-GhAN",
+          "points": 65,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "GamliNG, CAPTAIN Of RONAMN",
+          "points": 75,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "WITHHORSE + WOSES WARRIOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "The King’s Kuights <",
+          "points": 90,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "lfhelm, Captain of ROhAN",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "captain of Rohan cessssssssssssninsns",
+          "points": 85,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Ghan-buri-Ghan and a Warband of at least 12 Woses Warrlors",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Ghan-buri-Ghan and a Warband of at least 12 Woses Warrlors",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for WITHHORSE + WOSES WARRIOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:85",
+      "armyName": "The Fiefooms",
+      "bookId": "middle-earth",
+      "pdfPage": 85,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Priuce Imrzahil of Dol Amroth",
+          "points": 160,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "FORLONG TRE FAT",
+          "points": 90,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGBOR The Fearless",
+          "points": 70,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "AXeMAN Of LOSSARNACH",
+          "points": null,
+          "tier": "valour",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Blackroot vale. .",
+          "points": 65,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "captain of Dol AmRoth",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for AXeMAN Of LOSSARNACH",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:87",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 87,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Eomer, marshxall of « WARRIOR Of RONZN",
+          "points": null,
+          "tier": "legend",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "The RIDDERMIARK",
+          "points": 110,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Firefoot with armour",
+          "points": 25,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Throwing spears. SN S polnts) * Bow.",
+          "points": 1,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Prince Imrzhil of Dol Amroth",
+          "points": 160,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "WARDEN Of The KeYS",
+          "points": 0,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Horse.",
+          "points": 20,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "CAPTAIN Of RONAN",
+          "points": 85,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Horse.",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CApPTAIN Of DOL AMROTh",
+          "points": 85,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CApTAIN Of MiNAS TiRiTh",
+          "points": 60,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "KNiGhT Of MiNAS TIRITH",
+          "points": 15,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Exchange lance and shield for banner",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Eomer",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for Eomer, marshxall of « WARRIOR Of RONZN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:89",
+      "armyName": "ZARNOR ||",
+      "bookId": "middle-earth",
+      "pdfPage": 89,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Of The DUNEDRIN",
+          "points": 50,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "malseth the Seer",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ARGADIR, CAPTAIN Of ZARNOR",
+          "points": 5,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "WARRIOR Of ZARNOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Swap spear and shield for banner",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "KNIGHT Of ZARNOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "RANGER Of ZARNOR ccooonrescsseersmsssssssssssssssssssassse",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "CAPTAIN Of ZARNOR .",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for WARRIOR Of ZARNOR",
+        "Unreadable points for KNIGHT Of ZARNOR",
+        "Unreadable points for RANGER Of ZARNOR ccooonrescsseersmsssssssssssssssssssassse",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:91",
+      "armyName": "ZArmy of Dzale",
+      "bookId": "middle-earth",
+      "pdfPage": 91,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "BRAND, KiNG Of DAle",
+          "points": 110,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "BARD I, PriNCe Of Dale",
+          "points": 100,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "KNIGHT Of DALe",
+          "points": null,
+          "tier": "valour",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "WENDLANCE oo eeeeeeeeesressssssssssssessmnenrnn",
+          "points": null,
+          "tier": "valour",
+          "confidence": "needsReview"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Brand",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for KNIGHT Of DALe",
+        "Unreadable points for WENDLANCE oo eeeeeeeeesressssssssssssessmnenrnn",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:93",
+      "armyName": "Battle of FornosT",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "E€ARNUR, LAST KiNG Of GONDOR",
+          "points": 110,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Glorfindel, LORD of The westT",
+          "points": 160,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Asfaloth.",
+          "points": 20,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "ARANARTh, FirRsT Chiefrain + Knight of minas Tirith",
+          "points": 15,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Of The DUNEDRIM",
+          "points": 50,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Cirban of The Grey HAVeNS",
+          "points": 75,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CAPTAIN Of MINAS TiRITh",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "RIVENDELL CAPTAIM",
+          "points": 70,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Exchange lance and shield for banner",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "RIVENDELL WARRIOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Elf bow.",
+          "points": 2,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "RANGER Of The NORTh",
+          "points": 25,
+          "tier": "minor",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Edrnur and Glorfindel",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for RIVENDELL WARRIOR",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:95",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 95,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "DURIN, KiNgG Of Khazab-diim.",
+          "points": 170,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "MARDIN, The KiNGS WARD",
+          "points": 80,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "DWARf CAPTAIN",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Two-handed Weapon",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "KhazAdb Guard.",
+          "points": 12,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "IRON GUARD",
+          "points": 15,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "VAUIT WARDEN TEAM",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "DwARVeN Ballista",
+          "points": 70,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for VAUIT WARDEN TEAM",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:97",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 97,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "DAIN IRONfOOT, * IRON HIilLS WARRIOR",
+          "points": 10,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "KingG Unver the MOUNTAIM",
+          "points": 130,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "ThORIN lll STONEhelm",
+          "points": null,
+          "tier": "valour",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Mattock.",
+          "points": 1,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "champion of EReBOR",
+          "points": 110,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "ChAMPION Of EREBOR",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ChAMPION Of EREBOR",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ChAMPION Of EREBOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "ChAMPION Of EREBOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "ChAMPION Of EREBOR",
+          "points": 100,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "GiMli, SON Of GLOIM",
+          "points": 100,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "IRON HillS CAPTAIN",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for ThORIN lll STONEhelm",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:99",
+      "armyName": "DefeNDeRrs Oof EREBOR",
+      "bookId": "middle-earth",
+      "pdfPage": 99,
+      "printedPage": null,
+      "heroes": [],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for DAIN IRONfOOT, IRON HillS WARRIOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for CAPTAIN Of DALE",
+        "No hero rows were extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:161",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 161,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "The witch-kinGg of ANGMAR",
+          "points": 150,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "ATTACKS, 3 MIGHT, 18 WILL, 3 FATE * Warg,",
+          "points": 20,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Crown of Morgul. BR— 1113 « shelos",
+          "points": 100,
+          "tier": "independent",
+          "confidence": "high"
+        },
+        {
+          "name": "Horse.",
+          "points": 20,
+          "tier": "independent",
+          "confidence": "high"
+        },
+        {
+          "name": "R U101 01T TR — .",
+          "points": 10,
+          "tier": "independent",
+          "confidence": "high"
+        },
+        {
+          "name": "Ringwrzaith",
+          "points": 120,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Fell Beast.",
+          "points": 50,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Morgul Blade .",
+          "points": 10,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR ORC WARRIOR",
+          "points": null,
+          "tier": "valour",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "GOThMOG, LIeUTENANT Of SAUROM",
+          "points": 120,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Warg,",
+          "points": 20,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "The mouth of SAUROM",
+          "points": 75,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR WARG RiDER",
+          "points": 11,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "GURITZ, MASTER Of RESERVES",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "GOTNMOG'S ENFORCER",
+          "points": 55,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ShAGRAT, CAPTAIN Of CiriTth UNGOL",
+          "points": 110,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Two-handed Weapon",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR TROL Chiefrain",
+          "points": 150,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR ORC TASKMASTER",
+          "points": 5,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR URUk-hai CApTAIM",
+          "points": 55,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Black NGUmenorean Marshal",
+          "points": 70,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORDOR WAR CaTapult",
+          "points": 150,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Flaming Ammunition",
+          "points": 10,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Black NOMENOREAN KNIGHT",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for MORDOR ORC WARRIOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:163",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 163,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "sharkey AnD WoORrRMm. .",
+          "points": 60,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "SiD BRIARTNORM",
+          "points": 50,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Bill Feruy",
+          "points": 40,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "LoThO SACKVIlle-BAGGINS",
+          "points": 30,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "T€D SANDYIMAN",
+          "points": 30,
+          "tier": "valour",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [
+        {
+          "name": "Ruffian",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "name": "Whip.",
+          "points": 1,
+          "confidence": "high"
+        }
+      ],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Sharkey",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Sharkey",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:165",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 165,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "DURBURZ, GOBLIN-KING Of MORIA",
+          "points": 75,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "DRUZhAG The Beastcaller",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORIA GOBLN CAPTAIN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Orcbow.",
+          "points": 5,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "MORIA GOBLIN ShAMAM",
+          "points": 5,
+          "tier": "minor",
+          "confidence": "high"
+        },
+        {
+          "name": "The watcher in The WateR",
+          "points": 200,
+          "tier": "minor",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [
+        {
+          "name": "MORIA GOBLIN WARRIOR",
+          "points": null,
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Orcbow. A",
+          "points": null,
+          "confidence": "needsReview"
+        },
+        {
+          "name": "MORIA GOBLIN PROWIER",
+          "points": null,
+          "confidence": "needsReview"
+        },
+        {
+          "name": "MORIA GOBLIN DRUM",
+          "points": null,
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Troll Spear.",
+          "points": 5,
+          "confidence": "high"
+        },
+        {
+          "name": "cave Drake",
+          "points": 150,
+          "confidence": "high"
+        },
+        {
+          "name": "Fell warg",
+          "points": 8,
+          "confidence": "high"
+        }
+      ],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for MORIA GOBLN CAPTAIN",
+        "Unreadable points for MORIA GOBLIN WARRIOR",
+        "Unreadable points for Orcbow. A",
+        "Unreadable points for MORIA GOBLIN PROWIER",
+        "Unreadable points for MORIA GOBLIN DRUM",
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:169",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 169,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "The witch-kinGg of ANGMAR",
+          "points": 150,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Horse.",
+          "points": 20,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Morgul Blade.",
+          "points": 10,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "The Shabow Of RNUDAUR",
+          "points": 80,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Orcbow.",
+          "points": 1,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "AlbRAC, WARLORD Of CARN DUM",
+          "points": 120,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "NazThAK, ORC CAPTAIM",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGMAR WARG RIDER",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "ZANGMAR ORC CAPTAIN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Orcbow.",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "FriAecht, vassal of the witch-kiNgG",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Throwing Spears",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CAPTAIN Of CARN DUM",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "spectre",
+          "points": 15,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "shave .",
+          "points": 75,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "WARRIOR Of CARN DUMN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Werewolf",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for ANGMAR WARG RIDER",
+        "Unreadable points for ZANGMAR ORC CAPTAIN",
+        "Unreadable points for CAPTAIN Of CARN DUM",
+        "Unreadable points for WARRIOR Of CARN DUMN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:171",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 171,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "cllavhar, the TERROR Of ZARNOR",
+          "points": 200,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "The shabow of RhUDAUR",
+          "points": 80,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "NAZThAK, ORC CAPTAIM",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGMZAR ORC CAPTAIM",
+          "points": 45,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGMAR ORC ShAMAM",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [
+        {
+          "name": "ZANGMAR ORC WARRIOR",
+          "points": null,
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Orcbow.",
+          "points": 1,
+          "confidence": "high"
+        },
+        {
+          "name": "Orchow.",
+          "points": 1,
+          "confidence": "high"
+        },
+        {
+          "name": "Ry T LT C—",
+          "points": 1,
+          "confidence": "high"
+        },
+        {
+          "name": "spectre",
+          "points": 15,
+          "confidence": "high"
+        }
+      ],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for ZANGMAR ORC WARRIOR",
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:173",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 173,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "BUhRDUR, Hill TrRolL Chiefrain",
+          "points": 130,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGMAR ORC CAPTAIN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "WIlD WARG CHIEfTAIN",
+          "points": 0,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ANGMZAR WARG RiDER",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "B T ——",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Wilb warg",
+          "points": 7,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Buhrdar",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Buhrdar",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for ANGMAR ORC CAPTAIN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:175",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 175,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "Fell WaRgG. .",
+          "points": 8,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Werewolf",
+          "points": 25,
+          "tier": "valour",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:177",
+      "armyName": "ArMy of CARN DUM",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "ALDRAC, WARLORD Of CARN DUM",
+          "points": 120,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "Friiecht, vassal of The witch-KiNgG",
+          "points": 65,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ZANGMAR ORC WARRIOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "CAPTAIN Of CARN DUM",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Orcbow.",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ZANGMAR ORC CAPTAIHN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "ANGMAR WARG RIDER",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for ZANGMAR ORC WARRIOR",
+        "Unreadable points for CAPTAIN Of CARN DUM",
+        "Unreadable points for ZANGMAR ORC CAPTAIHN",
+        "Unreadable points for ANGMAR WARG RIDER",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:179",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 179,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "AMDIR, LORD of Blaves",
+          "points": 135,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "EASTERUNG CAPTAIN",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "ensterling Kataphrakt CApTAiw",
+          "points": 90,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "EAsTerliNG WAR PRIEST",
+          "points": 80,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "éasterling DRAGON KNiGhT.",
+          "points": 70,
+          "tier": "minor",
+          "confidence": "high"
+        },
+        {
+          "name": "BLACK DRAGON WARRIOR",
+          "points": 10,
+          "tier": "minor",
+          "confidence": "high"
+        },
+        {
+          "name": "Exchange shield for banner",
+          "points": null,
+          "tier": "minor",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "DRAGOW Cult ZAcolyte T",
+          "points": null,
+          "tier": "minor",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "WAR DRAKE Of RAUIN",
+          "points": 20,
+          "tier": "minor",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Amdar",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Amdar",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for Exchange shield for banner",
+        "Unreadable points for DRAGOW Cult ZAcolyte T",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:181",
+      "armyName": "HosT of the DRAGON EMPEROR J‘",
+      "bookId": "middle-earth",
+      "pdfPage": 181,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "The DRAGON €MPpPeROR Of RhilK",
+          "points": 200,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "Of The DRAGON LeGiOM",
+          "points": 20,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "EAsTerlinGg DRAGON KNIGhT",
+          "points": 70,
+          "tier": "minor",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "the Dragon Emperor of Rhan",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "the Dragon Emperor of Rhan",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:183",
+      "armyName": "The serpent Horbe",
+      "bookId": "middle-earth",
+      "pdfPage": 183,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "T ] S—— ] ] Banner.",
+          "points": 25,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "RAZA, FANG Of The SerRpeNT",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "HARADRIM CHIEfTAIN",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM TASKMASTER",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "War spear.",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "WAR MUMAK Of HARZAD",
+          "points": 250,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "O e S 2 TN SERPENT GUARD",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Rocks",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "Suladan",
+          "confidence": "medium"
+        },
+        {
+          "code": "MUST_BE_GENERAL",
+          "profile": "Suladan",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for RAZA, FANG Of The SerRpeNT",
+        "Unreadable points for HARADRIM TASKMASTER",
+        "Unreadable points for O e S 2 TN SERPENT GUARD",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:185",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 185,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "DAlAMYR, FleetmAsTer Of UMBAR",
+          "points": 100,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "DElGAMAR, GATEMASTER Of UMBAR",
+          "points": 75,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM CHIfTAIN",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Light shield and throwing weapons.",
+          "points": 1,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "HASNARHE e 8)",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "CORSAIR CAPTAIN oo cessresesecsnsescnneen",
+          "points": 55,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CORSAIR BOBUM",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Black NGmeNGReaN MARshaAL",
+          "points": 70,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [
+        {
+          "code": "MANDATORY_PROFILE",
+          "profile": "at least one Hasharin",
+          "confidence": "medium"
+        }
+      ],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for HASNARHE e 8)",
+        "Unreadable points for CORSAIR BOBUM",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "key": "middle-earth:187",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 187,
+      "printedPage": null,
+      "heroes": [
+        {
+          "name": "MOmak WaR Leaber",
+          "points": 400,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "sulabAn, the SERPeNT LORD.",
+          "points": 120,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM WARRIOR .c.coocooeereseeeeserrsesrsrresns§",
+          "points": null,
+          "tier": "legend",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "DALAMYR, FIeeTMASTER Of UMBAR",
+          "points": 100,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "War homn.",
+          "points": 25,
+          "tier": "legend",
+          "confidence": "high"
+        },
+        {
+          "name": "AMOUR, LORD Of Blaves",
+          "points": 135,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM RAIDER.",
+          "points": 1,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "DElGAMAR, GATEMASTER Of UMBAR",
+          "points": 75,
+          "tier": "valour",
+          "confidence": "high"
+        },
+        {
+          "name": "RAZA, FANG Of The SerRpeNT",
+          "points": 75,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM CRIfTAIN",
+          "points": 50,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "SeRpeNT RiDer.",
+          "points": 14,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "HARADRIM TASKMASTER",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "asterliNnGg WARRIOR",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "war mamak of HARAD. ssesesnei",
+          "points": 250,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Gnarled Hide e ST TS * Easterling Halberd and shield",
+          "points": 2,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Mah0d Beastmaster ChIeftaln",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Rocks",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "BT T T S — .",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Tusk Weapons. .",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Foul Temperament.",
+          "points": 15,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Rappelling Lines. S .",
+          "points": 10,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "EASTERIING CAPTAIM",
+          "points": 60,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "easterling KataphrakT CAPTAIN",
+          "points": 90,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "EASTERLING WAR PRIEST",
+          "points": 60,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "HASNARIN .coooeeeessrssssssssssssssssssssesssnss",
+          "points": 30,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Black DRAGON WZARRIOR .",
+          "points": 10,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "Exchange shield for banner",
+          "points": 25,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "DRAGON cult Acolyte",
+          "points": 11,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "WAR DRAKE Of RRDN",
+          "points": 20,
+          "tier": "fortitude",
+          "confidence": "high"
+        },
+        {
+          "name": "CORSAIR CAPTAIN",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "CORSAIR BOSUN e",
+          "points": null,
+          "tier": "fortitude",
+          "confidence": "needsReview"
+        },
+        {
+          "name": "Exchange SPear fOr CTOSSDOW",
+          "points": 10,
+          "tier": "fortitude",
+          "confidence": "high"
+        }
+      ],
+      "warriors": [],
+      "constructionRules": [],
+      "confidence": "needsReview",
+      "reviewReasons": [
+        "Unreadable points for HARADRIM WARRIOR .c.coocooeereseeeeserrsesrsrresns§",
+        "Unreadable points for HARADRIM TASKMASTER",
+        "Unreadable points for asterliNnGg WARRIOR",
+        "Unreadable points for CORSAIR CAPTAIN",
+        "Unreadable points for CORSAIR BOSUN e",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    }
+  ]
+}

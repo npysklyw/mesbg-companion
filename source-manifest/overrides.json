@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "key": "middle-earth:91",
+      "armyName": "The Army of Dale",
+      "bookId": "middle-earth",
+      "pdfPage": 91,
+      "printedPage": 91,
+      "heroes": [
+        { "name": "Brand, King of Dale", "tier": "legend", "points": 110, "confidence": "verified" },
+        { "name": "Bard II, Prince of Dale", "tier": "valour", "points": 100, "confidence": "verified" },
+        { "name": "Captain of Dale", "tier": "fortitude", "points": 55, "confidence": "verified" }
+      ],
+      "warriors": [
+        { "name": "Warrior of Dale", "points": 7, "confidence": "verified" },
+        { "name": "Knight of Dale", "points": 11, "confidence": "verified" },
+        { "name": "Windlance", "points": 70, "confidence": "verified" }
+      ],
+      "constructionRules": [
+        { "code": "MANDATORY_PROFILE", "profile": "Brand, King of Dale", "confidence": "verified" },
+        { "code": "MUST_BE_GENERAL", "profile": "Brand, King of Dale", "confidence": "verified" }
+      ],
+      "confidence": "verified",
+      "reviewReasons": []
+    }
+  ]
+}

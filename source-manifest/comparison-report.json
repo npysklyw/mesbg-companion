@@ -1,0 +1,1349 @@
+{
+  "generatedAt": "2026-09-04T17:30:29.625Z",
+  "manifestEntries": 27,
+  "needsReview": [
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 73,
+      "reasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 75,
+      "reasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "The Grey COmpany \\",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "reasons": [
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 79,
+      "reasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "ForOs of Isen",
+      "bookId": "middle-earth",
+      "pdfPage": 81,
+      "reasons": [
+        "Unreadable points for RONZAN ROYAL GUARD",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 83,
+      "reasons": [
+        "Unreadable points for WITHHORSE + WOSES WARRIOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "The Fiefooms",
+      "bookId": "middle-earth",
+      "pdfPage": 85,
+      "reasons": [
+        "Unreadable points for AXeMAN Of LOSSARNACH",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 87,
+      "reasons": [
+        "Unreadable points for Eomer, marshxall of « WARRIOR Of RONZN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "ZARNOR ||",
+      "bookId": "middle-earth",
+      "pdfPage": 89,
+      "reasons": [
+        "Unreadable points for WARRIOR Of ZARNOR",
+        "Unreadable points for KNIGHT Of ZARNOR",
+        "Unreadable points for RANGER Of ZARNOR ccooonrescsseersmsssssssssssssssssssassse",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Battle of FornosT",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "reasons": [
+        "Unreadable points for RIVENDELL WARRIOR",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 95,
+      "reasons": [
+        "Unreadable points for VAUIT WARDEN TEAM",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 97,
+      "reasons": [
+        "Unreadable points for ThORIN lll STONEhelm",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "DefeNDeRrs Oof EREBOR",
+      "bookId": "middle-earth",
+      "pdfPage": 99,
+      "reasons": [
+        "Unreadable points for DAIN IRONfOOT, IRON HillS WARRIOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for ChAMPION Of EREBOR",
+        "Unreadable points for CAPTAIN Of DALE",
+        "No hero rows were extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 161,
+      "reasons": [
+        "Unreadable points for MORDOR ORC WARRIOR",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 163,
+      "reasons": [
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 165,
+      "reasons": [
+        "Unreadable points for MORIA GOBLN CAPTAIN",
+        "Unreadable points for MORIA GOBLIN WARRIOR",
+        "Unreadable points for Orcbow. A",
+        "Unreadable points for MORIA GOBLIN PROWIER",
+        "Unreadable points for MORIA GOBLIN DRUM",
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 169,
+      "reasons": [
+        "Unreadable points for ANGMAR WARG RIDER",
+        "Unreadable points for ZANGMAR ORC CAPTAIN",
+        "Unreadable points for CAPTAIN Of CARN DUM",
+        "Unreadable points for WARRIOR Of CARN DUMN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 171,
+      "reasons": [
+        "Unreadable points for ZANGMAR ORC WARRIOR",
+        "Army heading could not be extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 173,
+      "reasons": [
+        "Unreadable points for ANGMAR ORC CAPTAIN",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 175,
+      "reasons": [
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "ArMy of CARN DUM",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "reasons": [
+        "Unreadable points for ZANGMAR ORC WARRIOR",
+        "Unreadable points for CAPTAIN Of CARN DUM",
+        "Unreadable points for ZANGMAR ORC CAPTAIHN",
+        "Unreadable points for ANGMAR WARG RIDER",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 179,
+      "reasons": [
+        "Unreadable points for Exchange shield for banner",
+        "Unreadable points for DRAGOW Cult ZAcolyte T",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "HosT of the DRAGON EMPEROR J‘",
+      "bookId": "middle-earth",
+      "pdfPage": 181,
+      "reasons": [
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "The serpent Horbe",
+      "bookId": "middle-earth",
+      "pdfPage": 183,
+      "reasons": [
+        "Unreadable points for RAZA, FANG Of The SerRpeNT",
+        "Unreadable points for HARADRIM TASKMASTER",
+        "Unreadable points for O e S 2 TN SERPENT GUARD",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 185,
+      "reasons": [
+        "Unreadable points for HASNARHE e 8)",
+        "Unreadable points for CORSAIR BOBUM",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    },
+    {
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 187,
+      "reasons": [
+        "Unreadable points for HARADRIM WARRIOR .c.coocooeereseeeeserrsesrsrresns§",
+        "Unreadable points for HARADRIM TASKMASTER",
+        "Unreadable points for asterliNnGg WARRIOR",
+        "Unreadable points for CORSAIR CAPTAIN",
+        "Unreadable points for CORSAIR BOSUN e",
+        "Army heading could not be extracted",
+        "No warrior rows were extracted"
+      ]
+    }
+  ],
+  "totals": {
+    "appArmyMissingFromSource": 100,
+    "possibleNameMismatch": 15,
+    "sourceArmyMissingFromApp": 23,
+    "missingHero": 11,
+    "tierMismatch": 2,
+    "extraHero": 5,
+    "extraWarrior": 9,
+    "pointMismatch": 1
+  },
+  "mismatches": [
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Iron Hills",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Reclamation of Moria",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Erebor",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Defenders of Erebor",
+      "bookId": "middle-earth",
+      "pdfPage": 99,
+      "confidence": "needsReview",
+      "detail": "Possible source match: DefeNDeRrs Oof EREBOR"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Battle of Five Armies",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Erebor Reclaimed",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Thror",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Lindon",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Rivendell",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Lothlorien",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Road to Rivendell",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Fields of Celebrant",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The White Council",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Vanquishers of the Necromancer",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Battle of Bywater",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Shire",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Battle of Greenfields",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Radagast's Alliance",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Three Trolls",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Defenders of the Shire",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Last Alliance",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Realms of Men",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Minas Tirith",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Garrison of Ithilien",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Atop the Wall",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Defenders of the Pelennor",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "The Fiefdoms",
+      "bookId": "middle-earth",
+      "pdfPage": 85,
+      "confidence": "needsReview",
+      "detail": "Possible source match: The Fiefooms"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Men of the West",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Return of the King",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Reclamation of Osgiliath",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Numenor",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Garrison of Minas Tirith",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Paths of the Druadan",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Arnor",
+      "bookId": "middle-earth",
+      "pdfPage": 89,
+      "confidence": "needsReview",
+      "detail": "Possible source match: ZARNOR ||"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Arathorn's Stand",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Fellowship",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Breaking of the Fellowship",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Garrison of Dale",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Erebor & Dale",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Dead of Dunharrow",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Survivors of Lake-town",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Rangers of Mirkwood",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Lake-town",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Thorin's Company",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Fangorn",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Eagles",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Beornings",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Kingdom of Rohan",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Riders of Eomer",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Defenders of Helm's Deep",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Edoras",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Fords of Isen",
+      "bookId": "middle-earth",
+      "pdfPage": 81,
+      "confidence": "needsReview",
+      "detail": "Possible source match: ForOs of Isen"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Riders of Theoden",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Grief of Eomer",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Defenders of the Hornburg",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Usurpers of Edoras",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Besiegers of the Hornburg",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Ride Out",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Road to Helm's Deep",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Theodred's Guard",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Helm's Guard",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Host of the Witch-King",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Wolf Pack of Angmar",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Shadows of Angmar",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Buhrdur's Horde",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Fell Beings of Mirkwood",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Spider Queen's Brood",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Assault on Lothlorien",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Pits of Dol Guldur",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Dark Powers of Dol Guldur",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Depths of Moria",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Moria",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Azog's Hunters",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Gundabad",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Goblin-Town",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Assault on Ravenhill",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Desolator of the North",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Grand Army of the South",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Variags of Khand",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Far Harad",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Harad",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "The Serpent Horde",
+      "bookId": "middle-earth",
+      "pdfPage": 183,
+      "confidence": "needsReview",
+      "detail": "Possible source match: The serpent Horbe"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Umbar",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Easterlings",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Expedition to the East",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Corsair Fleets",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Host of the Dragon Emperor",
+      "bookId": "middle-earth",
+      "pdfPage": 181,
+      "confidence": "needsReview",
+      "detail": "Possible source match: HosT of the DRAGON EMPEROR J‘"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of the White Hand",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Lurtz's Scouts",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Ugluk's Scouts",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Muster of Isengard",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Wolves of Isengard",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Assault Upon Helm's Deep",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Isengard",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of the Great Eye",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Legions of Mordor",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Rise of the Necromancer",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Mordor",
+      "bookId": "middle-earth",
+      "pdfPage": 89,
+      "confidence": "needsReview",
+      "detail": "Possible source match: ZARNOR ||"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Minas Morgul",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Army of Gothmog",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Barad-Dur",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Cirith Ungol",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Black Gate",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "The Black Riders",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Wraiths on Wings",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Ravagers of the Shire",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "appArmyMissingFromSource",
+      "armyName": "Sharkey's Rogues",
+      "detail": "No normalized source-manifest match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 73,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 75,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "The Grey Company",
+      "profileName": "ARAGORM (STRIDER)",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Aragorn (Strider)"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "The Grey Company",
+      "profileName": "LAS GREENLEAS",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "The Grey Company",
+      "profileName": "Gimli, SON Of GLOIM",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Gimli, Son of Gloin"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "The Grey Company",
+      "profileName": "ellabaN AND €IRONIR",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "tierMismatch",
+      "armyName": "The Grey Company",
+      "profileName": "RANGeR Of The NORTh",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Source valour; app independent"
+    },
+    {
+      "category": "extraHero",
+      "armyName": "The Grey Company",
+      "profileName": "Elladan",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraHero",
+      "armyName": "The Grey Company",
+      "profileName": "Elrohir",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraHero",
+      "armyName": "The Grey Company",
+      "profileName": "Halbarad",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraHero",
+      "armyName": "The Grey Company",
+      "profileName": "Legolas Greenleaf",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "The Grey Company",
+      "profileName": "Ranger of the North",
+      "bookId": "middle-earth",
+      "pdfPage": 77,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 79,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "ForOs of Isen",
+      "bookId": "middle-earth",
+      "pdfPage": 81,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 83,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "The Fiefooms",
+      "bookId": "middle-earth",
+      "pdfPage": 85,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 87,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "ZARNOR ||",
+      "bookId": "middle-earth",
+      "pdfPage": 89,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "E€ARNUR, LAST KiNG Of GONDOR",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Earnur, Last King of Gondor"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "Glorfindel, LORD of The westT",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Glorfindel, Lord of the West"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "Asfaloth.",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "ARANARTh, FirRsT Chiefrain + Knight of minas Tirith",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "Of The DUNEDRIM",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "Cirban of The Grey HAVeNS",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Cirdan of the Grey Havens"
+    },
+    {
+      "category": "pointMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "CAPTAIN Of MINAS TiRITh",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Source 80; app 60"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "RIVENDELL CAPTAIM",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Rivendell Captain"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "Exchange lance and shield for banner",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "RIVENDELL WARRIOR",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "Elf bow.",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "tierMismatch",
+      "armyName": "Battle of Fornost",
+      "profileName": "RANGER Of The NORTh",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Source minor; app independent"
+    },
+    {
+      "category": "extraHero",
+      "armyName": "Battle of Fornost",
+      "profileName": "Aranarth, First Chieftain of the Dunedain",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Battle of Fornost",
+      "profileName": "Rivendell Warrior",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Battle of Fornost",
+      "profileName": "Warrior of Minas Tirith",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Battle of Fornost",
+      "profileName": "Knight of Minas Tirith",
+      "bookId": "middle-earth",
+      "pdfPage": 93,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 95,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 97,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "DefeNDeRrs Oof EREBOR",
+      "bookId": "middle-earth",
+      "pdfPage": 99,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 161,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 163,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 165,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 169,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 171,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 173,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 175,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Friiecht, vassal of The witch-KiNgG",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Fraecht, Vassal of the Witch-King"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Army of Carn Dum",
+      "profileName": "ZANGMAR ORC WARRIOR",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Orcbow.",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "possibleNameMismatch",
+      "armyName": "Army of Carn Dum",
+      "profileName": "ZANGMAR ORC CAPTAIHN",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Possible app profile match: Angmar Orc Captain"
+    },
+    {
+      "category": "missingHero",
+      "armyName": "Army of Carn Dum",
+      "profileName": "ANGMAR WARG RIDER",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Listed by source but absent from app"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Orc Tracker",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Warrior of Carn Dum",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Angmar Orc Warrior",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Angmar Warg Rider",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "extraWarrior",
+      "armyName": "Army of Carn Dum",
+      "profileName": "Hill Troll",
+      "bookId": "middle-earth",
+      "pdfPage": 177,
+      "confidence": "needsReview",
+      "detail": "Present in app but absent from extracted source entry"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 179,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "HosT of the DRAGON EMPEROR J‘",
+      "bookId": "middle-earth",
+      "pdfPage": 181,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "The serpent Horbe",
+      "bookId": "middle-earth",
+      "pdfPage": 183,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 185,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    },
+    {
+      "category": "sourceArmyMissingFromApp",
+      "armyName": "Unknown army",
+      "bookId": "middle-earth",
+      "pdfPage": 187,
+      "confidence": "needsReview",
+      "detail": "No normalized app catalogue match"
+    }
+  ]
+}

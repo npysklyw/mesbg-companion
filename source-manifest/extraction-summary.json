@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-09-04T17:29:19.711Z",
+  "books": [
+    {
+      "bookId": "lotr-2024",
+      "filename": "810448106-MESBG-Armies-of-the-Lord-of-the-Rings-2024.pdf",
+      "candidatePages": 0,
+      "status": "extracted"
+    },
+    {
+      "bookId": "hobbit-2024",
+      "filename": "806906844-MESBG-Armies-of-the-Hobbit-2024.pdf",
+      "candidatePages": 0,
+      "status": "extracted"
+    },
+    {
+      "bookId": "middle-earth",
+      "filename": "ArmiesofMiddle-Earth.pdf",
+      "candidatePages": 27,
+      "status": "extracted"
+    }
+  ]
+}
