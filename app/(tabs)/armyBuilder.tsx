@@ -26,7 +26,7 @@ import menArmy from "../data/good/men_of_the_west.json";
 import otherGoodArmy from "../data/good/other_good.json";
 import rohanArmy from "../data/good/rohan.json";
 
-type ActiveArmy = Army;
+type ActiveArmy = Army & { id?: string };
 type ActiveHero = ArmyHero;
 
 type CatalogueWargear = { name: string; cost: number };
@@ -253,7 +253,11 @@ export default function HomeScreen() {
       if (savedArmyIdx !== undefined) {
         // Load from saved armies
         const idx = parseInt(savedArmyIdx, 10);
-        const savedArmy = await localArmyRepository.getSavedArmy(idx);
+        const orderedArmies = await localArmyRepository.listSavedArmies();
+        const savedArmyId = orderedArmies[idx]?.id;
+        const savedArmy = savedArmyId
+          ? await localArmyRepository.getSavedArmy(savedArmyId)
+          : null;
         if (savedArmy) {
           setActiveArmy(savedArmy);
           setEditableArmyName(savedArmy.name);
@@ -446,15 +450,13 @@ export default function HomeScreen() {
         const idx = parseInt(savedArmyIdx, 10);
         if (!isNaN(idx) && armies[idx]) {
           // Update existing army
-          await localArmyRepository.createOrUpdateArmy(
-            {
-              ...activeArmy,
-              name: editableArmyName,
-              points: totalPoints,
-              modelCount: totalModels,
-            },
-            idx,
-          );
+          await localArmyRepository.createOrUpdateArmy({
+            ...activeArmy,
+            id: armies[idx].id,
+            name: editableArmyName,
+            points: totalPoints,
+            modelCount: totalModels,
+          });
           Alert.alert("Army Workshop", "Army updated successfully!", [
             {
               text: "Ok",

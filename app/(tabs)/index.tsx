@@ -43,7 +43,9 @@ export default function TabTwoScreen() {
             const newArmies = savedArmies.filter(
               (_, index) => index !== idxToDelete,
             );
-            await localArmyRepository.deleteSavedArmy(idxToDelete);
+            await localArmyRepository.deleteSavedArmy(
+              savedArmies[idxToDelete].id,
+            );
             setSavedArmies(newArmies);
           } catch (e) {
             alert("Failed to delete army.");

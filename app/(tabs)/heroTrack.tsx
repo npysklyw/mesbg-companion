@@ -59,7 +59,11 @@ export default function TabTwoScreen() {
     const loadArmy = async () => {
       try {
         const idx = parseInt(savedArmyIdx as string, 10);
-        const savedArmy = await localArmyRepository.getSavedArmy(idx);
+        const orderedArmies = await localArmyRepository.listSavedArmies();
+        const savedArmyId = orderedArmies[idx]?.id;
+        const savedArmy = savedArmyId
+          ? await localArmyRepository.getSavedArmy(savedArmyId)
+          : null;
         if (!isNaN(idx) && savedArmy) {
           let needsSave = false;
           let shouldResetToMax = false;
@@ -182,7 +186,7 @@ export default function TabTwoScreen() {
 
           if (needsSave) {
             try {
-              await localArmyRepository.createOrUpdateArmy(selectedArmy, idx);
+              await localArmyRepository.createOrUpdateArmy(selectedArmy);
 
               if (shouldResetToMax) {
                 const activeUri =
@@ -243,7 +247,7 @@ export default function TabTwoScreen() {
     try {
       const idx = parseInt(savedArmyIdx as string, 10);
       if (!isNaN(idx)) {
-        await localArmyRepository.createOrUpdateArmy(updatedArmy, idx);
+        await localArmyRepository.createOrUpdateArmy(updatedArmy);
       }
     } catch (e) {
       console.error("Failed to save hero stats:", e);

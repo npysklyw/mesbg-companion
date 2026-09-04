@@ -8,81 +8,109 @@ import {
 
 class MemoryStorage {
   files = new Map();
+  writes = [];
 
-  async exists(filename) {
-    return this.files.has(filename);
-  }
-
-  async read(filename) {
-    return this.files.get(filename);
-  }
-
+  async exists(filename) { return this.files.has(filename); }
+  async read(filename) { return this.files.get(filename); }
   async write(filename, content) {
     this.files.set(filename, content);
+    this.writes.push({ filename, content });
   }
-
-  async delete(filename) {
-    this.files.delete(filename);
-  }
+  async delete(filename) { this.files.delete(filename); }
 }
 
-const army = (name) => ({ name, faction: "Good", heroes: [] });
-
-test("lists no armies when the saved file is absent", async () => {
-  const repository = new JsonArmyRepository(new MemoryStorage());
-  assert.deepEqual(await repository.listSavedArmies(), []);
-  assert.equal(await repository.getSavedArmy(0), null);
+const ids = [
+  "00000000-0000-4000-8000-000000000001",
+  "00000000-0000-4000-8000-000000000002",
+  "00000000-0000-4000-8000-000000000003",
+];
+const idFactory = () => {
+  let index = 0;
+  return () => ids[index++];
+};
+const army = (name, id) => ({
+  ...(id ? { id } : {}),
+  name,
+  faction: "Good",
+  heroes: [],
 });
 
-test("reads the legacy single-object saved format without rewriting it", async () => {
+test("creating an army assigns and preserves one UUID", async () => {
+  const repository = new JsonArmyRepository(new MemoryStorage(), idFactory());
+  const created = await repository.createOrUpdateArmy(army("First"));
+  assert.match(created.id, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-8[0-9a-f]{3}-[0-9a-f]{12}$/);
+  const updated = await repository.createOrUpdateArmy({ ...created, name: "Updated" });
+  assert.equal(updated.id, created.id);
+  assert.deepEqual(await repository.listSavedArmies(), [updated]);
+});
+
+test("legacy armies receive unique IDs and persist in order", async () => {
+  const storage = new MemoryStorage();
+  storage.files.set(SAVED_ARMIES_FILENAME, JSON.stringify([army("First"), army("Second")]));
+  const repository = new JsonArmyRepository(storage, idFactory());
+  const migrated = await repository.listSavedArmies();
+  assert.deepEqual(migrated.map(({ name }) => name), ["First", "Second"]);
+  assert.deepEqual(migrated.map(({ id }) => id), ids.slice(0, 2));
+  assert.deepEqual(JSON.parse(storage.files.get(SAVED_ARMIES_FILENAME)), migrated);
+  assert.equal(storage.writes.length, 1);
+});
+
+test("legacy single-object format is identified and normalized", async () => {
   const storage = new MemoryStorage();
   storage.files.set(SAVED_ARMIES_FILENAME, JSON.stringify(army("Solo")));
-  const repository = new JsonArmyRepository(storage);
-  assert.deepEqual(await repository.listSavedArmies(), [army("Solo")]);
-  assert.equal(storage.files.get(SAVED_ARMIES_FILENAME)[0], "{");
+  const repository = new JsonArmyRepository(storage, idFactory());
+  const migrated = await repository.listSavedArmies();
+  assert.equal(migrated[0].id, ids[0]);
+  assert.ok(Array.isArray(JSON.parse(storage.files.get(SAVED_ARMIES_FILENAME))));
 });
 
-test("creates and retrieves saved armies by index", async () => {
-  const repository = new JsonArmyRepository(new MemoryStorage());
-  assert.equal(await repository.createOrUpdateArmy(army("First")), 0);
-  assert.equal(await repository.createOrUpdateArmy(army("Second")), 1);
-  assert.deepEqual(await repository.getSavedArmy(1), army("Second"));
+test("retrieves, updates, and deletes by UUID without reordering", async () => {
+  const repository = new JsonArmyRepository(new MemoryStorage(), idFactory());
+  const first = await repository.createOrUpdateArmy(army("First"));
+  const second = await repository.createOrUpdateArmy(army("Second"));
+  const third = await repository.createOrUpdateArmy(army("Third"));
+  assert.deepEqual((await repository.listSavedArmies()).map(({ id }) => id), [first.id, second.id, third.id]);
+  assert.equal((await repository.getSavedArmy(second.id)).name, "Second");
+  await repository.createOrUpdateArmy({ ...second, name: "Updated second" });
+  assert.deepEqual((await repository.listSavedArmies()).map(({ name }) => name), ["First", "Updated second", "Third"]);
+  await repository.deleteSavedArmy(second.id);
+  assert.deepEqual((await repository.listSavedArmies()).map(({ name }) => name), ["First", "Third"]);
 });
 
-test("updates an existing army at the same index", async () => {
-  const repository = new JsonArmyRepository(new MemoryStorage());
-  await repository.createOrUpdateArmy(army("Before"));
-  assert.equal(await repository.createOrUpdateArmy(army("After"), 0), 0);
-  assert.deepEqual(await repository.listSavedArmies(), [army("After")]);
+test("missing UUID lookup and deletion are harmless", async () => {
+  const repository = new JsonArmyRepository(new MemoryStorage(), idFactory());
+  const created = await repository.createOrUpdateArmy(army("First"));
+  assert.equal(await repository.getSavedArmy(ids[2]), null);
+  await repository.deleteSavedArmy(ids[2]);
+  assert.deepEqual(await repository.listSavedArmies(), [created]);
 });
 
-test("does not turn an invalid update index into a new army", async () => {
-  const repository = new JsonArmyRepository(new MemoryStorage());
-  await assert.rejects(
-    repository.createOrUpdateArmy(army("Unexpected"), 4),
-    RangeError,
-  );
-  assert.deepEqual(await repository.listSavedArmies(), []);
-});
-
-test("deleting preserves index order and removes an empty saved file", async () => {
+test("deleting the final army removes the saved file", async () => {
   const storage = new MemoryStorage();
-  const repository = new JsonArmyRepository(storage);
-  await repository.createOrUpdateArmy(army("First"));
-  await repository.createOrUpdateArmy(army("Second"));
-  await repository.deleteSavedArmy(0);
-  assert.deepEqual(await repository.listSavedArmies(), [army("Second")]);
-  await repository.deleteSavedArmy(0);
+  const repository = new JsonArmyRepository(storage, idFactory());
+  const created = await repository.createOrUpdateArmy(army("First"));
+  await repository.deleteSavedArmy(created.id);
   assert.equal(storage.files.has(SAVED_ARMIES_FILENAME), false);
 });
 
-test("loads, saves, and clears the work-in-progress army", async () => {
+test("draft identity is assigned, migrated, and preserved", async () => {
   const storage = new MemoryStorage();
-  const repository = new JsonArmyRepository(storage);
-  assert.equal(await repository.loadWorkInProgress(), null);
-  await repository.saveWorkInProgress(army("Draft"));
-  assert.deepEqual(await repository.loadWorkInProgress(), army("Draft"));
-  assert.ok(storage.files.get(WORK_IN_PROGRESS_FILENAME).includes("Draft"));
+  const repository = new JsonArmyRepository(storage, idFactory());
+  const firstSave = await repository.saveWorkInProgress(army("Draft"));
+  const secondSave = await repository.saveWorkInProgress(army("Draft"));
+  assert.equal(secondSave.id, firstSave.id);
+  assert.equal((await repository.loadWorkInProgress()).id, firstSave.id);
+  storage.files.set(WORK_IN_PROGRESS_FILENAME, JSON.stringify(army("Legacy draft")));
+  const migrated = await repository.loadWorkInProgress();
+  assert.equal(migrated.id, ids[1]);
+  assert.equal(JSON.parse(storage.files.get(WORK_IN_PROGRESS_FILENAME)).id, ids[1]);
   await repository.clearWorkInProgress();
   assert.equal(await repository.loadWorkInProgress(), null);
+});
+
+test("saving a draft as a new army reuses the draft UUID", async () => {
+  const repository = new JsonArmyRepository(new MemoryStorage(), idFactory());
+  const draft = await repository.saveWorkInProgress(army("Draft"));
+  const saved = await repository.createOrUpdateArmy(army("Draft"));
+  assert.equal(saved.id, draft.id);
 });

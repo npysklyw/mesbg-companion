@@ -12,21 +12,21 @@ export type PersistedHero = Hero & {
 };
 
 export type PersistedArmy = Omit<Army, "heroes"> & {
+  id: string;
   heroes: PersistedHero[];
   points?: number;
   modelCount?: number;
 };
 
+export type PersistableArmy = Omit<PersistedArmy, "id"> & { id?: string };
+
 export interface ArmyRepository {
   listSavedArmies(): Promise<PersistedArmy[]>;
-  getSavedArmy(index: number): Promise<PersistedArmy | null>;
-  createOrUpdateArmy(
-    army: PersistedArmy,
-    index?: number,
-  ): Promise<number>;
-  deleteSavedArmy(index: number): Promise<void>;
+  getSavedArmy(id: string): Promise<PersistedArmy | null>;
+  createOrUpdateArmy(army: PersistableArmy): Promise<PersistedArmy>;
+  deleteSavedArmy(id: string): Promise<void>;
   loadWorkInProgress(): Promise<PersistedArmy | null>;
-  saveWorkInProgress(army: PersistedArmy): Promise<void>;
+  saveWorkInProgress(army: PersistableArmy): Promise<PersistedArmy>;
   clearWorkInProgress(): Promise<void>;
 }
 
@@ -42,9 +42,11 @@ export const WORK_IN_PROGRESS_FILENAME = "wip-army.json";
 
 export class JsonArmyRepository implements ArmyRepository {
   private readonly storage: ArmyFileStorage;
+  private readonly createId: () => string;
 
-  constructor(storage: ArmyFileStorage) {
+  constructor(storage: ArmyFileStorage, createId: () => string = createUuid) {
     this.storage = storage;
+    this.createId = createId;
   }
 
   async listSavedArmies(): Promise<PersistedArmy[]> {
@@ -52,37 +54,48 @@ export class JsonArmyRepository implements ArmyRepository {
     const parsed: unknown = JSON.parse(
       await this.storage.read(SAVED_ARMIES_FILENAME),
     );
-    return (Array.isArray(parsed) ? parsed : [parsed]) as PersistedArmy[];
+    const armies = (Array.isArray(parsed) ? parsed : [parsed]) as PersistableArmy[];
+    let migrated = false;
+    const identifiedArmies = armies.map((army) => {
+      if (army.id) return army as PersistedArmy;
+      migrated = true;
+      return { ...army, id: this.createId() };
+    });
+    if (migrated) await this.writeSavedArmies(identifiedArmies);
+    return identifiedArmies;
   }
 
-  async getSavedArmy(index: number): Promise<PersistedArmy | null> {
-    if (!Number.isInteger(index) || index < 0) return null;
-    return (await this.listSavedArmies())[index] ?? null;
+  async getSavedArmy(id: string): Promise<PersistedArmy | null> {
+    return (await this.listSavedArmies()).find((army) => army.id === id) ?? null;
   }
 
-  async createOrUpdateArmy(
-    army: PersistedArmy,
-    index?: number,
-  ): Promise<number> {
+  async createOrUpdateArmy(army: PersistableArmy): Promise<PersistedArmy> {
     const armies = await this.listSavedArmies();
-    if (index !== undefined && Number.isInteger(index) && armies[index]) {
-      armies[index] = army;
+    let id = army.id;
+    if (!id) {
+      const draft = await this.loadWorkInProgress();
+      id =
+        draft && draft.name === army.name && draft.faction === army.faction
+          ? draft.id
+          : this.createId();
+    }
+    const identifiedArmy: PersistedArmy = { ...army, id };
+    const index = armies.findIndex((candidate) => candidate.id === id);
+    if (index >= 0) {
+      armies[index] = identifiedArmy;
       await this.writeSavedArmies(armies);
-      return index;
+      return identifiedArmy;
     }
 
-    if (index !== undefined) {
-      throw new RangeError(`Saved army index ${index} does not exist.`);
-    }
-
-    armies.push(army);
+    armies.push(identifiedArmy);
     await this.writeSavedArmies(armies);
-    return armies.length - 1;
+    return identifiedArmy;
   }
 
-  async deleteSavedArmy(index: number): Promise<void> {
+  async deleteSavedArmy(id: string): Promise<void> {
     const armies = await this.listSavedArmies();
-    if (!Number.isInteger(index) || index < 0 || !armies[index]) return;
+    const index = armies.findIndex((army) => army.id === id);
+    if (index < 0) return;
     armies.splice(index, 1);
     if (armies.length === 0) {
       await this.storage.delete(SAVED_ARMIES_FILENAME);
@@ -93,12 +106,32 @@ export class JsonArmyRepository implements ArmyRepository {
 
   async loadWorkInProgress(): Promise<PersistedArmy | null> {
     if (!(await this.storage.exists(WORK_IN_PROGRESS_FILENAME))) return null;
-    return JSON.parse(
+    const parsed = JSON.parse(
       await this.storage.read(WORK_IN_PROGRESS_FILENAME),
-    ) as PersistedArmy;
+    ) as PersistableArmy;
+    if (parsed.id) return parsed as PersistedArmy;
+    const migrated = { ...parsed, id: this.createId() };
+    await this.writeWorkInProgress(migrated);
+    return migrated;
   }
 
-  async saveWorkInProgress(army: PersistedArmy): Promise<void> {
+  async saveWorkInProgress(army: PersistableArmy): Promise<PersistedArmy> {
+    let id = army.id;
+    if (!id) {
+      const existing = await this.loadWorkInProgress();
+      id =
+        existing &&
+        existing.name === army.name &&
+        existing.faction === army.faction
+          ? existing.id
+          : this.createId();
+    }
+    const identifiedArmy = { ...army, id };
+    await this.writeWorkInProgress(identifiedArmy);
+    return identifiedArmy;
+  }
+
+  private async writeWorkInProgress(army: PersistedArmy): Promise<void> {
     await this.storage.write(
       WORK_IN_PROGRESS_FILENAME,
       JSON.stringify(army, null, 2),
@@ -115,4 +148,15 @@ export class JsonArmyRepository implements ArmyRepository {
       JSON.stringify(armies, null, 2),
     );
   }
+}
+
+function createUuid(): string {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+    /[xy]/g,
+    (character) => {
+      const random = Math.floor(Math.random() * 16);
+      const value = character === "x" ? random : (random & 0x3) | 0x8;
+      return value.toString(16);
+    },
+  );
 }
