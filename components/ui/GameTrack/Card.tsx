@@ -19,17 +19,25 @@ const Cards = ({
   onValuesChange,
 }: HeroCardProp) => {
   const buttonText = useThemeColor({}, "buttonText");
-  const cardColor = useThemeColor({}, "buttonEvil");
+  const cardColor = useThemeColor({}, "button");
+  const defeatedCardColor = useThemeColor({}, "buttonEvil");
+  const defeatedTextColor = useThemeColor({}, "buttonEvilText");
+  const isDefeated = values[0] === 0;
   return (
     <>
       <ScrollView>
         <View style={styles.container}>
           <Card
-            containerStyle={{ backgroundColor: cardColor, borderRadius: 5 }}
+            containerStyle={{
+              backgroundColor: isDefeated ? defeatedCardColor : cardColor,
+              borderRadius: 5,
+              borderWidth: isDefeated ? 2 : 1,
+              borderColor: isDefeated ? defeatedTextColor : cardColor,
+            }}
           >
             <Card.Title
               style={{
-                color: buttonText,
+                color: isDefeated ? defeatedTextColor : buttonText,
                 fontFamily: "briosoUberBold",
                 fontSize: 25,
               }}

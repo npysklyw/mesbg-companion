@@ -5,6 +5,7 @@ import ArmyCount from "@/components/ui/GameTrack/ArmyCounter";
 import Cards from "@/components/ui/GameTrack/Card";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { calculateModelCount } from "@/domain/army";
+import { getArmyCondition } from "@/domain/gameStatus";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import type { PersistedArmy, PersistedHero } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
@@ -307,6 +308,7 @@ export default function TabTwoScreen() {
   const modelCount = activeArmy?.modelCount ?? 0;
   const quarterBreak = Math.floor(modelCount / 4) + 1;
   const halfBreak = Math.floor(modelCount / 2) + 1;
+  const armyCondition = getArmyCondition(modelCount, remainingModels);
 
   return (
     <ParallaxScrollView
@@ -323,6 +325,20 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">{activeArmy?.name}</ThemedText>
       </ThemedView>
+      {armyCondition ? (
+        <ThemedView
+          style={[
+            styles.conditionBanner,
+            { backgroundColor: endGameColor },
+          ]}
+        >
+          <ThemedText
+            style={[styles.conditionText, { color: endGameTextColor }]}
+          >
+            {armyCondition === "quartered" ? "Quartered" : "Broken"}
+          </ThemedText>
+        </ThemedView>
+      ) : null}
       <ThemedView style={styles.titleContainer}>
         <Button
           onPress={handleEndGame}
@@ -380,6 +396,19 @@ const styles = StyleSheet.create({
     padding: 5,
     borderBottomWidth: 1,
     borderColor: "#ccc",
+  },
+  conditionBanner: {
+    minHeight: 44,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 8,
+    paddingHorizontal: 12,
+  },
+  conditionText: {
+    fontFamily: "briosoUberBold",
+    fontSize: 24,
+    textTransform: "uppercase",
   },
   headerImage: {
     color: "#808080",
