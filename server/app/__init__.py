@@ -1,0 +1,1 @@
+"""MESBG Companion API package."""
