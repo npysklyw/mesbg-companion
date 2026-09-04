@@ -1,16 +1,20 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
-import {
+import type {
   Army,
   Hero as ArmyHero,
   HeroTier,
   Warrior as ArmyWarrior,
-  calculateBowCount,
+} from "@/domain/army";
+import {
   calculateHeroWargearPoints,
-  calculateModelCount,
-  calculateTierCapacity,
   calculateWarbandModelCount,
   calculateWarbandPoints,
 } from "@/domain/army";
+import {
+  getHeroSelectionIssue,
+  getWarriorAdditionIssue,
+  isWarbandAtCapacity,
+} from "@/domain/validation";
 import { Button, ListItem } from "@rneui/base";
 import React from "react";
 import { Alert, Platform, ToastAndroid, View } from "react-native";
@@ -30,7 +34,6 @@ type HeroProps = {
   tier?: HeroTier;
   mustBeLeader?: boolean;
   warband: ArmyWarrior[];
-  isAlreadySelected?: boolean; // For independent heroes
   army?: Army | null; // For bow limit calculations
 };
 
@@ -46,7 +49,6 @@ export function Hero({
   tier = "fortitude",
   mustBeLeader = false,
   warband,
-  isAlreadySelected = false,
   army = null,
 }: HeroProps) {
   const backgroundColor = useThemeColor({}, "background");
@@ -67,8 +69,6 @@ export function Hero({
     independent: "Independent",
   };
   const tierLabel = tierLabels[tier];
-  const warbandCap = calculateTierCapacity(tier);
-
   // Calculate total warriors in this hero's warband
   const totalWarriors = calculateWarbandModelCount(warband);
 
@@ -87,6 +87,9 @@ export function Hero({
     warband,
   };
   const heroWargearCost = calculateHeroWargearPoints(calculationHero);
+  const selectionIssue = army
+    ? getHeroSelectionIssue(army, calculationHero)
+    : null;
 
   // Calculate total warband cost for this hero (including hero, hero wargear, and warriors)
   const totalWarbandCost = calculateWarbandPoints(calculationHero);
@@ -96,13 +99,7 @@ export function Hero({
 
   // Toggle hero selection
   const setSelectedHero = () => {
-    if (checked && mustBeLeader) {
-      return; // Cannot remove required leader
-    }
-    // Prevent adding independent heroes if already selected elsewhere
-    if (!checked && tier === "independent" && isAlreadySelected) {
-      return; // Don't allow selection
-    }
+    if (selectionIssue) return;
 
     if (armyUpdate) {
       armyUpdate((prev) => ({
@@ -154,17 +151,15 @@ export function Hero({
     cost: number,
     delta: number,
   ) => {
-    if (delta > 0 && totalWarriors >= warbandCap) return;
-
-    // Check bow limit before adding
-    if (delta > 0 && army && option.toLowerCase().includes("bow")) {
-      const totalBows = calculateBowCount(army);
-      const totalModels = calculateModelCount(army);
-
-      const bowLimit = Math.floor(totalModels / 3);
-      if (totalBows >= bowLimit) {
-        // Show toast
-        const message = `Bow limit reached (${bowLimit})! You cannot add more bows.`;
+    if (delta > 0 && army) {
+      const additionIssue = getWarriorAdditionIssue(
+        army,
+        calculationHero,
+        option,
+      );
+      if (additionIssue) {
+        if (additionIssue.code !== "BOW_LIMIT_EXCEEDED") return;
+        const message = additionIssue.message;
         if (Platform.OS === "android") {
           ToastAndroid.show(message, ToastAndroid.SHORT);
         } else {
@@ -248,10 +243,10 @@ export function Hero({
           <Button
             title="Add hero"
             onPress={setSelectedHero}
-            disabled={!checked && tier === "independent" && isAlreadySelected}
+            disabled={Boolean(selectionIssue)}
             buttonStyle={{
               backgroundColor:
-                !checked && tier === "independent" && isAlreadySelected
+                Boolean(selectionIssue)
                   ? "#888"
                   : buttonColor,
               minHeight: 44,
@@ -409,7 +404,7 @@ export function Hero({
                         })
                         .map((wg): [string, number] => [wg.name, wg.cost])}
                       wargearCounts={warrior.wargearCounts}
-                      canAddWarrior={totalWarriors < warbandCap}
+                      canAddWarrior={!isWarbandAtCapacity(calculationHero)}
                       onToggleWargear={(option, cost, delta) =>
                         handleToggleWarriorWargear(
                           warriorIdx,

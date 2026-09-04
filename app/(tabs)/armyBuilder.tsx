@@ -4,11 +4,8 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Hero } from "@/components/ui/ArmyBuilder/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import {
-  Army,
-  Hero as ArmyHero,
-  calculateArmyTotals,
-} from "@/domain/army";
+import type { Army, Hero as ArmyHero } from "@/domain/army";
+import { calculateArmyTotals } from "@/domain/army";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Button } from "@rneui/base";
 import * as FileSystem from "expo-file-system";
@@ -629,11 +626,6 @@ export default function HomeScreen() {
             ? selectedHeroes.findIndex((h) => h.name === hero.name) + 1
             : null;
 
-          // Check if this independent hero is already selected
-          const isIndependentAlreadySelected =
-            hero.tier === "independent" &&
-            selectedHeroes.some((h) => h.name === hero.name && h !== hero);
-
           // Sort wargear by cost (least to greatest), banners always last
           const sortedWargear: [string, number][] = [...hero.wargear]
             .filter((wg) => wg.cost !== 0)
@@ -668,7 +660,6 @@ export default function HomeScreen() {
               tier={hero.tier}
               mustBeLeader={hero.mustBeLeader}
               warband={hero.warband}
-              isAlreadySelected={isIndependentAlreadySelected}
               army={activeArmy}
             />
           );
