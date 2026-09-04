@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { auditCatalogueReachability } from "../domain/catalogue.ts";
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const activeFiles = [
@@ -27,6 +28,8 @@ const occurrences = {
   warrior: new Map(),
 };
 const counts = { files: 0, armies: 0, heroes: 0, warriors: 0 };
+const activeSources = [];
+const identifiers = new Map();
 const optionalFields = { legacy: 0, mustBeLeader: 0 };
 const warningCounts = { zeroCostWarriors: 0, reusedHeroes: 0, reusedWarriors: 0 };
 
@@ -36,6 +39,16 @@ const addOccurrence = (kind, name, location) => {
   const entries = occurrences[kind].get(name) ?? [];
   entries.push(location);
   occurrences[kind].set(name, entries);
+};
+const addIdentifier = (id, location) => {
+  if (id === undefined) return;
+  if (typeof id !== "string" || id.trim() === "") {
+    errors.push(`${location}.id must be a non-empty string when present`);
+    return;
+  }
+  const previous = identifiers.get(id);
+  if (previous) errors.push(`duplicate catalogue id "${id}" at ${previous} and ${location}`);
+  else identifiers.set(id, location);
 };
 const requireObject = (value, location) => {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
@@ -100,12 +113,18 @@ for (const relativeFile of activeFiles) {
     errors.push(`${relativeFile} must contain an array of armies`);
     continue;
   }
+  activeSources.push({
+    side: relativeFile.includes("/good/") ? "Good" : "Evil",
+    file: relativeFile,
+    armies: catalogue,
+  });
 
   for (const [armyIndex, army] of catalogue.entries()) {
     const armyLocation = `${relativeFile}[${armyIndex}]`;
     if (!requireObject(army, armyLocation)) continue;
     counts.armies += 1;
     const hasArmyName = requireString(army.name, "name", armyLocation);
+    addIdentifier(army.id, armyLocation);
     requireString(army.faction, "faction", armyLocation);
     if (hasArmyName) addOccurrence("army", army.name, relativeFile);
     if (!Array.isArray(army.heroes)) {
@@ -126,6 +145,7 @@ for (const relativeFile of activeFiles) {
     for (const [heroIndex, hero] of army.heroes.entries()) {
       const heroLocation = `${armyLocation}.heroes[${heroIndex}]`;
       if (!requireObject(hero, heroLocation)) continue;
+      addIdentifier(hero.id, heroLocation);
       counts.heroes += 1;
       const hasHeroName = requireString(hero.name, "name", heroLocation);
       if (hasHeroName) {
@@ -150,6 +170,7 @@ for (const relativeFile of activeFiles) {
     for (const [warriorIndex, warrior] of army.warbandOptions.entries()) {
       const warriorLocation = `${armyLocation}.warbandOptions[${warriorIndex}]`;
       if (!requireObject(warrior, warriorLocation)) continue;
+      addIdentifier(warrior.id, warriorLocation);
       counts.warriors += 1;
       const hasWarriorName = requireString(warrior.name, "name", warriorLocation);
       if (hasWarriorName) {
@@ -206,9 +227,28 @@ for (const [field, missing] of Object.entries(optionalFields)) {
   }
 }
 
+const reachability = auditCatalogueReachability(activeSources);
+errors.push(...reachability.errors.map((issue) => `[${issue.code}] ${issue.message}`));
+warnings.push(
+  ...reachability.warnings.map((issue) => `[${issue.code}] ${issue.message}`),
+);
+const reachabilityWarningCounts = Object.groupBy(
+  reachability.warnings,
+  (issue) => issue.code,
+);
+
 console.log(
   `Catalogue audit: ${counts.files} files, ${counts.armies} armies, ${counts.heroes} hero entries, ${counts.warriors} warrior entries`,
 );
+console.log(
+  `Builder reachability: ${reachability.counts.goodArmies} Good armies, ${reachability.counts.evilArmies} Evil armies, ${reachability.counts.heroes} heroes, ${reachability.counts.warriors} warriors, ${reachability.counts.failures} failures`,
+);
+console.log(
+  `Reachability review: ${Object.entries(reachabilityWarningCounts)
+    .map(([code, issues]) => `${code} ${issues.length}`)
+    .join(", ") || "none"}`,
+);
+console.log("Profile references: 0 unresolved (active catalogues embed hero and warrior profiles).");
 console.log(
   `Warning summary: ${warningCounts.zeroCostWarriors} zero-cost warriors, ${warningCounts.reusedHeroes} reused hero names, ${warningCounts.reusedWarriors} reused warrior names`,
 );

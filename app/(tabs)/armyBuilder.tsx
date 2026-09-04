@@ -6,6 +6,12 @@ import { Hero } from "@/components/ui/ArmyBuilder/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import type { Army, Hero as ArmyHero } from "@/domain/army";
 import { calculateArmyTotals } from "@/domain/army";
+import {
+  getSelectableCatalogueHeroes,
+  getSelectableCatalogueWarriors,
+  resolveCatalogueArmy,
+  type CatalogueArmy,
+} from "@/domain/catalogue";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { registerArmyEditGuard } from "@/navigation/armyEditGuard";
 import {
@@ -38,32 +44,26 @@ import rohanArmy from "../data/good/rohan.json";
 type ActiveArmy = Army & { id?: string };
 type ActiveHero = ArmyHero;
 
-type CatalogueWargear = { name: string; cost: number };
-type CatalogueWarrior = {
-  name: string;
-  baseCost: number;
-  legacy?: boolean;
-  availableWargear: CatalogueWargear[];
-};
-type CatalogueHero = {
-  name: string;
-  points: number;
-  tier: Exclude<ActiveHero["tier"], "minor">;
-  legacy?: boolean;
-  mustBeLeader?: boolean;
-  wargear: CatalogueWargear[];
-};
-type CatalogueArmy = {
-  name: string;
-  faction: string;
-  heroes: CatalogueHero[];
-  warbandOptions: CatalogueWarrior[];
-};
-
 const firstParam = (value: string | string[] | undefined) =>
   Array.isArray(value) ? value[0] : value;
 
 const catalogue = (value: unknown) => value as CatalogueArmy[];
+
+const activeArmyCatalogues: CatalogueArmy[][] = [
+  catalogue(dwarfArmy),
+  catalogue(elfArmy),
+  catalogue(hobbitArmy),
+  catalogue(menArmy),
+  catalogue(rohanArmy),
+  catalogue(otherGoodArmy),
+  catalogue(mordorAndSauronAligned),
+  catalogue(dolGuldurAndMirkwoodEvil),
+  catalogue(isenguard),
+  catalogue(angmar),
+  catalogue(haradUmbarKhandEast),
+  catalogue(gundabadMoriaGoblinsAndOrcs),
+  catalogue(shireInvaders),
+];
 
 export default function HomeScreen() {
   const params = useLocalSearchParams<{
@@ -83,182 +83,15 @@ export default function HomeScreen() {
   const [savedSnapshot, setSavedSnapshot] =
     useState<ArmyEditSnapshot | null>(null);
   const bypassExitGuard = useRef(false);
-  const armyCatalogues: Record<string, CatalogueArmy[]> = {
-    dwarves: catalogue(dwarfArmy),
-    elves: catalogue(elfArmy),
-    hobbits_and_the_shire: catalogue(hobbitArmy),
-    "Men of the West": catalogue(menArmy),
-    rohan: catalogue(rohanArmy),
-    other_good: catalogue(otherGoodArmy),
-    "Mordor & Sauron-Aligned": catalogue(mordorAndSauronAligned),
-    "Dol Guldur & Mirkwood Evil": catalogue(dolGuldurAndMirkwoodEvil),
-    isenguard: catalogue(isenguard),
-    "Angmar & Northern Evil": catalogue(angmar),
-    "Harad, Umbar, Khand, East": catalogue(haradUmbarKhandEast),
-    "Gundabad, Moria, Goblins, and Orcs": catalogue(gundabadMoriaGoblinsAndOrcs),
-    "Shire Invaders": catalogue(shireInvaders),
-  };
-
   const primaryColor = useThemeColor({}, "button");
   const textColor = useThemeColor({}, "buttonText");
   const borderColor = useThemeColor({}, "tint");
   const saveColor = useThemeColor({}, "buttonGood");
   const saveTextColor = useThemeColor({}, "buttonGoodText");
 
-  const armyCategoryMap = {
-    elves: [
-      "Rivendell",
-      "Lothlorien",
-      "Lindon",
-      "Road to Rivendell",
-      "Fields of Celebrant",
-      "The White Council",
-      "Vanquishers of the Necromancer",
-    ],
-    dwarves: [
-      "The Iron Hills",
-      "Kingdom of Khazad-dûm",
-      "Reclamation of Moria",
-      "Army of Erebor",
-      "Defenders of Erebor",
-      "The Battle of Five Armies",
-      "Erebor Reclaimed",
-      "Army of Thror",
-    ],
-    "Men of the West": [
-      "Minas Tirith",
-      "Garrison of Ithilien",
-      "Atop the Wall",
-      "Defenders of the Pelennor",
-      "Reclamation of Osgiliath",
-      "Garrison of Minas Tirith",
-      "The Fiefdoms",
-      "The Grey Company",
-      "Realms of Men",
-      "Men of the West",
-      "Return of the King",
-      "The Last Alliance",
-      "Numenor",
-    ],
-    rohan: [
-      "Kingdom of Rohan",
-      "Riders of Eomer",
-      "Riders of Theoden",
-      "Army of Edoras",
-      "Defenders of Helm's Deep",
-      "Fords of Isen",
-      "Theodred's Guard",
-      "Helm's Guard",
-      "Ride Out",
-      "Road to Helm's Deep",
-      "Usurpers of Edoras",
-      "Besiegers of the Hornburg",
-      "Defenders of the Hornburg",
-      "The Grief of Eomer",
-    ],
-    hobbits_and_the_shire: [
-      "The Shire",
-      "Defenders of the Shire",
-      "Battle of Bywater",
-      "Battle of Greenfields",
-      "The Three Trolls",
-      "Radagast's Alliance",
-    ],
-    other_good: [
-      "Fangorn",
-      "The Beornings",
-      "The Eagles",
-      "The Dead of Dunharrow",
-      "The Fellowship",
-      "Breaking of the Fellowship",
-      "Arnor",
-      "Battle of Fornost",
-      "Arathorn's Stand",
-      "Paths of the Druadan",
-      "Survivors of Lake-town",
-      "Army of Lake-town",
-      "Rangers of Mirkwood",
-      "Thorin's Company",
-      "Erebor & Dale",
-      "The Army of Dale",
-      "Garrison of Dale",
-    ],
-    "Mordor & Sauron-Aligned": [
-      "Mordor",
-      "Legions of Mordor",
-      "Army of the Great Eye",
-      "Army of Gothmog",
-      "Barad-Dur",
-      "Minas Morgul",
-      "Cirith Ungol",
-      "The Black Gate",
-      "The Black Riders",
-      "Wraiths on Wings",
-      "Rise of the Necromancer",
-    ],
-    "Dol Guldur & Mirkwood Evil": [
-      "Dark Powers of Dol Guldur",
-      "Pits of Dol Guldur",
-      "Fell Beings of Mirkwood",
-      "The Spider Queen's Brood",
-      "Assault on Lothlorien",
-    ],
-    isenguard: [
-      "Isengard",
-      "Army of the White Hand",
-      "Muster of Isengard",
-      "Lurtz's Scouts",
-      "Ugluk's Scouts",
-      "Wolves of Isengard",
-      "Assault Upon Helm's Deep",
-      "Sharkey's Rogues",
-    ],
-    "Angmar & Northern Evil": [
-      "Host of the Witch-King",
-      "Wolf Pack of Angmar",
-      "Shadows of Angmar",
-      "Buhrdur's Horde",
-      "Army of Carn Dum",
-    ],
-    "Harad, Umbar, Khand, East": [
-      "Harad",
-      "Far Harad",
-      "The Serpent Horde",
-      "Umbar",
-      "Corsair Fleets",
-      "Variags of Khand",
-      "Grand Army of the South",
-      "The Easterlings",
-      "Host of the Dragon Emperor",
-      "Expedition to the East",
-    ],
-    "Gundabad, Moria, Goblins, and Orcs": [
-      "Moria",
-      "Depths of Moria",
-      "Goblin-Town",
-      "Azog's Hunters",
-      "Army of Gundabad",
-      "Desolator of the North",
-      "Assault on Ravenhill",
-    ],
-    "Shire Invaders": ["Ravagers of the Shire", "Sharkey's Rogues"],
-  };
-
-  function getArmyCategory(armyName: string) {
-    for (const [category, armies] of Object.entries(armyCategoryMap)) {
-      if (armies.includes(armyName)) return category;
-    }
-    return "Uncategorized";
-  }
-
-  // Find the correct army template
-  const armyList = armyName
-    ? armyCatalogues[getArmyCategory(armyName)] || []
-    : [];
-
-  const selectedArmy = armyList.find((a) => a.name === armyName);
-  const templateArmy =
-    selectedArmy || armyList[0] || catalogue(dwarfArmy)[0];
+  const templateArmy = armyName
+    ? resolveCatalogueArmy(activeArmyCatalogues, armyName)
+    : undefined;
 
   // Load army on mount
   useEffect(() => {
@@ -287,6 +120,12 @@ export default function HomeScreen() {
         }
       } else {
         setSavedSnapshot(null);
+        if (!templateArmy) {
+          console.error(`Unable to resolve army catalogue entry: ${armyName}`);
+          setActiveArmy(null);
+          setLoading(false);
+          return;
+        }
         // Try to load work-in-progress army first
         try {
           const wipArmy = await localArmyRepository.loadWorkInProgress();
@@ -372,9 +211,10 @@ export default function HomeScreen() {
   }, [settings.legacyProfilesEnabled, activeArmy]);
 
   function createActiveArmyFromTemplate(template: CatalogueArmy): ActiveArmy {
-    const filteredHeroes = settings.legacyProfilesEnabled
-      ? template.heroes
-      : template.heroes.filter((hero) => !hero.legacy);
+    const filteredHeroes = getSelectableCatalogueHeroes(
+      template,
+      settings.legacyProfilesEnabled,
+    );
 
     // Sort heroes by tier: legend > valour > fortitude > independent
     const tierOrder = { legend: 0, valour: 1, fortitude: 2, independent: 3 };
@@ -403,12 +243,10 @@ export default function HomeScreen() {
           },
           {} as { [key: string]: boolean },
         ),
-        warband: [...template.warbandOptions]
-          .filter(
-            (option) =>
-              (option.baseCost || 0) > 0 &&
-              (settings.legacyProfilesEnabled || !option.legacy),
-          )
+        warband: getSelectableCatalogueWarriors(
+          template,
+          settings.legacyProfilesEnabled,
+        )
           .sort((a, b) => (a.baseCost || 0) - (b.baseCost || 0))
           .map((option) => ({
             name: option.name,
@@ -440,10 +278,16 @@ export default function HomeScreen() {
   }
 
   const handleReset = async () => {
+    const resetTemplate =
+      templateArmy ??
+      (activeArmy
+        ? resolveCatalogueArmy(activeArmyCatalogues, activeArmy.faction)
+        : undefined);
+    if (!resetTemplate) return;
     setPoints(0);
-    // Reset to a fresh template of the current army type (not Isengard or any default)
-    setActiveArmy(createActiveArmyFromTemplate(templateArmy));
-    setEditableArmyName(templateArmy.name);
+    // Reset to the exact catalogue faction, including when editing a renamed army.
+    setActiveArmy(createActiveArmyFromTemplate(resetTemplate));
+    setEditableArmyName(resetTemplate.name);
     // Clear WIP
     try {
       await localArmyRepository.clearWorkInProgress();
