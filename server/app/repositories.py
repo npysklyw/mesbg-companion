@@ -4,7 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import ArmyRecord
-from app.schemas import ArmyWrite
+from app.schemas import ArmyCreate, ArmyWrite
 
 
 class ArmyRepository:
@@ -18,8 +18,9 @@ class ArmyRepository:
     def get(self, army_id: uuid.UUID) -> ArmyRecord | None:
         return self.session.get(ArmyRecord, army_id)
 
-    def create(self, data: ArmyWrite) -> ArmyRecord:
+    def create(self, data: ArmyCreate) -> ArmyRecord:
         record = ArmyRecord(
+            id=data.id,
             name=data.name,
             faction=data.faction,
             payload=data.payload.model_dump(mode="json"),

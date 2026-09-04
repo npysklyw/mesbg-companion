@@ -3,6 +3,7 @@ import uuid
 
 def army_body(name: str = "The Iron Hills") -> dict:
     return {
+        "id": str(uuid.uuid4()),
         "name": name,
         "faction": "Good",
         "schema_version": 1,
@@ -33,10 +34,11 @@ def test_health(client):
 def test_full_crud_and_revision_timestamps(client):
     assert client.get("/api/v1/armies").json() == []
 
-    created_response = client.post("/api/v1/armies", json=army_body())
+    body = army_body()
+    created_response = client.post("/api/v1/armies", json=body)
     assert created_response.status_code == 201
     created = created_response.json()
-    uuid.UUID(created["id"])
+    assert created["id"] == body["id"]
     assert created["revision"] == 1
     assert created["schema_version"] == 1
     assert created["created_at"]
@@ -66,6 +68,14 @@ def test_missing_ids(client):
     assert client.get(f"/api/v1/armies/{missing}").status_code == 404
     assert client.put(f"/api/v1/armies/{missing}", json=army_body()).status_code == 404
     assert client.delete(f"/api/v1/armies/{missing}").status_code == 404
+
+
+def test_duplicate_client_uuid_returns_conflict(client):
+    body = army_body()
+    assert client.post("/api/v1/armies", json=body).status_code == 201
+    duplicate = client.post("/api/v1/armies", json=body)
+    assert duplicate.status_code == 409
+    assert duplicate.json() == {"detail": "Army with this ID already exists"}
 
 
 def test_invalid_payloads_are_rejected(client):

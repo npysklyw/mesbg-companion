@@ -5,6 +5,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import SavedList from "@/components/ui/Library/SavedList";
 import type { PersistedArmy } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
+import { remoteArmyRepository } from "@/storage/RemoteArmyRepository";
 import { useFocusEffect, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Alert, LogBox, StyleSheet } from "react-native";
@@ -15,6 +16,20 @@ export default function TabTwoScreen() {
   const router = useRouter();
   const [savedArmies, setSavedArmies] = useState<PersistedArmy[]>([]);
   const [loading, setLoading] = useState(true);
+  const [backupStates, setBackupStates] = useState<
+    Record<string, "backing-up" | "backed-up" | "failed">
+  >({});
+
+  const handleBackup = async (army: PersistedArmy) => {
+    if (!remoteArmyRepository) return;
+    setBackupStates((states) => ({ ...states, [army.id]: "backing-up" }));
+    try {
+      await remoteArmyRepository.createOrUpdateArmy(army);
+      setBackupStates((states) => ({ ...states, [army.id]: "backed-up" }));
+    } catch {
+      setBackupStates((states) => ({ ...states, [army.id]: "failed" }));
+    }
+  };
 
   useFocusEffect(
     React.useCallback(() => {
@@ -70,6 +85,9 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Library</ThemedText>
       </ThemedView>
+      {remoteArmyRepository ? (
+        <ThemedText>Development cloud backup (unauthenticated)</ThemedText>
+      ) : null}
       {loading ? (
         <ThemedText>Loading...</ThemedText>
       ) : savedArmies.length === 0 ? (
@@ -85,13 +103,25 @@ export default function TabTwoScreen() {
       ) : (
         savedArmies.map((army, idx) => (
           <SavedList
-            key={`${army.name}-${idx}`}
+            key={army.id}
             name={army.name}
             points={army.points ?? 0}
             faction={army.faction}
             edit={true}
             modelCount={army.modelCount ?? 0}
             onDelete={() => handleDelete(idx)}
+            onBackup={
+              remoteArmyRepository ? () => handleBackup(army) : undefined
+            }
+            backupLabel={
+              backupStates[army.id] === "backing-up"
+                ? "Backing up…"
+                : backupStates[army.id] === "backed-up"
+                  ? "Backed up"
+                  : backupStates[army.id] === "failed"
+                    ? "Backup failed"
+                    : "Back up"
+            }
             onEdit={() =>
               router.push({
                 pathname: "/armyBuilder",

@@ -11,6 +11,8 @@ type SavedListProps = {
   faction?: string;
   onDelete?: () => void;
   onEdit?: () => void;
+  onBackup?: () => void;
+  backupLabel?: string;
   edit?: boolean;
 };
 
@@ -21,6 +23,8 @@ export default function SavedList({
   faction,
   onDelete,
   onEdit,
+  onBackup,
+  backupLabel = "Back up",
   edit = false,
 }: SavedListProps) {
   const backgroundColor = useThemeColor({}, "background");
@@ -56,11 +60,14 @@ export default function SavedList({
         <ListItem.ButtonGroup
           onPress={(action) => {
             if (action === 0 && onEdit) onEdit();
-            if (action === 1 && onDelete) onDelete();
+            if (onBackup) {
+              if (action === 1) onBackup();
+              if (action === 2 && onDelete) onDelete();
+            } else if (action === 1 && onDelete) onDelete();
           }}
           buttonStyle={{ backgroundColor: buttonColor }}
           textStyle={{ color: textColor, fontFamily: "brioso", fontSize: 18 }}
-          buttons={["Edit", "Delete"]}
+          buttons={onBackup ? ["Edit", backupLabel, "Delete"] : ["Edit", "Delete"]}
         />
       ) : (
         <ListItem.ButtonGroup

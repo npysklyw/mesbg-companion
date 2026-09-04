@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app.repositories import ArmyRepository
-from app.schemas import ArmyResponse, ArmyWrite
+from app.schemas import ArmyCreate, ArmyResponse, ArmyWrite
 from app.services import ArmyService
 
 router = APIRouter(prefix="/armies", tags=["armies"])
@@ -26,7 +26,7 @@ def get_army(army_id: uuid.UUID, service: ArmyService = Depends(get_service)) ->
 
 
 @router.post("", response_model=ArmyResponse, status_code=status.HTTP_201_CREATED)
-def create_army(data: ArmyWrite, service: ArmyService = Depends(get_service)) -> ArmyResponse:
+def create_army(data: ArmyCreate, service: ArmyService = Depends(get_service)) -> ArmyResponse:
     return service.create_army(data)
 
 

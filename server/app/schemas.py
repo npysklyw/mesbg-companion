@@ -50,6 +50,10 @@ class ArmyWrite(BaseModel):
         return self
 
 
+class ArmyCreate(ArmyWrite):
+    id: uuid.UUID
+
+
 class ArmyResponse(BaseModel):
     id: uuid.UUID
     name: str

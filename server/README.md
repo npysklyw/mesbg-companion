@@ -29,7 +29,7 @@ python -m venv .venv
 python -m pip install -e ".[test]"
 copy .env.example .env
 alembic upgrade head
-uvicorn app.main:app --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 On macOS/Linux, activate with `source .venv/bin/activate` and copy the example
@@ -38,3 +38,6 @@ with `cp .env.example .env`.
 Set `CORS_ORIGINS` to a comma-separated list of allowed Expo origins. Do not
 reuse the development database credentials or expose this API publicly without
 authentication, authorization, secret management, TLS, and operational controls.
+
+For a physical Expo device, configure the app with
+`EXPO_PUBLIC_API_URL=http://<WINDOWS_LAN_IP>:8000`; do not use `localhost`.
