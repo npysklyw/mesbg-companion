@@ -5,6 +5,8 @@ import ArmyCount from "@/components/ui/GameTrack/ArmyCounter";
 import Cards from "@/components/ui/GameTrack/Card";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import type { PersistedArmy, PersistedHero } from "@/storage/ArmyRepository";
+import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { Button } from "@rneui/themed";
 import * as FileSystem from "expo-file-system";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -23,8 +25,7 @@ const globalHeroLookup = new Map<string, any>();
   }
 });
 
-type Hero = {
-  name: string;
+type TrackerHero = PersistedHero & {
   might: number;
   will: number;
   fate: number;
@@ -33,16 +34,12 @@ type Hero = {
   maxWill?: number;
   maxFate?: number;
   maxWounds?: number;
-  selected: boolean;
-  tier?: string;
 };
 
-type SavedArmy = {
-  name: string;
+type TrackerArmy = Omit<PersistedArmy, "heroes"> & {
   points: number;
-  faction: string;
   modelCount: number;
-  heroes: Hero[];
+  heroes: TrackerHero[];
 };
 
 export default function TabTwoScreen() {
@@ -53,7 +50,7 @@ export default function TabTwoScreen() {
     ? savedArmyIdxParam[0]
     : savedArmyIdxParam;
   const router = useRouter();
-  const [activeArmy, setActiveArmy] = useState<SavedArmy | null>(null);
+  const [activeArmy, setActiveArmy] = useState<TrackerArmy | null>(null);
   const [loading, setLoading] = useState(true);
   const buttonColor = useThemeColor({}, "button");
   const buttonText = useThemeColor({}, "buttonText");
@@ -61,23 +58,13 @@ export default function TabTwoScreen() {
   useEffect(() => {
     const loadArmy = async () => {
       try {
-        const fileUri = FileSystem.documentDirectory + "saved-army.json";
-        const fileInfo = await FileSystem.getInfoAsync(fileUri);
-        if (!fileInfo.exists) {
-          setActiveArmy(null);
-          return;
-        }
-
-        const content = await FileSystem.readAsStringAsync(fileUri);
-        const parsed = JSON.parse(content);
-        const armies = Array.isArray(parsed) ? parsed : [parsed];
-
         const idx = parseInt(savedArmyIdx as string, 10);
-        if (!isNaN(idx) && armies[idx]) {
+        const savedArmy = await localArmyRepository.getSavedArmy(idx);
+        if (!isNaN(idx) && savedArmy) {
           let needsSave = false;
           let shouldResetToMax = false;
 
-          const factionName = armies[idx].faction;
+          const factionName = savedArmy.faction;
           const baseArmy = (organizedHeroArmies as any[]).find(
             (army) => army.name === factionName || army.faction === factionName,
           );
@@ -107,8 +94,10 @@ export default function TabTwoScreen() {
 
           // Ensure all heroes have `.selected` and starting max values
           const selectedArmy = {
-            ...armies[idx],
-            heroes: armies[idx].heroes.map((h: any) => {
+            ...savedArmy,
+            points: savedArmy.points ?? 0,
+            modelCount: savedArmy.modelCount ?? 0,
+            heroes: savedArmy.heroes.map((h) => {
               const baseHero =
                 baseHeroLookup.get(h.name) ?? globalHeroLookup.get(h.name);
               const baseWounds =
@@ -188,16 +177,12 @@ export default function TabTwoScreen() {
                 fate: finalFate,
               };
             }),
-          };
+          } as TrackerArmy;
           setActiveArmy(selectedArmy);
 
           if (needsSave) {
             try {
-              armies[idx] = selectedArmy;
-              await FileSystem.writeAsStringAsync(
-                fileUri,
-                JSON.stringify(armies, null, 2),
-              );
+              await localArmyRepository.createOrUpdateArmy(selectedArmy, idx);
 
               if (shouldResetToMax) {
                 const activeUri =
@@ -256,16 +241,9 @@ export default function TabTwoScreen() {
 
     // Save to file
     try {
-      const fileUri = FileSystem.documentDirectory + "saved-army.json";
-      const content = await FileSystem.readAsStringAsync(fileUri);
-      const armies = JSON.parse(content);
       const idx = parseInt(savedArmyIdx as string, 10);
       if (!isNaN(idx)) {
-        armies[idx] = updatedArmy;
-        await FileSystem.writeAsStringAsync(
-          fileUri,
-          JSON.stringify(armies, null, 2),
-        );
+        await localArmyRepository.createOrUpdateArmy(updatedArmy, idx);
       }
     } catch (e) {
       console.error("Failed to save hero stats:", e);

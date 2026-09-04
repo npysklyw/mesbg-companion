@@ -9,7 +9,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "test": "node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test ./domain/*.test.mjs",
+    "test": "node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON --test ./domain/*.test.mjs ./storage/*.test.mjs",
     "typecheck": "tsc --noEmit",
     "audit:catalogue": "node ./scripts/audit-catalogue.mjs",
     "verify:web": "expo export --platform web"

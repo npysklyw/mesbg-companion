@@ -3,23 +3,17 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import SavedList from "@/components/ui/Library/SavedList";
-import * as FileSystem from "expo-file-system";
+import type { PersistedArmy } from "@/storage/ArmyRepository";
+import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { useFocusEffect, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Alert, LogBox, StyleSheet } from "react-native";
 
 LogBox.ignoreAllLogs(true); // Hides all warnings
 
-type SavedArmy = {
-  name: string;
-  points: number;
-  faction: string;
-  modelCount: number;
-};
-
 export default function TabTwoScreen() {
   const router = useRouter();
-  const [savedArmies, setSavedArmies] = useState<SavedArmy[]>([]);
+  const [savedArmies, setSavedArmies] = useState<PersistedArmy[]>([]);
   const [loading, setLoading] = useState(true);
 
   useFocusEffect(
@@ -27,15 +21,7 @@ export default function TabTwoScreen() {
       const loadSavedArmies = async () => {
         setLoading(true);
         try {
-          const fileUri = FileSystem.documentDirectory + "saved-army.json";
-          const fileInfo = await FileSystem.getInfoAsync(fileUri);
-          if (fileInfo.exists) {
-            const content = await FileSystem.readAsStringAsync(fileUri);
-            const parsed = JSON.parse(content);
-            setSavedArmies(Array.isArray(parsed) ? parsed : [parsed]);
-          } else {
-            setSavedArmies([]);
-          }
+          setSavedArmies(await localArmyRepository.listSavedArmies());
         } catch (e) {
           setSavedArmies([]);
         } finally {
@@ -54,17 +40,10 @@ export default function TabTwoScreen() {
         style: "destructive",
         onPress: async () => {
           try {
-            const fileUri = FileSystem.documentDirectory + "saved-army.json";
-            let newArmies = [...savedArmies];
-            newArmies.splice(idxToDelete, 1);
-            if (newArmies.length === 0) {
-              await FileSystem.deleteAsync(fileUri, { idempotent: true });
-            } else {
-              await FileSystem.writeAsStringAsync(
-                fileUri,
-                JSON.stringify(newArmies, null, 2)
-              );
-            }
+            const newArmies = savedArmies.filter(
+              (_, index) => index !== idxToDelete,
+            );
+            await localArmyRepository.deleteSavedArmy(idxToDelete);
             setSavedArmies(newArmies);
           } catch (e) {
             alert("Failed to delete army.");
@@ -106,10 +85,10 @@ export default function TabTwoScreen() {
           <SavedList
             key={`${army.name}-${idx}`}
             name={army.name}
-            points={army.points}
+            points={army.points ?? 0}
             faction={army.faction}
             edit={true}
-            modelCount={army.modelCount}
+            modelCount={army.modelCount ?? 0}
             onDelete={() => handleDelete(idx)}
             onEdit={() =>
               router.push({

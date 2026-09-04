@@ -7,8 +7,8 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import type { Army, Hero as ArmyHero } from "@/domain/army";
 import { calculateArmyTotals } from "@/domain/army";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { Button } from "@rneui/base";
-import * as FileSystem from "expo-file-system";
 import { useLocalSearchParams } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { Alert, StyleSheet, TextInput } from "react-native";
@@ -252,33 +252,25 @@ export default function HomeScreen() {
     const loadArmy = async () => {
       if (savedArmyIdx !== undefined) {
         // Load from saved armies
-        const fileUri = FileSystem.documentDirectory + "saved-army.json";
-        const fileInfo = await FileSystem.getInfoAsync(fileUri);
-        if (fileInfo.exists) {
-          const content = await FileSystem.readAsStringAsync(fileUri);
-          const armies = JSON.parse(content);
-          const idx = parseInt(savedArmyIdx, 10);
-          if (!isNaN(idx) && armies[idx]) {
-            setActiveArmy(armies[idx]);
-            setEditableArmyName(armies[idx].name);
-            setPoints(
-              armies[idx].heroes.reduce(
-                (sum: number, hero: ActiveHero) => sum + hero.points,
-                0,
-              ),
-            );
-          } else {
-            setActiveArmy(null);
-          }
+        const idx = parseInt(savedArmyIdx, 10);
+        const savedArmy = await localArmyRepository.getSavedArmy(idx);
+        if (savedArmy) {
+          setActiveArmy(savedArmy);
+          setEditableArmyName(savedArmy.name);
+          setPoints(
+            savedArmy.heroes.reduce(
+              (sum: number, hero: ActiveHero) => sum + hero.points,
+              0,
+            ),
+          );
+        } else {
+          setActiveArmy(null);
         }
       } else {
         // Try to load work-in-progress army first
         try {
-          const wipUri = FileSystem.documentDirectory + "wip-army.json";
-          const wipInfo = await FileSystem.getInfoAsync(wipUri);
-          if (wipInfo.exists) {
-            const wipContent = await FileSystem.readAsStringAsync(wipUri);
-            const wipArmy = JSON.parse(wipContent);
+          const wipArmy = await localArmyRepository.loadWorkInProgress();
+          if (wipArmy) {
             // If WIP exists and we're not specifying a specific army, always load WIP
             if (wipArmy && !armyName) {
               setActiveArmy(wipArmy);
@@ -335,11 +327,7 @@ export default function HomeScreen() {
 
     const timeoutId = setTimeout(async () => {
       try {
-        const wipUri = FileSystem.documentDirectory + "wip-army.json";
-        await FileSystem.writeAsStringAsync(
-          wipUri,
-          JSON.stringify(activeArmy, null, 2),
-        );
+        await localArmyRepository.saveWorkInProgress(activeArmy);
       } catch (e) {
         console.error("Failed to save WIP:", e);
       }
@@ -436,22 +424,18 @@ export default function HomeScreen() {
     setEditableArmyName(templateArmy.name);
     // Clear WIP
     try {
-      const wipUri = FileSystem.documentDirectory + "wip-army.json";
-      await FileSystem.deleteAsync(wipUri, { idempotent: true });
+      await localArmyRepository.clearWorkInProgress();
     } catch {}
   };
 
   const handleSaveArmy = async () => {
+    if (!activeArmy) return;
     try {
-      const fileUri = FileSystem.documentDirectory + "saved-army.json";
-      let armies = [];
+      let armies: Awaited<
+        ReturnType<typeof localArmyRepository.listSavedArmies>
+      > = [];
       try {
-        const fileInfo = await FileSystem.getInfoAsync(fileUri);
-        if (fileInfo.exists) {
-          const content = await FileSystem.readAsStringAsync(fileUri);
-          armies = JSON.parse(content);
-          if (!Array.isArray(armies)) armies = [armies];
-        }
+        armies = await localArmyRepository.listSavedArmies();
       } catch {}
       // Calculate totals before saving
       const { points: totalPoints, modelCount: totalModels } =
@@ -462,15 +446,14 @@ export default function HomeScreen() {
         const idx = parseInt(savedArmyIdx, 10);
         if (!isNaN(idx) && armies[idx]) {
           // Update existing army
-          armies[idx] = {
-            ...activeArmy,
-            name: editableArmyName,
-            points: totalPoints,
-            modelCount: totalModels,
-          };
-          await FileSystem.writeAsStringAsync(
-            fileUri,
-            JSON.stringify(armies, null, 2),
+          await localArmyRepository.createOrUpdateArmy(
+            {
+              ...activeArmy,
+              name: editableArmyName,
+              points: totalPoints,
+              modelCount: totalModels,
+            },
+            idx,
           );
           Alert.alert("Army Workshop", "Army updated successfully!", [
             {
@@ -503,31 +486,23 @@ export default function HomeScreen() {
             {
               text: "Ok",
               onPress: async () => {
-                armies.push({
+                await localArmyRepository.createOrUpdateArmy({
                   ...activeArmy,
                   name: editableArmyName,
                   points: totalPoints,
                   modelCount: totalModels,
                 });
-                await FileSystem.writeAsStringAsync(
-                  fileUri,
-                  JSON.stringify(armies, null, 2),
-                );
               },
             },
           ],
         );
       } else {
-        armies.push({
+        await localArmyRepository.createOrUpdateArmy({
           ...activeArmy,
           name: editableArmyName,
           points: totalPoints,
           modelCount: totalModels,
         });
-        await FileSystem.writeAsStringAsync(
-          fileUri,
-          JSON.stringify(armies, null, 2),
-        );
         // alert("Army saved to device!");
         Alert.alert("Army Workshop", "Army Saved to Device!", [
           {
