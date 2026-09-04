@@ -1,4 +1,4 @@
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 type AppSettings = {

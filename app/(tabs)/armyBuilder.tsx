@@ -343,6 +343,8 @@ export default function HomeScreen() {
   useEffect(() => {
     if (!activeArmy) return;
     if (settings.legacyProfilesEnabled) return;
+    // This effect intentionally reconciles persisted state when the setting changes.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveArmy((prev) =>
       prev && prev.heroes.some((hero) => hero.legacy)
         ? {

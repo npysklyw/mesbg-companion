@@ -1,4 +1,4 @@
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import type { ArmyFileStorage } from "./ArmyRepository";
 import { JsonArmyRepository } from "./ArmyRepository";
 

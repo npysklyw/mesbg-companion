@@ -8,7 +8,7 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 import type { PersistedArmy, PersistedHero } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { Button } from "@rneui/themed";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";

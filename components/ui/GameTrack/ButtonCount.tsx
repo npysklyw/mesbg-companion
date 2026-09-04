@@ -33,6 +33,8 @@ const CounterButton = ({
   const [count, setCount] = useState(initialValue);
 
   useEffect(() => {
+    // Keep the local counter synchronized with externally restored game state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCount(initialValue);
   }, [initialValue]);
 

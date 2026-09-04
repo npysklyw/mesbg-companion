@@ -21,6 +21,8 @@ export default function StatsGrid({
   const [currentValues, setCurrentValues] =
     useState<[number, number, number, number]>(values);
   useEffect(() => {
+    // Keep editable grid state synchronized with externally restored values.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentValues(values);
   }, [values]);
   const resolvedMaxValues: [number, number, number, number] =

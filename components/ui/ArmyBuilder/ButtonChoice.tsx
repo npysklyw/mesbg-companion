@@ -103,7 +103,7 @@ const FantasyChoiceButton = ({
       transform: [{ scale: 1.55 }, { translateY: -100 }],
     },
     overlay: {
-      ...StyleSheet.absoluteFillObject,
+      ...StyleSheet.absoluteFill,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "rgba(0, 0, 0, 0.32)",

@@ -1,5 +1,5 @@
 import { ColorPalettes } from "@/constants/ColorPalettes";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type Palette = keyof typeof ColorPalettes;

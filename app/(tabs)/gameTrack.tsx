@@ -5,7 +5,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import SavedList from "@/components/ui/Library/SavedList";
 import type { PersistedArmy } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 import { useFocusEffect, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Alert, LogBox, StyleSheet } from "react-native";
