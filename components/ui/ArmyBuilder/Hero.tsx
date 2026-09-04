@@ -1,24 +1,22 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
+import {
+  Army,
+  Hero as ArmyHero,
+  HeroTier,
+  Warrior as ArmyWarrior,
+  calculateBowCount,
+  calculateHeroWargearPoints,
+  calculateModelCount,
+  calculateTierCapacity,
+  calculateWarbandModelCount,
+  calculateWarbandPoints,
+} from "@/domain/army";
 import { Button, ListItem } from "@rneui/base";
 import React from "react";
 import { Alert, Platform, ToastAndroid, View } from "react-native";
 import { Warrior } from "./Warrior";
 
-type WargearOption = { name: string; cost: number };
-type WarriorState = {
-  name: string;
-  baseCost: number;
-  availableWargear: WargearOption[];
-  wargearCounts: Record<string, number>;
-};
-type ArmyHeroState = {
-  name: string;
-  selected: boolean;
-  wargearChecks: Record<string, boolean>;
-  warband: WarriorState[];
-};
-type ArmyState = { heroes: ArmyHeroState[] };
-type ArmyUpdater = (updater: (previous: ArmyState) => ArmyState) => void;
+type ArmyUpdater = (updater: (previous: Army) => Army) => void;
 
 type HeroProps = {
   name: string;
@@ -29,14 +27,12 @@ type HeroProps = {
   armyUpdate?: ArmyUpdater;
   setPoints?: React.Dispatch<React.SetStateAction<number>>;
   warbandNumber?: number | null;
-  tier?: "legend" | "valour" | "fortitude" | "independent";
+  tier?: HeroTier;
   mustBeLeader?: boolean;
-  warband: WarriorState[];
+  warband: ArmyWarrior[];
   isAlreadySelected?: boolean; // For independent heroes
-  army?: ArmyState | null; // For bow limit calculations
+  army?: Army | null; // For bow limit calculations
 };
-
-type WargearCounts = Record<string, number>;
 
 export function Hero({
   name,
@@ -70,59 +66,32 @@ export function Hero({
     minor: "Minor",
     independent: "Independent",
   };
-  const tierCaps = {
-    legend: 18,
-    valour: 15,
-    fortitude: 12,
-    minor: 6,
-    independent: 0,
-  };
   const tierLabel = tierLabels[tier];
-  const warbandCap = tierCaps[tier];
+  const warbandCap = calculateTierCapacity(tier);
 
   // Calculate total warriors in this hero's warband
-  const totalWarriors = warband
-    ? warband.reduce(
-        (sum, w) =>
-          sum +
-          Object.values((w.wargearCounts || {}) as WargearCounts).reduce(
-            (a, b) => a + b,
-            0,
-          ),
-        0,
-      )
-    : 0;
+  const totalWarriors = calculateWarbandModelCount(warband);
 
   // Calculate hero's wargear cost
-  const heroWargearCost = wargear
-    ? wargear.reduce(
-        (sum, [option, cost]) => sum + (wargearChecks[option] ? cost || 0 : 0),
-        0,
-      )
-    : 0;
+  const calculationHero: ArmyHero = {
+    name,
+    points,
+    tier,
+    mustBeLeader,
+    wargear: (wargear ?? []).map(([option, cost]) => ({
+      name: option,
+      cost,
+    })),
+    wargearChecks,
+    selected: checked,
+    warband,
+  };
+  const heroWargearCost = calculateHeroWargearPoints(calculationHero);
 
   // Calculate total warband cost for this hero (including hero, hero wargear, and warriors)
-  const totalWarbandCost =
-    points +
-    heroWargearCost +
-    (warband
-      ? warband.reduce((sum, w) => {
-          let cost = 0;
-          if (w.availableWargear && w.availableWargear.length > 0) {
-            cost += (w.wargearCounts?.Base || 0) * (w.baseCost || 0);
-            w.availableWargear.forEach((wg) => {
-              cost +=
-                (w.wargearCounts?.[wg.name] || 0) *
-                ((w.baseCost || 0) + (wg.cost || 0));
-            });
-          } else {
-            cost += (w.wargearCounts?.Base || 0) * (w.baseCost || 0);
-          }
-          return sum + cost;
-        }, 0)
-      : 0);
+  const totalWarbandCost = calculateWarbandPoints(calculationHero);
 
-  // Model count: 1 for hero + all warriors
+  // Preserve the existing row display: this count only includes the warband.
   const totalModelCount = totalWarriors;
 
   // Toggle hero selection
@@ -189,45 +158,8 @@ export function Hero({
 
     // Check bow limit before adding
     if (delta > 0 && army && option.toLowerCase().includes("bow")) {
-      // Calculate current total bows in army
-      let totalBows = 0;
-      if (army.heroes) {
-        army.heroes.forEach((h) => {
-          if (h.selected && h.warband) {
-            h.warband.forEach((w) => {
-              if (w.wargearCounts) {
-                Object.keys(w.wargearCounts).forEach((wgName) => {
-                  if (wgName.toLowerCase().includes("bow")) {
-                    totalBows += w.wargearCounts[wgName] || 0;
-                  }
-                });
-              }
-            });
-          }
-        });
-      }
-
-      // Calculate total models
-      let totalModels = 0;
-      if (army.heroes) {
-        army.heroes.forEach((h) => {
-          if (h.selected) {
-            totalModels += 1; // Hero counts
-            if (h.warband) {
-              h.warband.forEach((w) => {
-                if (w.wargearCounts) {
-                  totalModels += Object.values(
-                    w.wargearCounts as WargearCounts,
-                  ).reduce(
-                    (a, b) => a + b,
-                    0,
-                  );
-                }
-              });
-            }
-          }
-        });
-      }
+      const totalBows = calculateBowCount(army);
+      const totalModels = calculateModelCount(army);
 
       const bowLimit = Math.floor(totalModels / 3);
       if (totalBows >= bowLimit) {

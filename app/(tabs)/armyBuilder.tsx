@@ -4,6 +4,11 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Hero } from "@/components/ui/ArmyBuilder/Hero";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import {
+  Army,
+  Hero as ArmyHero,
+  calculateArmyTotals,
+} from "@/domain/army";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Button } from "@rneui/base";
 import * as FileSystem from "expo-file-system";
@@ -24,31 +29,8 @@ import menArmy from "../data/good/men_of_the_west.json";
 import otherGoodArmy from "../data/good/other_good.json";
 import rohanArmy from "../data/good/rohan.json";
 
-type ActiveWarriorOption = {
-  name: string;
-  baseCost: number;
-  availableWargear: { name: string; cost: number }[];
-  wargearCounts: { [option: string]: number };
-};
-
-type ActiveHero = {
-  name: string;
-  points: number;
-  tier: "legend" | "valour" | "fortitude" | "independent";
-  legacy?: boolean;
-  mustBeLeader?: boolean;
-  wargear: { name: string; cost: number }[];
-  wargearChecks: { [option: string]: boolean };
-  selected: boolean;
-  warband: ActiveWarriorOption[];
-};
-
-type ActiveArmy = {
-  name: string;
-  faction: string;
-  heroes: ActiveHero[];
-  warbandOptions?: ActiveWarriorOption[];
-};
+type ActiveArmy = Army;
+type ActiveHero = ArmyHero;
 
 type CatalogueWargear = { name: string; cost: number };
 type CatalogueWarrior = {
@@ -60,7 +42,7 @@ type CatalogueWarrior = {
 type CatalogueHero = {
   name: string;
   points: number;
-  tier: ActiveHero["tier"];
+  tier: Exclude<ActiveHero["tier"], "minor">;
   legacy?: boolean;
   mustBeLeader?: boolean;
   wargear: CatalogueWargear[];
@@ -475,7 +457,8 @@ export default function HomeScreen() {
         }
       } catch {}
       // Calculate totals before saving
-      const { totalPoints, totalModels } = getArmyTotals(activeArmy);
+      const { points: totalPoints, modelCount: totalModels } =
+        calculateArmyTotals(activeArmy, settings.legacyProfilesEnabled);
 
       // Check if we're editing an existing army
       if (savedArmyIdx !== undefined) {
@@ -562,51 +545,12 @@ export default function HomeScreen() {
     }
   };
 
-  // Helper to calculate total points and model count
-  function getArmyTotals(army: ActiveArmy | null) {
-    if (!army) return { totalPoints: 0, totalModels: 0 };
-    let totalPoints = 0;
-    let totalModels = 0;
-    for (const hero of army.heroes) {
-      if (!settings.legacyProfilesEnabled && hero.legacy) continue;
-      if (hero.selected) {
-        totalPoints += hero.points;
-        // Add hero's wargear points if any
-        if (hero.wargear && hero.wargearChecks) {
-          for (const wg of hero.wargear) {
-            if (wg.name && hero.wargearChecks[wg.name]) {
-              totalPoints += wg.cost || 0;
-            }
-          }
-        }
-        // Count hero
-        totalModels += 1;
-        // Count warriors in warband
-        for (const w of hero.warband) {
-          if (w.wargearCounts) {
-            totalModels += Object.values(w.wargearCounts).reduce(
-              (a, b) => a + b,
-              0,
-            );
-            // Add warrior points
-            for (const [wgName, count] of Object.entries(w.wargearCounts)) {
-              if (wgName === "Base") {
-                totalPoints += (w.baseCost || 0) * count;
-              } else {
-                const wg = w.availableWargear.find((g) => g.name === wgName);
-                if (wg) {
-                  totalPoints += ((w.baseCost || 0) + (wg.cost || 0)) * count;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    return { totalPoints, totalModels };
-  }
-
-  const { totalPoints, totalModels } = getArmyTotals(activeArmy);
+  const {
+    points: totalPoints,
+    modelCount: totalModels,
+    breakValue,
+    bowAllowance,
+  } = calculateArmyTotals(activeArmy, settings.legacyProfilesEnabled);
   const pluralize = (value: number, singular: string) =>
     `${value} ${singular}${value === 1 ? "" : "s"}`;
 
@@ -648,8 +592,8 @@ export default function HomeScreen() {
         <ThemedView style={styles.summaryRow}>
           {[
             pluralize(totalModels, "model"),
-            `Break at ${totalModels === 0 ? 0 : Math.floor(totalModels / 2) + 1}`,
-            pluralize(totalModels === 0 ? 0 : Math.floor(totalModels / 3), "bow"),
+            `Break at ${breakValue}`,
+            pluralize(bowAllowance, "bow"),
             pluralize(totalPoints, "point"),
           ].map((label) => (
             <ThemedView

@@ -1,4 +1,8 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
+import {
+  calculateWarbandModelCount,
+  calculateWarriorPoints,
+} from "@/domain/army";
 import { Text } from "@rneui/themed";
 import React from "react";
 import { Pressable, View } from "react-native";
@@ -28,20 +32,17 @@ export function Warrior({
   const buttonEvilText = useThemeColor({}, "buttonEvilText");
   const [expanded, setExpanded] = React.useState(false);
 
-  const totalCount = Object.values(wargearCounts || {}).reduce(
-    (a, b) => a + b,
-    0,
-  );
-
-  let totalCost = 0;
-  if (wargear && wargear.length > 0) {
-    totalCost += (wargearCounts["Base"] || 0) * baseCost;
-    wargear.forEach(([option, cost]) => {
-      totalCost += (wargearCounts[option] || 0) * (baseCost + (cost || 0));
-    });
-  } else {
-    totalCost = (wargearCounts["Base"] || 0) * baseCost;
-  }
+  const calculationWarrior = {
+    name,
+    baseCost,
+    availableWargear: (wargear ?? []).map(([option, cost]) => ({
+      name: option,
+      cost,
+    })),
+    wargearCounts,
+  };
+  const totalCount = calculateWarbandModelCount([calculationWarrior]);
+  const totalCost = calculateWarriorPoints(calculationWarrior);
 
   const selectedWargearSummary = wargear
     ? wargear
