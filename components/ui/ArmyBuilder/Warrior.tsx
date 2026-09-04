@@ -3,6 +3,7 @@ import {
   calculateWarbandModelCount,
   calculateWarriorPoints,
 } from "@/domain/army";
+import { getAvailableWarriorWargear } from "@/domain/warriorSelection";
 import { Text } from "@rneui/themed";
 import React from "react";
 import { Pressable, View } from "react-native";
@@ -43,6 +44,10 @@ export function Warrior({
   };
   const totalCount = calculateWarbandModelCount([calculationWarrior]);
   const totalCost = calculateWarriorPoints(calculationWarrior);
+  const availableChoices = getAvailableWarriorWargear(
+    wargear ?? [],
+    wargearCounts,
+  );
 
   const selectedWargearSummary = wargear
     ? wargear
@@ -284,7 +289,7 @@ export function Warrior({
           )}
 
           {wargear &&
-            wargear
+            availableChoices
               .filter(([, cost]) => (cost || 0) > 0)
               .map(([option, cost]) => (
                 <Pressable

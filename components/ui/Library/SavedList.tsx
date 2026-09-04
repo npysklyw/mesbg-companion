@@ -1,6 +1,7 @@
 import { ListItem } from "@rneui/themed";
 import TouchableScale from "react-native-touchable-scale";
 import React from "react";
+import { Pressable, Text, View } from "react-native";
 
 import { useThemeColor } from "@/hooks/useThemeColor";
 
@@ -30,6 +31,8 @@ export default function SavedList({
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");
   const buttonColor = useThemeColor({}, "button");
+  const destructiveColor = useThemeColor({}, "buttonEvil");
+  const destructiveTextColor = useThemeColor({}, "buttonEvilText");
   const touchableScaleProps = {
     Component: TouchableScale as unknown as typeof React.Component,
     friction: 90,
@@ -41,7 +44,10 @@ export default function SavedList({
     <ListItem
       {...touchableScaleProps}
       onPress={onEdit}
-      containerStyle={{ backgroundColor }}
+      containerStyle={{
+        backgroundColor,
+        ...(edit ? { flexWrap: "wrap" as const } : {}),
+      }}
     >
       <ListItem.Content>
         <ListItem.Title
@@ -57,18 +63,52 @@ export default function SavedList({
         </ListItem.Subtitle>
       </ListItem.Content>
       {edit === true ? (
-        <ListItem.ButtonGroup
-          onPress={(action) => {
-            if (action === 0 && onEdit) onEdit();
-            if (onBackup) {
-              if (action === 1) onBackup();
-              if (action === 2 && onDelete) onDelete();
-            } else if (action === 1 && onDelete) onDelete();
+        <View
+          style={{
+            width: "100%",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "flex-end",
+            gap: 8,
           }}
-          buttonStyle={{ backgroundColor: buttonColor }}
-          textStyle={{ color: textColor, fontFamily: "brioso", fontSize: 18 }}
-          buttons={onBackup ? ["Edit", backupLabel, "Delete"] : ["Edit", "Delete"]}
-        />
+        >
+          {[
+            { label: "Edit", onPress: onEdit, destructive: false },
+            ...(onBackup
+              ? [{ label: backupLabel, onPress: onBackup, destructive: false }]
+              : []),
+            { label: "Delete", onPress: onDelete, destructive: true },
+          ].map((action) => (
+            <Pressable
+              key={action.label}
+              accessibilityRole="button"
+              onPress={action.onPress}
+              style={({ pressed }) => ({
+                minHeight: 44,
+                minWidth: 72,
+                paddingHorizontal: 12,
+                borderRadius: 7,
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: action.destructive
+                  ? destructiveColor
+                  : buttonColor,
+                opacity: pressed ? 0.7 : 1,
+              })}
+            >
+              <Text
+                numberOfLines={1}
+                style={{
+                  color: action.destructive ? destructiveTextColor : textColor,
+                  fontFamily: "brioso",
+                  fontSize: 16,
+                }}
+              >
+                {action.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
       ) : (
         <ListItem.ButtonGroup
           onPress={(action) => {

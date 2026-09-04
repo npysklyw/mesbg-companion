@@ -7,10 +7,19 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import type { Army, Hero as ArmyHero } from "@/domain/army";
 import { calculateArmyTotals } from "@/domain/army";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import { registerArmyEditGuard } from "@/navigation/armyEditGuard";
+import {
+  createArmyEditSnapshot,
+  discardArmyEdit,
+  isArmyEditDirty,
+  prepareArmyEditSave,
+  type ArmyEditSnapshot,
+} from "@/storage/ArmyEditSession";
+import type { PersistedArmy } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { Button } from "@rneui/base";
-import { useLocalSearchParams } from "expo-router";
-import React, { useEffect, useState } from "react";
+import { useLocalSearchParams, useNavigation } from "expo-router";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Alert, StyleSheet, TextInput } from "react-native";
 import angmar from "../data/evil/angmar_and_northern_evil.json";
 import dolGuldurAndMirkwoodEvil from "../data/evil/dol_guldur_and_mirkwood_evil.json";
@@ -66,10 +75,14 @@ export default function HomeScreen() {
   const armyName = firstParam(params.armyName);
   const armyType = firstParam(params.armyType);
   const { settings } = useSettings();
+  const navigation = useNavigation();
   const [activeArmy, setActiveArmy] = useState<ActiveArmy | null>(null);
   const [loading, setLoading] = useState(true);
   const [, setPoints] = useState(0);
   const [editableArmyName, setEditableArmyName] = useState("");
+  const [savedSnapshot, setSavedSnapshot] =
+    useState<ArmyEditSnapshot | null>(null);
+  const bypassExitGuard = useRef(false);
   const armyCatalogues: Record<string, CatalogueArmy[]> = {
     dwarves: catalogue(dwarfArmy),
     elves: catalogue(elfArmy),
@@ -261,6 +274,7 @@ export default function HomeScreen() {
         if (savedArmy) {
           setActiveArmy(savedArmy);
           setEditableArmyName(savedArmy.name);
+          setSavedSnapshot(createArmyEditSnapshot(savedArmy));
           setPoints(
             savedArmy.heroes.reduce(
               (sum: number, hero: ActiveHero) => sum + hero.points,
@@ -269,8 +283,10 @@ export default function HomeScreen() {
           );
         } else {
           setActiveArmy(null);
+          setSavedSnapshot(null);
         }
       } else {
+        setSavedSnapshot(null);
         // Try to load work-in-progress army first
         try {
           const wipArmy = await localArmyRepository.loadWorkInProgress();
@@ -434,6 +450,30 @@ export default function HomeScreen() {
     } catch {}
   };
 
+  const saveExistingEdit = useCallback(async (): Promise<boolean> => {
+    if (!activeArmy?.id || !savedSnapshot) return false;
+    try {
+      const { points: totalPoints, modelCount: totalModels } =
+        calculateArmyTotals(activeArmy, settings.legacyProfilesEnabled);
+      const prepared = prepareArmyEditSave(
+        {
+          ...activeArmy,
+          points: totalPoints,
+          modelCount: totalModels,
+        } as PersistedArmy,
+        editableArmyName,
+        savedSnapshot,
+      );
+      const saved = await localArmyRepository.createOrUpdateArmy(prepared);
+      setActiveArmy(saved);
+      setSavedSnapshot(createArmyEditSnapshot(saved, saved.name));
+      return true;
+    } catch {
+      Alert.alert("Army Workshop", "Failed to save army.");
+      return false;
+    }
+  }, [activeArmy, editableArmyName, savedSnapshot, settings.legacyProfilesEnabled]);
+
   const handleSaveArmy = async () => {
     if (!activeArmy) return;
     try {
@@ -449,23 +489,14 @@ export default function HomeScreen() {
 
       // Check if we're editing an existing army
       if (savedArmyIdx !== undefined) {
-        const idx = parseInt(savedArmyIdx, 10);
-        if (!isNaN(idx) && armies[idx]) {
-          // Update existing army
-          await localArmyRepository.createOrUpdateArmy({
-            ...activeArmy,
-            id: armies[idx].id,
-            name: editableArmyName,
-            points: totalPoints,
-            modelCount: totalModels,
-          });
+        if (await saveExistingEdit()) {
           Alert.alert("Army Workshop", "Army updated successfully!", [
             {
               text: "Ok",
             },
           ]);
-          return;
         }
+        return;
       }
 
       // Check for duplicate names (only for new armies)
@@ -520,6 +551,69 @@ export default function HomeScreen() {
       alert("Failed to save army: " + e);
     }
   };
+
+  const editIsDirty = Boolean(
+    activeArmy?.id &&
+      savedSnapshot &&
+      isArmyEditDirty(
+        activeArmy as PersistedArmy,
+        editableArmyName,
+        savedSnapshot,
+      ),
+  );
+
+  const confirmEditExit = useCallback(
+    (proceed: () => void) => {
+      if (!activeArmy?.id || !savedSnapshot || !editIsDirty) {
+        proceed();
+        return;
+      }
+      Alert.alert("Unsaved changes", "Save your changes before leaving?", [
+        { text: "Keep editing", style: "cancel" },
+        {
+          text: "Discard changes",
+          style: "destructive",
+          onPress: () => {
+            setActiveArmy(discardArmyEdit(savedSnapshot));
+            setEditableArmyName(savedSnapshot.editableName);
+            bypassExitGuard.current = true;
+            proceed();
+          },
+        },
+        {
+          text: "Save changes",
+          onPress: async () => {
+            if (await saveExistingEdit()) {
+              bypassExitGuard.current = true;
+              proceed();
+            }
+          },
+        },
+      ]);
+    }, [activeArmy?.id, editIsDirty, saveExistingEdit, savedSnapshot],
+  );
+
+  useEffect(() => {
+    if (!editIsDirty) return;
+    return registerArmyEditGuard(confirmEditExit);
+  }, [confirmEditExit, editIsDirty]);
+
+  useEffect(
+    () =>
+      navigation.addListener("beforeRemove", (event) => {
+        if (bypassExitGuard.current) {
+          bypassExitGuard.current = false;
+          return;
+        }
+        if (!editIsDirty) return;
+        event.preventDefault();
+        confirmEditExit(() => {
+          bypassExitGuard.current = true;
+          navigation.dispatch(event.data.action);
+        });
+      }),
+    [confirmEditExit, editIsDirty, navigation],
+  );
 
   const {
     points: totalPoints,

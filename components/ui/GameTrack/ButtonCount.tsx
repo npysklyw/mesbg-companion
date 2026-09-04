@@ -65,7 +65,7 @@ const CounterButton = ({
     buttonContainer: {
       backgroundColor: buttonColor,
       borderRadius: 7,
-      padding: 8,
+      padding: 10,
       shadowColor: "#000",
       shadowOffset: {
         width: 0,
@@ -73,7 +73,7 @@ const CounterButton = ({
       },
       shadowOpacity: 0.15,
       shadowRadius: 8,
-      minWidth: 30,
+      minWidth: 112,
       maxWidth: width * 0.8,
       borderWidth: 2,
       borderColor: "#E3E8EF",
@@ -84,6 +84,7 @@ const CounterButton = ({
     },
     mainButton: {
       alignItems: "center",
+      paddingBottom: 8,
       borderBottomWidth: 1,
       borderBottomColor: "#E9ECEF",
     },
@@ -109,11 +110,13 @@ const CounterButton = ({
       flexDirection: "row",
       gap: 12,
       justifyContent: "center",
+      paddingTop: 8,
     },
     subButton: {
       flex: 1,
-      height: 20,
-      borderRadius: 20,
+      minHeight: 44,
+      minWidth: 44,
+      borderRadius: 8,
       alignItems: "center",
       justifyContent: "center",
       shadowColor: "#000",
@@ -136,7 +139,9 @@ const CounterButton = ({
       elevation: 0,
     },
     subButtonText: {
-      fontSize: 22,
+      fontSize: 26,
+      lineHeight: 30,
+      fontWeight: "bold",
       color: "#fff",
     },
     disabledSubButtonText: {

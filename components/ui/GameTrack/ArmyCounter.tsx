@@ -18,7 +18,12 @@ const ArmyCount = ({ modelCount = 0 }: ArmyCardProp) => {
       <ScrollView>
         <View style={styles.container}>
           <Card
-            containerStyle={{ backgroundColor: cardColor, borderRadius: 10 }}
+            containerStyle={{
+              backgroundColor: cardColor,
+              borderRadius: 10,
+              padding: 16,
+              marginHorizontal: 0,
+            }}
           >
             <Card.Title
               style={{

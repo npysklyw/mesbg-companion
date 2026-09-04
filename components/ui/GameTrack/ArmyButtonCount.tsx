@@ -32,14 +32,6 @@ const CounterButtonArmy = ({
 }: CounterButtonArmyProps) => {
   const [count, setCount] = useState(initialValue);
 
-  const increment = () => {
-    if (!disabled && count < maxValue) {
-      const newValue = count + step;
-      setCount(newValue);
-      onValueChange && onValueChange(newValue);
-    }
-  };
-
   const decrement = () => {
     if (!disabled && count > minValue) {
       const newValue = count - step;
@@ -49,7 +41,6 @@ const CounterButtonArmy = ({
   };
 
   const isDecrementDisabled = disabled || count <= minValue;
-  const isIncrementDisabled = disabled || count >= maxValue;
   const buttonColor = useThemeColor({}, "button");
   const buttonText = useThemeColor({}, "buttonText");
   const buttonGood = useThemeColor({}, "tint");
@@ -59,7 +50,7 @@ const CounterButtonArmy = ({
     buttonContainer: {
       backgroundColor: buttonColor,
       borderRadius: 7,
-      padding: 8,
+      padding: 12,
       shadowColor: "#000",
       shadowOffset: {
         width: 0,
@@ -108,8 +99,9 @@ const CounterButtonArmy = ({
     },
     subButton: {
       flex: 1,
-      height: 40,
-      borderRadius: 20,
+      minHeight: 44,
+      minWidth: 44,
+      borderRadius: 8,
       alignItems: "center",
       justifyContent: "center",
       shadowColor: "#000",
@@ -133,7 +125,8 @@ const CounterButtonArmy = ({
       elevation: 0,
     },
     subButtonText: {
-      fontSize: 20,
+      fontSize: 26,
+      lineHeight: 30,
       fontWeight: "bold",
       color: "#fff",
     },

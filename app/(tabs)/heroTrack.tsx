@@ -7,11 +7,11 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import type { PersistedArmy, PersistedHero } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
+import { localActiveGameRepository } from "@/storage/LocalActiveGameRepository";
 import { Button } from "@rneui/themed";
-import * as FileSystem from "expo-file-system/legacy";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { StyleSheet } from "react-native";
+import { Alert, StyleSheet } from "react-native";
 import organizedHeroArmies from "../data/organized_hero_armies.json";
 
 const globalHeroLookup = new Map<string, any>();
@@ -52,8 +52,8 @@ export default function TabTwoScreen() {
   const router = useRouter();
   const [activeArmy, setActiveArmy] = useState<TrackerArmy | null>(null);
   const [loading, setLoading] = useState(true);
-  const buttonColor = useThemeColor({}, "button");
-  const buttonText = useThemeColor({}, "buttonText");
+  const endGameColor = useThemeColor({}, "buttonEvil");
+  const endGameTextColor = useThemeColor({}, "buttonEvilText");
 
   useEffect(() => {
     const loadArmy = async () => {
@@ -80,13 +80,9 @@ export default function TabTwoScreen() {
           }
 
           try {
-            const activeUri = FileSystem.documentDirectory + "active-game.json";
-            const activeInfo = await FileSystem.getInfoAsync(activeUri);
-            if (activeInfo.exists) {
-              const activeContent =
-                await FileSystem.readAsStringAsync(activeUri);
-              const activeMatch = JSON.parse(activeContent);
-              const activeIdx = parseInt(activeMatch?.savedArmyIdx, 10);
+            const activeMatch = await localActiveGameRepository.load();
+            if (activeMatch) {
+              const activeIdx = activeMatch.savedArmyIdx;
               shouldResetToMax =
                 !isNaN(activeIdx) &&
                 activeIdx === idx &&
@@ -189,16 +185,10 @@ export default function TabTwoScreen() {
               await localArmyRepository.createOrUpdateArmy(selectedArmy);
 
               if (shouldResetToMax) {
-                const activeUri =
-                  FileSystem.documentDirectory + "active-game.json";
-                await FileSystem.writeAsStringAsync(
-                  activeUri,
-                  JSON.stringify(
-                    { savedArmyIdx: idx, resetToMax: false },
-                    null,
-                    2,
-                  ),
-                );
+                await localActiveGameRepository.save({
+                  savedArmyIdx: idx,
+                  resetToMax: false,
+                });
               }
             } catch (e) {
               console.error("Failed to save hero max stats:", e);
@@ -254,15 +244,27 @@ export default function TabTwoScreen() {
     }
   };
 
-  const handleEndMatch = async () => {
-    try {
-      const activeUri = FileSystem.documentDirectory + "active-game.json";
-      await FileSystem.deleteAsync(activeUri, { idempotent: true });
-    } catch (e) {
-      // If delete fails, still navigate back
-    }
-
-    router.replace({ pathname: "/gameTrack" });
+  const handleEndGame = () => {
+    Alert.alert(
+      "End game",
+      "End this game and reset all active match counters? Your saved army will not be deleted.",
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "End game",
+          style: "destructive",
+          onPress: async () => {
+            try {
+              await localActiveGameRepository.clear();
+              setActiveArmy(null);
+              router.replace({ pathname: "/gameTrack" });
+            } catch {
+              Alert.alert("End game", "Unable to clear the active game.");
+            }
+          },
+        },
+      ],
+    );
   };
 
   if (loading) return <ThemedText>Loading...</ThemedText>;
@@ -299,11 +301,11 @@ export default function TabTwoScreen() {
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
         <Button
-          onPress={handleEndMatch}
-          buttonStyle={{ backgroundColor: buttonColor }}
-          titleStyle={{ color: buttonText, fontFamily: "brioso" }}
+          onPress={handleEndGame}
+          buttonStyle={{ backgroundColor: endGameColor, minHeight: 44 }}
+          titleStyle={{ color: endGameTextColor, fontFamily: "brioso" }}
         >
-          End Match
+          End game
         </Button>
       </ThemedView>
       <ThemedView style={{ marginBottom: 8 }}>

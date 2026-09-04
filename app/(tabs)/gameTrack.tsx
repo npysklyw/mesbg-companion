@@ -5,7 +5,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import SavedList from "@/components/ui/Library/SavedList";
 import type { PersistedArmy } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
-import * as FileSystem from "expo-file-system/legacy";
+import { localActiveGameRepository } from "@/storage/LocalActiveGameRepository";
 import { useFocusEffect, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Alert, LogBox, StyleSheet } from "react-native";
@@ -28,14 +28,9 @@ export default function GameTracker() {
 
             // If there is an active match, reopen it
             try {
-              const activeUri =
-                FileSystem.documentDirectory + "active-game.json";
-              const activeInfo = await FileSystem.getInfoAsync(activeUri);
-              if (activeInfo.exists) {
-                const activeContent =
-                  await FileSystem.readAsStringAsync(activeUri);
-                const activeMatch = JSON.parse(activeContent);
-                const idx = parseInt(activeMatch?.savedArmyIdx, 10);
+              const activeMatch = await localActiveGameRepository.load();
+              if (activeMatch) {
+                const idx = activeMatch.savedArmyIdx;
 
                 if (!isNaN(idx) && armies[idx]) {
                   router.replace({
@@ -49,7 +44,7 @@ export default function GameTracker() {
                 }
 
                 // Clean up invalid active match
-                await FileSystem.deleteAsync(activeUri, { idempotent: true });
+                await localActiveGameRepository.clear();
               }
             } catch (e) {
               // If active match fails to load, allow list to render
@@ -69,11 +64,10 @@ export default function GameTracker() {
 
   const handleStartMatch = async (idx: number) => {
     try {
-      const activeUri = FileSystem.documentDirectory + "active-game.json";
-      await FileSystem.writeAsStringAsync(
-        activeUri,
-        JSON.stringify({ savedArmyIdx: idx, resetToMax: true }, null, 2),
-      );
+      await localActiveGameRepository.save({
+        savedArmyIdx: idx,
+        resetToMax: true,
+      });
     } catch (e) {
       // If we fail to persist, still allow navigation
     }
