@@ -1,8 +1,10 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
+import { useBottomTabBarHeight } from "expo-router/js-tabs";
 import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
   Animated,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -13,7 +15,6 @@ import {
 type FantasyChoiceButtonProps = {
   onGoodPress?: () => void;
   onEvilPress?: () => void;
-  tabBarHeight?: number;
 };
 
 const hexToRgb = (color: string) => {
@@ -28,7 +29,6 @@ const hexToRgb = (color: string) => {
 const FantasyChoiceButton = ({
   onGoodPress = () => console.log("Good choice selected"),
   onEvilPress = () => console.log("Evil choice selected"),
-  tabBarHeight = 80, // Pass the tab bar height as a prop
 }: FantasyChoiceButtonProps) => {
   const [hoveredSection, setHoveredSection] = useState<"good" | "evil" | null>(null);
   const [goodScale] = useState(new Animated.Value(1));
@@ -36,9 +36,9 @@ const FantasyChoiceButton = ({
   const primaryColor = useThemeColor({}, "buttonGood");
   const evilColor = useThemeColor({}, "buttonEvil");
   const { height: windowHeight } = useWindowDimensions();
+  const tabBarHeight = useBottomTabBarHeight();
 
-  // Calculate available height (screen height minus tab bar)
-  const availableHeight = Math.max(windowHeight - tabBarHeight, 480);
+  const availableHeight = Math.max(windowHeight - tabBarHeight, 0);
 
   const handleGoodPressIn = () => {
     setHoveredSection("good");
@@ -74,11 +74,12 @@ const FantasyChoiceButton = ({
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      height: availableHeight,
-      minHeight: 480,
+      ...(Platform.OS === "ios"
+        ? { height: availableHeight }
+        : { flex: 1 }),
+      width: "100%",
+      alignSelf: "stretch",
       backgroundColor: "#1a1a1a",
-      paddingBottom: 0, // Let the tab bar handle its own spacing
     },
     section: {
       flex: 1,
