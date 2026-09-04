@@ -18,10 +18,18 @@ test("active game survives repository reloads", async () => {
   await new JsonActiveGameRepository(storage).save({
     savedArmyIdx: 2,
     resetToMax: false,
+    armyId: "army-id",
+    modelCount: 24,
+    remainingModels: 19,
+    heroStats: { Dain: [2, 3, 1, 3] },
   });
   assert.deepEqual(await new JsonActiveGameRepository(storage).load(), {
     savedArmyIdx: 2,
     resetToMax: false,
+    armyId: "army-id",
+    modelCount: 24,
+    remainingModels: 19,
+    heroStats: { Dain: [2, 3, 1, 3] },
   });
 });
 
@@ -46,4 +54,3 @@ test("an unconfirmed end leaves the active game unchanged", async () => {
     resetToMax: false,
   });
 });
-

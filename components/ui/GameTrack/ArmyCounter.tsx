@@ -1,18 +1,24 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Card } from "@rneui/themed";
-import React, { useState } from "react";
+import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import CounterButtonArmy from "./ArmyButtonCount";
 type ArmyCardProp = {
   modelCount: number;
+  remainingModels: number;
+  onRemainingModelsChange: (value: number) => void;
 };
 
 //Card to display army status to user
-const ArmyCount = ({ modelCount = 0 }: ArmyCardProp) => {
+const ArmyCount = ({
+  modelCount = 0,
+  remainingModels,
+  onRemainingModelsChange,
+}: ArmyCardProp) => {
   const buttonText = useThemeColor({}, "buttonText");
 
   const cardColor = useThemeColor({}, "buttonEvil");
-  const [deadCount, setDeadCount] = useState(0);
+  const deadCount = modelCount - remainingModels;
   return (
     <>
       <ScrollView>
@@ -54,11 +60,11 @@ const ArmyCount = ({ modelCount = 0 }: ArmyCardProp) => {
                       ) + " till quartered)"
                 )
               }
-              initialValue={modelCount}
+              initialValue={remainingModels}
               minValue={0}
               maxValue={modelCount}
               step={1}
-              onValueChange={() => setDeadCount((prevCount) => prevCount + 1)}
+              onValueChange={onRemainingModelsChange}
             />
 
             <Card.Divider />

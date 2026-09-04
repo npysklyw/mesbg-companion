@@ -4,10 +4,12 @@ import { ThemedView } from "@/components/ThemedView";
 import ArmyCount from "@/components/ui/GameTrack/ArmyCounter";
 import Cards from "@/components/ui/GameTrack/Card";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { calculateModelCount } from "@/domain/army";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import type { PersistedArmy, PersistedHero } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { localActiveGameRepository } from "@/storage/LocalActiveGameRepository";
+import type { ActiveGame } from "@/storage/ActiveGameRepository";
 import { Button } from "@rneui/themed";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
@@ -51,6 +53,8 @@ export default function TabTwoScreen() {
     : savedArmyIdxParam;
   const router = useRouter();
   const [activeArmy, setActiveArmy] = useState<TrackerArmy | null>(null);
+  const [activeGame, setActiveGame] = useState<ActiveGame | null>(null);
+  const [remainingModels, setRemainingModels] = useState(0);
   const [loading, setLoading] = useState(true);
   const endGameColor = useThemeColor({}, "buttonEvil");
   const endGameTextColor = useThemeColor({}, "buttonEvilText");
@@ -65,8 +69,8 @@ export default function TabTwoScreen() {
           ? await localArmyRepository.getSavedArmy(savedArmyId)
           : null;
         if (!isNaN(idx) && savedArmy) {
-          let needsSave = false;
           let shouldResetToMax = false;
+          let storedGame: ActiveGame | null = null;
 
           const factionName = savedArmy.faction;
           const baseArmy = (organizedHeroArmies as any[]).find(
@@ -80,13 +84,13 @@ export default function TabTwoScreen() {
           }
 
           try {
-            const activeMatch = await localActiveGameRepository.load();
-            if (activeMatch) {
-              const activeIdx = activeMatch.savedArmyIdx;
+            storedGame = await localActiveGameRepository.load();
+            if (storedGame) {
+              const activeIdx = storedGame.savedArmyIdx;
               shouldResetToMax =
                 !isNaN(activeIdx) &&
                 activeIdx === idx &&
-                activeMatch?.resetToMax === true;
+                storedGame.resetToMax === true;
             }
           } catch (e) {
             // If active match fails to load, skip reset logic
@@ -96,7 +100,7 @@ export default function TabTwoScreen() {
           const selectedArmy = {
             ...savedArmy,
             points: savedArmy.points ?? 0,
-            modelCount: savedArmy.modelCount ?? 0,
+            modelCount: calculateModelCount(savedArmy),
             heroes: savedArmy.heroes.map((h) => {
               const baseHero =
                 baseHeroLookup.get(h.name) ?? globalHeroLookup.get(h.name);
@@ -141,28 +145,19 @@ export default function TabTwoScreen() {
               const currentWill = typeof h.will === "number" ? h.will : maxWill;
               const currentFate = typeof h.fate === "number" ? h.fate : maxFate;
 
-              const finalWounds = shouldResetToMax ? maxWounds : currentWounds;
-              const finalMight = shouldResetToMax ? maxMight : currentMight;
-              const finalWill = shouldResetToMax ? maxWill : currentWill;
-              const finalFate = shouldResetToMax ? maxFate : currentFate;
-
-              if (
-                h.maxWounds === undefined ||
-                h.maxMight === undefined ||
-                h.maxWill === undefined ||
-                h.maxFate === undefined
-              ) {
-                needsSave = true;
-              }
-
-              if (
-                h.wounds !== finalWounds ||
-                h.might !== finalMight ||
-                h.will !== finalWill ||
-                h.fate !== finalFate
-              ) {
-                needsSave = true;
-              }
+              const storedStats = storedGame?.heroStats?.[h.name];
+              const finalWounds = shouldResetToMax
+                ? maxWounds
+                : storedStats?.[0] ?? currentWounds;
+              const finalMight = shouldResetToMax
+                ? maxMight
+                : storedStats?.[1] ?? currentMight;
+              const finalWill = shouldResetToMax
+                ? maxWill
+                : storedStats?.[2] ?? currentWill;
+              const finalFate = shouldResetToMax
+                ? maxFate
+                : storedStats?.[3] ?? currentFate;
 
               return {
                 ...h,
@@ -179,21 +174,28 @@ export default function TabTwoScreen() {
             }),
           } as TrackerArmy;
           setActiveArmy(selectedArmy);
-
-          if (needsSave) {
-            try {
-              await localArmyRepository.createOrUpdateArmy(selectedArmy);
-
-              if (shouldResetToMax) {
-                await localActiveGameRepository.save({
-                  savedArmyIdx: idx,
-                  resetToMax: false,
-                });
-              }
-            } catch (e) {
-              console.error("Failed to save hero max stats:", e);
-            }
-          }
+          const modelCount = selectedArmy.modelCount;
+          const nextGame: ActiveGame = {
+            savedArmyIdx: idx,
+            resetToMax: false,
+            armyId: savedArmy.id,
+            modelCount,
+            remainingModels: shouldResetToMax
+              ? modelCount
+              : Math.min(
+                  modelCount,
+                  Math.max(0, storedGame?.remainingModels ?? modelCount),
+                ),
+            heroStats: Object.fromEntries(
+              selectedArmy.heroes.map((hero) => [
+                hero.name,
+                [hero.wounds, hero.might, hero.will, hero.fate],
+              ]),
+            ),
+          };
+          setActiveGame(nextGame);
+          setRemainingModels(nextGame.remainingModels ?? modelCount);
+          await localActiveGameRepository.save(nextGame);
         } else {
           setActiveArmy(null);
         }
@@ -233,14 +235,34 @@ export default function TabTwoScreen() {
 
     setActiveArmy(updatedArmy);
 
-    // Save to file
     try {
-      const idx = parseInt(savedArmyIdx as string, 10);
-      if (!isNaN(idx)) {
-        await localArmyRepository.createOrUpdateArmy(updatedArmy);
+      if (activeGame) {
+        const nextGame: ActiveGame = {
+          ...activeGame,
+          heroStats: Object.fromEntries(
+            updatedArmy.heroes.map((hero) => [
+              hero.name,
+              [hero.wounds, hero.might, hero.will, hero.fate],
+            ]),
+          ),
+        };
+        setActiveGame(nextGame);
+        await localActiveGameRepository.save(nextGame);
       }
     } catch (e) {
-      console.error("Failed to save hero stats:", e);
+      console.error("Failed to save active game stats:", e);
+    }
+  };
+
+  const handleRemainingModelsChange = async (value: number) => {
+    setRemainingModels(value);
+    if (!activeGame) return;
+    const nextGame = { ...activeGame, remainingModels: value };
+    setActiveGame(nextGame);
+    try {
+      await localActiveGameRepository.save(nextGame);
+    } catch (error) {
+      console.error("Failed to save active army count:", error);
     }
   };
 
@@ -257,6 +279,8 @@ export default function TabTwoScreen() {
             try {
               await localActiveGameRepository.clear();
               setActiveArmy(null);
+              setActiveGame(null);
+              setRemainingModels(0);
               router.replace({ pathname: "/gameTrack" });
             } catch {
               Alert.alert("End game", "Unable to clear the active game.");
@@ -280,7 +304,7 @@ export default function TabTwoScreen() {
     });
 
   // Calculate quarter and half breakpoints
-  const modelCount = activeArmy?.modelCount || 0;
+  const modelCount = activeArmy?.modelCount ?? 0;
   const quarterBreak = Math.floor(modelCount / 4) + 1;
   const halfBreak = Math.floor(modelCount / 2) + 1;
 
@@ -316,7 +340,9 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ArmyCount
           key={savedArmyIdx}
-          modelCount={activeArmy?.modelCount ?? 0}
+          modelCount={modelCount}
+          remainingModels={remainingModels}
+          onRemainingModelsChange={handleRemainingModelsChange}
         ></ArmyCount>
       </ThemedView>
 

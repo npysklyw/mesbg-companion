@@ -3,6 +3,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import SavedList from "@/components/ui/Library/SavedList";
+import { calculateModelCount } from "@/domain/army";
 import type { PersistedArmy } from "@/storage/ArmyRepository";
 import { localArmyRepository } from "@/storage/LocalArmyRepository";
 import { localActiveGameRepository } from "@/storage/LocalActiveGameRepository";
@@ -64,9 +65,14 @@ export default function GameTracker() {
 
   const handleStartMatch = async (idx: number) => {
     try {
+      const army = savedArmies[idx];
+      const modelCount = calculateModelCount(army);
       await localActiveGameRepository.save({
         savedArmyIdx: idx,
         resetToMax: true,
+        armyId: army.id,
+        modelCount,
+        remainingModels: modelCount,
       });
     } catch (e) {
       // If we fail to persist, still allow navigation

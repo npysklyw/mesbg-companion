@@ -3,8 +3,6 @@ import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
   Animated,
-  ImageBackground,
-  ImageSourcePropType,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -13,8 +11,6 @@ import {
 } from "react-native";
 
 type FantasyChoiceButtonProps = {
-  goodBackgroundImage?: ImageSourcePropType;
-  evilBackgroundImage?: ImageSourcePropType;
   onGoodPress?: () => void;
   onEvilPress?: () => void;
   tabBarHeight?: number;
@@ -30,8 +26,6 @@ const hexToRgb = (color: string) => {
 };
 
 const FantasyChoiceButton = ({
-  goodBackgroundImage = require("../../../assets/good.png"), // Update with your image path
-  evilBackgroundImage = require("../../../assets/bad.png"),
   onGoodPress = () => console.log("Good choice selected"),
   onEvilPress = () => console.log("Evil choice selected"),
   tabBarHeight = 80, // Pass the tab bar height as a prop
@@ -98,9 +92,6 @@ const FantasyChoiceButton = ({
       width: "100%",
       justifyContent: "center",
       alignItems: "center",
-    },
-    choiceImage: {
-      transform: [{ scale: 1.55 }, { translateY: -100 }],
     },
     overlay: {
       ...StyleSheet.absoluteFill,
@@ -179,12 +170,7 @@ const FantasyChoiceButton = ({
             onPress={onGoodPress}
             activeOpacity={0.9}
           >
-            <ImageBackground
-              source={goodBackgroundImage}
-              style={styles.backgroundImage}
-              imageStyle={styles.choiceImage}
-              resizeMode="cover"
-            >
+            <View style={[styles.backgroundImage, { backgroundColor: primaryColor }]}>
               <View
                 style={[
                   styles.overlay,
@@ -205,7 +191,7 @@ const FantasyChoiceButton = ({
                   <Text style={styles.subtitle}>Choose the path of light</Text>
                 )}
               </View>
-            </ImageBackground>
+            </View>
           </TouchableOpacity>
         </Link>
       </Animated.View>
@@ -228,12 +214,7 @@ const FantasyChoiceButton = ({
             onPress={onEvilPress}
             activeOpacity={0.9}
           >
-            <ImageBackground
-              source={evilBackgroundImage}
-              style={styles.backgroundImage}
-              imageStyle={styles.choiceImage}
-              resizeMode="cover"
-            >
+            <View style={[styles.backgroundImage, { backgroundColor: evilColor }]}>
               <View
                 style={[
                   styles.overlay,
@@ -254,7 +235,7 @@ const FantasyChoiceButton = ({
                   <Text style={styles.subtitle}>Embrace the darkness</Text>
                 )}
               </View>
-            </ImageBackground>
+            </View>
           </TouchableOpacity>
         </Link>
       </Animated.View>

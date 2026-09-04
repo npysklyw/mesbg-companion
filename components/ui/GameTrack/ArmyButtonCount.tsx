@@ -1,5 +1,5 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Dimensions,
   StyleSheet,
@@ -32,6 +32,19 @@ const CounterButtonArmy = ({
 }: CounterButtonArmyProps) => {
   const [count, setCount] = useState(initialValue);
 
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCount(initialValue);
+  }, [initialValue]);
+
+  const increment = () => {
+    if (!disabled && count < maxValue) {
+      const newValue = count + step;
+      setCount(newValue);
+      onValueChange?.(newValue);
+    }
+  };
+
   const decrement = () => {
     if (!disabled && count > minValue) {
       const newValue = count - step;
@@ -41,6 +54,7 @@ const CounterButtonArmy = ({
   };
 
   const isDecrementDisabled = disabled || count <= minValue;
+  const isIncrementDisabled = disabled || count >= maxValue;
   const buttonColor = useThemeColor({}, "button");
   const buttonText = useThemeColor({}, "buttonText");
   const buttonGood = useThemeColor({}, "tint");
@@ -172,7 +186,7 @@ const CounterButtonArmy = ({
           </Text>
         </TouchableOpacity>
 
-        {/* <TouchableOpacity
+        <TouchableOpacity
           style={[
             styles.subButton,
             styles.plusButton,
@@ -190,7 +204,7 @@ const CounterButtonArmy = ({
           >
             +
           </Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
       </View>
     </View>
   );
