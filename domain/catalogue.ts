@@ -18,6 +18,8 @@ export type CatalogueHero = {
   tier: "legend" | "valour" | "fortitude" | "independent";
   legacy?: boolean;
   mustBeLeader?: boolean;
+  mandatory?: boolean;
+  mustBeGeneral?: boolean;
   wargear: CatalogueWargear[];
   wounds: number;
   might: number;
@@ -52,6 +54,16 @@ export function getSelectableCatalogueHeroes(
   return legacyProfilesEnabled
     ? [...army.heroes]
     : army.heroes.filter((hero) => !hero.legacy);
+}
+
+export function getInitialCatalogueHeroRequirements(hero: CatalogueHero) {
+  return {
+    mandatory: hero.mandatory ?? false,
+    mustBeGeneral: hero.mustBeGeneral ?? false,
+    isGeneral: hero.mustBeGeneral ?? false,
+    mustBeLeader: hero.mustBeLeader ?? hero.mandatory ?? false,
+    selected: hero.mandatory ?? false,
+  };
 }
 
 export type WarriorFilterReason = "legacy-disabled" | "zero-cost-profile";
@@ -149,6 +161,17 @@ export function auditCatalogueReachability(
         message: `${army.name} has no warrior records; this may be a hero-only army`,
         ...context,
       });
+    }
+
+    for (const hero of army.heroes) {
+      if (hero.mandatory && !selectableHeroes.includes(hero)) {
+        errors.push({
+          code: "MANDATORY_PROFILE_UNREACHABLE",
+          message: `${hero.name} is mandatory but excluded by builder filtering`,
+          profile: hero.name,
+          ...context,
+        });
+      }
     }
 
     for (const warrior of army.warbandOptions) {

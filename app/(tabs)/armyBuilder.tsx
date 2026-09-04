@@ -9,6 +9,7 @@ import { calculateArmyTotals } from "@/domain/army";
 import {
   getSelectableCatalogueHeroes,
   getSelectableCatalogueWarriors,
+  getInitialCatalogueHeroRequirements,
   resolveCatalogueArmy,
   type CatalogueArmy,
 } from "@/domain/catalogue";
@@ -105,11 +106,18 @@ export default function HomeScreen() {
           ? await localArmyRepository.getSavedArmy(savedArmyId)
           : null;
         if (savedArmy) {
-          setActiveArmy(savedArmy);
-          setEditableArmyName(savedArmy.name);
-          setSavedSnapshot(createArmyEditSnapshot(savedArmy));
+          const savedTemplate = resolveCatalogueArmy(
+            activeArmyCatalogues,
+            savedArmy.faction,
+          );
+          const hydratedArmy = savedTemplate
+            ? applyCatalogueRequirements(savedArmy, savedTemplate)
+            : savedArmy;
+          setActiveArmy(hydratedArmy);
+          setEditableArmyName(hydratedArmy.name);
+          setSavedSnapshot(createArmyEditSnapshot(hydratedArmy));
           setPoints(
-            savedArmy.heroes.reduce(
+            hydratedArmy.heroes.reduce(
               (sum: number, hero: ActiveHero) => sum + hero.points,
               0,
             ),
@@ -132,10 +140,17 @@ export default function HomeScreen() {
           if (wipArmy) {
             // If WIP exists and we're not specifying a specific army, always load WIP
             if (wipArmy && !armyName) {
-              setActiveArmy(wipArmy);
-              setEditableArmyName(wipArmy.name);
+              const wipTemplate = resolveCatalogueArmy(
+                activeArmyCatalogues,
+                wipArmy.faction,
+              );
+              const hydratedArmy = wipTemplate
+                ? applyCatalogueRequirements(wipArmy, wipTemplate)
+                : wipArmy;
+              setActiveArmy(hydratedArmy);
+              setEditableArmyName(hydratedArmy.name);
               setPoints(
-                wipArmy.heroes.reduce(
+                hydratedArmy.heroes.reduce(
                   (sum: number, hero: ActiveHero) =>
                     sum + (hero.selected ? hero.points : 0),
                   0,
@@ -147,10 +162,14 @@ export default function HomeScreen() {
               (wipArmy.name === armyName || wipArmy.faction === armyName)
             ) {
               // WIP matches the requested army
-              setActiveArmy(wipArmy);
-              setEditableArmyName(wipArmy.name);
+              const hydratedArmy = applyCatalogueRequirements(
+                wipArmy,
+                templateArmy,
+              );
+              setActiveArmy(hydratedArmy);
+              setEditableArmyName(hydratedArmy.name);
               setPoints(
-                wipArmy.heroes.reduce(
+                hydratedArmy.heroes.reduce(
                   (sum: number, hero: ActiveHero) =>
                     sum + (hero.selected ? hero.points : 0),
                   0,
@@ -230,8 +249,7 @@ export default function HomeScreen() {
       heroes: sortedHeroes.map((hero) => ({
         ...hero,
         legacy: hero.legacy ?? false,
-        mustBeLeader: hero.mustBeLeader ?? false,
-        selected: false,
+        ...getInitialCatalogueHeroRequirements(hero),
         wargear: hero.wargear.map((wg) => ({
           name: wg.name ?? "",
           cost: wg.cost ?? 0,
@@ -275,6 +293,44 @@ export default function HomeScreen() {
           })),
       })),
     };
+  }
+
+  function applyCatalogueRequirements<TArmy extends ActiveArmy>(
+    army: TArmy,
+    template: CatalogueArmy,
+  ): TArmy {
+    const templateArmy = createActiveArmyFromTemplate(template);
+    const requirements = new Map(
+      templateArmy.heroes.map((hero) => [hero.name, hero]),
+    );
+    const retainedHeroes = army.heroes.filter((hero) => requirements.has(hero.name));
+    const existingNames = new Set(retainedHeroes.map((hero) => hero.name));
+    const heroes = retainedHeroes.map((hero) => {
+      const catalogueHero = requirements.get(hero.name);
+      if (!catalogueHero) return hero;
+      const warband = catalogueHero.warband.map((warrior) => {
+        const existingWarrior = hero.warband.find(
+          (candidate) => candidate.name === warrior.name,
+        );
+        return existingWarrior
+          ? { ...warrior, wargearCounts: existingWarrior.wargearCounts }
+          : warrior;
+      });
+      return {
+        ...hero,
+        mandatory: catalogueHero.mandatory,
+        mustBeGeneral: catalogueHero.mustBeGeneral,
+        isGeneral: catalogueHero.mustBeGeneral ? true : hero.isGeneral,
+        mustBeLeader: catalogueHero.mustBeLeader,
+        selected: catalogueHero.mandatory ? true : hero.selected,
+        warband,
+      };
+    });
+
+    for (const hero of templateArmy.heroes) {
+      if (hero.mandatory && !existingNames.has(hero.name)) heroes.push(hero);
+    }
+    return { ...army, heroes } as TArmy;
   }
 
   const handleReset = async () => {

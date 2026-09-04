@@ -1695,6 +1695,58 @@
     "faction": "The Army of Dale",
     "heroes": [
       {
+        "name": "Brand, King of Dale",
+        "points": 110,
+        "tier": "legend",
+        "mandatory": true,
+        "mustBeGeneral": true,
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 3,
+        "might": 3,
+        "will": 3,
+        "fate": 1
+      },
+      {
+        "name": "Bard II, Prince of Dale",
+        "points": 100,
+        "tier": "valour",
+        "wargear": [
+          {
+            "name": "Heavy armour",
+            "cost": 0
+          },
+          {
+            "name": "Shield",
+            "cost": 0
+          },
+          {
+            "name": "Spear",
+            "cost": 0
+          },
+          {
+            "name": "Hand weapon",
+            "cost": 0
+          }
+        ],
+        "wounds": 2,
+        "might": 3,
+        "will": 2,
+        "fate": 2
+      },
+      {
         "name": "Captain of Dale",
         "points": 55,
         "tier": "fortitude",
@@ -1714,35 +1766,6 @@
         ],
         "wounds": 2,
         "might": 2,
-        "will": 1,
-        "fate": 1
-      },
-      {
-        "name": "Windlance",
-        "points": 70,
-        "tier": "independent",
-        "wargear": [],
-        "wounds": 3,
-        "might": 0,
-        "will": 0,
-        "fate": 0
-      },
-      {
-        "name": "Dale Siege Veteran",
-        "points": 0,
-        "tier": "independent",
-        "wargear": [
-          {
-            "name": "Armour",
-            "cost": 0
-          },
-          {
-            "name": "Sword",
-            "cost": 0
-          }
-        ],
-        "wounds": 1,
-        "might": 1,
         "will": 1,
         "fate": 1
       }
@@ -1805,18 +1828,9 @@
         ]
       },
       {
-        "name": "Dale Crew",
-        "baseCost": 0,
-        "availableWargear": [
-          {
-            "name": "Armour",
-            "cost": 0
-          },
-          {
-            "name": "Sword",
-            "cost": 0
-          }
-        ]
+        "name": "Windlance",
+        "baseCost": 70,
+        "availableWargear": []
       }
     ]
   },

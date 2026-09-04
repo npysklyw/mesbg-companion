@@ -14,6 +14,8 @@ export type ValidationIssueCode =
   | "INDEPENDENT_HERO_DUPLICATED"
   | "INDEPENDENT_HERO_LEADING_WARBAND"
   | "MANDATORY_LEADER_CANNOT_BE_REMOVED"
+  | "MANDATORY_HERO_REQUIRED"
+  | "REQUIRED_GENERAL_MISSING"
   | "BOW_LIMIT_EXCEEDED";
 
 export type ValidationIssue = {
@@ -53,7 +55,7 @@ export function getHeroSelectionIssue(
   army: Army,
   hero: Hero,
 ): ValidationIssue | null {
-  if (hero.selected && hero.mustBeLeader) {
+  if (hero.selected && (hero.mandatory || hero.mustBeLeader)) {
     return {
       code: "MANDATORY_LEADER_CANNOT_BE_REMOVED",
       severity: "error",
@@ -145,6 +147,26 @@ export function validateArmy(army: Army): ValidationResult {
         code: "INDEPENDENT_HERO_DUPLICATED",
         severity: "error",
         message: `${hero.name} is selected more than once.`,
+        heroName: hero.name,
+        heroIndex,
+      });
+    }
+
+    if (hero.mandatory && !hero.selected) {
+      issues.push({
+        code: "MANDATORY_HERO_REQUIRED",
+        severity: "error",
+        message: `${hero.name} is required in this army.`,
+        heroName: hero.name,
+        heroIndex,
+      });
+    }
+
+    if (hero.mustBeGeneral && (!hero.selected || !hero.isGeneral)) {
+      issues.push({
+        code: "REQUIRED_GENERAL_MISSING",
+        severity: "error",
+        message: `${hero.name} must be this army's General.`,
         heroName: hero.name,
         heroIndex,
       });

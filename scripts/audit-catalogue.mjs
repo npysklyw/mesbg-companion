@@ -31,6 +31,7 @@ const counts = { files: 0, armies: 0, heroes: 0, warriors: 0 };
 const activeSources = [];
 const identifiers = new Map();
 const optionalFields = { legacy: 0, mustBeLeader: 0 };
+const requirementCounts = { mandatory: 0, mustBeGeneral: 0 };
 const warningCounts = { zeroCostWarriors: 0, reusedHeroes: 0, reusedWarriors: 0 };
 
 const describe = (file, army, profile) =>
@@ -164,6 +165,12 @@ for (const relativeFile of activeFiles) {
           errors.push(`${heroLocation}.${field} must be boolean when present`);
         }
       }
+      for (const field of ["mandatory", "mustBeGeneral"]) {
+        if (hero[field] !== undefined && typeof hero[field] !== "boolean") {
+          errors.push(`${heroLocation}.${field} must be boolean when present`);
+        }
+        if (hero[field] === true) requirementCounts[field] += 1;
+      }
       auditWargear(hero.wargear, heroLocation);
     }
 
@@ -249,6 +256,9 @@ console.log(
     .join(", ") || "none"}`,
 );
 console.log("Profile references: 0 unresolved (active catalogues embed hero and warrior profiles).");
+console.log(
+  `Embedded requirements: ${requirementCounts.mandatory} mandatory profiles, ${requirementCounts.mustBeGeneral} required Generals`,
+);
 console.log(
   `Warning summary: ${warningCounts.zeroCostWarriors} zero-cost warriors, ${warningCounts.reusedHeroes} reused hero names, ${warningCounts.reusedWarriors} reused warrior names`,
 );

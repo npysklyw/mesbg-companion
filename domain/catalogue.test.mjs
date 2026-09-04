@@ -4,6 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import {
   auditCatalogueReachability,
+  getInitialCatalogueHeroRequirements,
   getSelectableCatalogueWarriors,
   resolveCatalogueArmy,
 } from "./catalogue.ts";
@@ -33,20 +34,73 @@ const sources = activeFiles.map(([side, relativeFile]) => ({
 }));
 const catalogues = sources.map((source) => source.armies);
 
-test("Army of Dale exposes its established standard warrior profiles", () => {
+test("Army of Dale exposes the source-listed profiles", () => {
   const army = resolveCatalogueArmy(catalogues, "The Army of Dale");
-  const garrison = resolveCatalogueArmy(catalogues, "Garrison of Dale");
   assert.ok(army);
-  assert.ok(garrison);
   assert.deepEqual(
-    getSelectableCatalogueWarriors(army, false).map((warrior) => warrior.name),
-    ["Warrior of Dale", "Knight of Dale"],
+    army.heroes.map((hero) => hero.name),
+    ["Brand, King of Dale", "Bard II, Prince of Dale", "Captain of Dale"],
   );
   assert.deepEqual(
-    army.warbandOptions.slice(0, 2),
-    garrison.warbandOptions.slice(0, 2),
-    "the restored profiles must remain exact copies of the existing Garrison of Dale records",
+    army.heroes.slice(0, 2).map(({ name, points, tier, wargear, wounds, might, will, fate }) => ({
+      name,
+      points,
+      tier,
+      wargear: wargear.map((item) => item.name),
+      wounds,
+      might,
+      will,
+      fate,
+    })),
+    [
+      {
+        name: "Brand, King of Dale",
+        points: 110,
+        tier: "legend",
+        wargear: ["Heavy armour", "Shield", "Hand weapon"],
+        wounds: 3,
+        might: 3,
+        will: 3,
+        fate: 1,
+      },
+      {
+        name: "Bard II, Prince of Dale",
+        points: 100,
+        tier: "valour",
+        wargear: ["Heavy armour", "Shield", "Spear", "Hand weapon"],
+        wounds: 2,
+        might: 3,
+        will: 2,
+        fate: 2,
+      },
+    ],
   );
+  assert.deepEqual(
+    getSelectableCatalogueWarriors(army, false).map(({ name, baseCost }) => ({
+      name,
+      baseCost,
+    })),
+    [
+      { name: "Warrior of Dale", baseCost: 7 },
+      { name: "Knight of Dale", baseCost: 11 },
+      { name: "Windlance", baseCost: 70 },
+    ],
+  );
+  assert.equal(army.heroes.some((hero) => hero.name === "Dale Siege Veteran"), false);
+  assert.equal(army.warbandOptions.some((warrior) => warrior.name === "Dale Crew"), false);
+});
+
+test("Brand starts selected, mandatory, and assigned as General", () => {
+  const army = resolveCatalogueArmy(catalogues, "The Army of Dale");
+  const brand = army.heroes.find((hero) => hero.name === "Brand, King of Dale");
+  assert.ok(brand);
+  assert.deepEqual(getInitialCatalogueHeroRequirements(brand), {
+    mandatory: true,
+    mustBeGeneral: true,
+    isGeneral: true,
+    mustBeLeader: true,
+    selected: true,
+  });
 });
 
 test("an unknown army never falls back to an unrelated catalogue", () => {

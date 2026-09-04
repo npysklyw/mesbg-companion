@@ -23,6 +23,9 @@ export type Hero = {
   tier: HeroTier;
   legacy?: boolean;
   mustBeLeader?: boolean;
+  mandatory?: boolean;
+  mustBeGeneral?: boolean;
+  isGeneral?: boolean;
   wargear: WargearOption[];
   wargearChecks: Record<string, boolean>;
   selected: boolean;

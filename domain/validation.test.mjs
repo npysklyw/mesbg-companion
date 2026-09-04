@@ -95,6 +95,32 @@ test("a selected mandatory leader cannot be removed", () => {
   );
 });
 
+test("a catalogue-mandatory hero cannot be removed", () => {
+  const brand = hero({ name: "Brand, King of Dale", mandatory: true });
+  assert.equal(
+    getHeroSelectionIssue(army([brand]), brand)?.code,
+    "MANDATORY_LEADER_CANNOT_BE_REMOVED",
+  );
+});
+
+test("validation requires mandatory heroes and their General status", () => {
+  const missingBrand = hero({
+    name: "Brand, King of Dale",
+    mandatory: true,
+    mustBeGeneral: true,
+    isGeneral: false,
+    selected: false,
+  });
+  const codes = validateArmy(army([missingBrand])).errors.map(
+    (issue) => issue.code,
+  );
+  assert.ok(codes.includes("MANDATORY_HERO_REQUIRED"));
+  assert.ok(codes.includes("REQUIRED_GENERAL_MISSING"));
+
+  const brand = { ...missingBrand, selected: true, isGeneral: true };
+  assert.equal(validateArmy(army([brand])).isValid, true);
+});
+
 test("exactly at the bow limit is valid", () => {
   const subject = army([
     hero({ warband: [warrior(1, "Bow"), warrior(1, "Spear")] }),
