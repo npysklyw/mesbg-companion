@@ -11,8 +11,7 @@ import { StyleSheet, View } from "react-native";
 
 export default function Settings() {
   const { mode, toggleMode, themeColors } = useTheme();
-  const { settings, toggleLegacyProfiles, toggleCompactMode, toggleLargeText } =
-    useSettings();
+  const { settings, toggleLegacyProfiles, toggleLargeText } = useSettings();
 
   return (
     <ParallaxScrollView
@@ -70,30 +69,6 @@ export default function Settings() {
         <Switch
           value={settings.legacyProfilesEnabled}
           onValueChange={toggleLegacyProfiles}
-          color={themeColors.button}
-        />
-      </View>
-
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 16,
-        }}
-      >
-        <ThemedText
-          style={{
-            color: themeColors.text,
-            fontSize: 16,
-            fontFamily: "brioso",
-          }}
-        >
-          Enable Compact Mode
-        </ThemedText>
-        <Switch
-          value={settings.compactModeEnabled}
-          onValueChange={toggleCompactMode}
           color={themeColors.button}
         />
       </View>

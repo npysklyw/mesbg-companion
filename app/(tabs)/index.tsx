@@ -85,9 +85,6 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Library</ThemedText>
       </ThemedView>
-      {remoteArmyRepository ? (
-        <ThemedText>Development cloud backup (unauthenticated)</ThemedText>
-      ) : null}
       {loading ? (
         <ThemedText>Loading...</ThemedText>
       ) : savedArmies.length === 0 ? (

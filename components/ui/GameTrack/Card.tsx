@@ -44,6 +44,19 @@ const Cards = ({
             >
               {name}
             </Card.Title>
+            {isDefeated ? (
+              <Card.Title
+                accessibilityRole="text"
+                style={{
+                  color: defeatedTextColor,
+                  fontFamily: "briosoUberBold",
+                  fontSize: 20,
+                  letterSpacing: 2,
+                }}
+              >
+                DEAD
+              </Card.Title>
+            ) : null}
             {/* <Card.Divider /> */}
 
             <StatsGrid
