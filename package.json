@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
+    "@expo/ngrok": "^4.1.0",
     "@react-native-community/cli": "latest",
     "@testing-library/jest-native": "5.4.3",
     "@testing-library/react-native": "13.2.0",
