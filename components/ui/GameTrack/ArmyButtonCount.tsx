@@ -10,6 +10,16 @@ import {
 
 const { width } = Dimensions.get("window");
 
+type CounterButtonArmyProps = {
+  initialValue?: number;
+  minValue?: number;
+  maxValue?: number;
+  step?: number;
+  onValueChange?: (value: number) => void;
+  disabled?: boolean;
+  label?: string;
+};
+
 //Counter button
 const CounterButtonArmy = ({
   initialValue = 0,
@@ -19,7 +29,7 @@ const CounterButtonArmy = ({
   onValueChange,
   disabled = false,
   label = "Counter",
-}) => {
+}: CounterButtonArmyProps) => {
   const [count, setCount] = useState(initialValue);
 
   const increment = () => {

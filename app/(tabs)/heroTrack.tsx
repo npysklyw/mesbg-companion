@@ -46,7 +46,12 @@ type SavedArmy = {
 };
 
 export default function TabTwoScreen() {
-  const { savedArmyIdx } = useLocalSearchParams();
+  const { savedArmyIdx: savedArmyIdxParam } = useLocalSearchParams<{
+    savedArmyIdx?: string | string[];
+  }>();
+  const savedArmyIdx = Array.isArray(savedArmyIdxParam)
+    ? savedArmyIdxParam[0]
+    : savedArmyIdxParam;
   const router = useRouter();
   const [activeArmy, setActiveArmy] = useState<SavedArmy | null>(null);
   const [loading, setLoading] = useState(true);
@@ -327,7 +332,7 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ArmyCount
           key={savedArmyIdx}
-          modelCount={activeArmy?.modelCount}
+          modelCount={activeArmy?.modelCount ?? 0}
         ></ArmyCount>
       </ThemedView>
 

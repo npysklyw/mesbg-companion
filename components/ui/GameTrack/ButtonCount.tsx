@@ -10,6 +10,16 @@ import {
 
 const { width } = Dimensions.get("window");
 
+type CounterButtonProps = {
+  initialValue?: number;
+  minValue?: number;
+  maxValue?: number;
+  step?: number;
+  onValueChange?: (value: number) => void;
+  disabled?: boolean;
+  label?: string;
+};
+
 //Counter button
 const CounterButton = ({
   initialValue = 0,
@@ -19,7 +29,7 @@ const CounterButton = ({
   onValueChange,
   disabled = false,
   label = "Counter",
-}) => {
+}: CounterButtonProps) => {
   const [count, setCount] = useState(initialValue);
 
   useEffect(() => {

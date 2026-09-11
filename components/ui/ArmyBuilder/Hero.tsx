@@ -4,21 +4,39 @@ import React from "react";
 import { Alert, Platform, ToastAndroid, View } from "react-native";
 import { Warrior } from "./Warrior";
 
+type WargearOption = { name: string; cost: number };
+type WarriorState = {
+  name: string;
+  baseCost: number;
+  availableWargear: WargearOption[];
+  wargearCounts: Record<string, number>;
+};
+type ArmyHeroState = {
+  name: string;
+  selected: boolean;
+  wargearChecks: Record<string, boolean>;
+  warband: WarriorState[];
+};
+type ArmyState = { heroes: ArmyHeroState[] };
+type ArmyUpdater = (updater: (previous: ArmyState) => ArmyState) => void;
+
 type HeroProps = {
   name: string;
   points?: number;
   wargear?: [string, number][];
   checked?: boolean;
   wargearChecks?: { [option: string]: boolean };
-  armyUpdate?: (army: any) => void;
+  armyUpdate?: ArmyUpdater;
   setPoints?: React.Dispatch<React.SetStateAction<number>>;
   warbandNumber?: number | null;
   tier?: "legend" | "valour" | "fortitude" | "independent";
   mustBeLeader?: boolean;
-  warband: any[];
+  warband: WarriorState[];
   isAlreadySelected?: boolean; // For independent heroes
-  army?: any; // For bow limit calculations
+  army?: ArmyState | null; // For bow limit calculations
 };
+
+type WargearCounts = Record<string, number>;
 
 export function Hero({
   name,
@@ -62,7 +80,11 @@ export function Hero({
   const totalWarriors = warband
     ? warband.reduce(
         (sum, w) =>
-          sum + Object.values(w.wargearCounts || {}).reduce((a, b) => a + b, 0),
+          sum +
+          Object.values((w.wargearCounts || {}) as WargearCounts).reduce(
+            (a, b) => a + b,
+            0,
+          ),
         0,
       )
     : 0;
@@ -84,7 +106,7 @@ export function Hero({
           let cost = 0;
           if (w.availableWargear && w.availableWargear.length > 0) {
             cost += (w.wargearCounts?.Base || 0) * (w.baseCost || 0);
-            w.availableWargear.forEach((wg: any) => {
+            w.availableWargear.forEach((wg) => {
               cost +=
                 (w.wargearCounts?.[wg.name] || 0) *
                 ((w.baseCost || 0) + (wg.cost || 0));
@@ -110,7 +132,7 @@ export function Hero({
     }
 
     if (armyUpdate) {
-      armyUpdate((prev: { heroes: any[] }) => ({
+      armyUpdate((prev) => ({
         ...prev,
         heroes: prev.heroes.map((hero) =>
           hero.name === name ? { ...hero, selected: !hero.selected } : hero,
@@ -128,7 +150,7 @@ export function Hero({
   // Toggle wargear for this hero
   const handleToggleWargear = (option: string, cost: number) => {
     if (armyUpdate) {
-      armyUpdate((prev: { heroes: any[] }) => ({
+      armyUpdate((prev) => ({
         ...prev,
         heroes: prev.heroes.map((h) => {
           if (h.name !== name) return h;
@@ -166,9 +188,9 @@ export function Hero({
       // Calculate current total bows in army
       let totalBows = 0;
       if (army.heroes) {
-        army.heroes.forEach((h: any) => {
+        army.heroes.forEach((h) => {
           if (h.selected && h.warband) {
-            h.warband.forEach((w: any) => {
+            h.warband.forEach((w) => {
               if (w.wargearCounts) {
                 Object.keys(w.wargearCounts).forEach((wgName) => {
                   if (wgName.toLowerCase().includes("bow")) {
@@ -184,14 +206,16 @@ export function Hero({
       // Calculate total models
       let totalModels = 0;
       if (army.heroes) {
-        army.heroes.forEach((h: any) => {
+        army.heroes.forEach((h) => {
           if (h.selected) {
             totalModels += 1; // Hero counts
             if (h.warband) {
-              h.warband.forEach((w: any) => {
+              h.warband.forEach((w) => {
                 if (w.wargearCounts) {
-                  totalModels += Object.values(w.wargearCounts).reduce(
-                    (a: any, b: any) => a + b,
+                  totalModels += Object.values(
+                    w.wargearCounts as WargearCounts,
+                  ).reduce(
+                    (a, b) => a + b,
                     0,
                   );
                 }
@@ -215,13 +239,13 @@ export function Hero({
     }
 
     if (armyUpdate) {
-      armyUpdate((prev: { heroes: any[] }) => ({
+      armyUpdate((prev) => ({
         ...prev,
         heroes: prev.heroes.map((h) => {
           if (h.name !== name) return h;
           return {
             ...h,
-            warband: h.warband.map((w: any, idx: number) => {
+            warband: h.warband.map((w, idx) => {
               if (idx !== warriorIdx) return w;
               const prevCount = w.wargearCounts?.[option] || 0;
               const newCount = Math.max(prevCount + delta, 0);
@@ -391,7 +415,7 @@ export function Hero({
                       key={`${warrior.name}-${warriorIdx}`}
                       baseCost={warrior.baseCost}
                       wargear={[...warrior.availableWargear]
-                        .sort((a: any, b: any) => {
+                        .sort((a, b) => {
                           const aIsBanner = a.name
                             .toLowerCase()
                             .includes("banner");
@@ -406,7 +430,7 @@ export function Hero({
                           // Otherwise sort by cost (cheapest first)
                           return a.cost - b.cost;
                         })
-                        .map((wg: any) => [wg.name, wg.cost])}
+                        .map((wg): [string, number] => [wg.name, wg.cost])}
                       wargearCounts={warrior.wargearCounts}
                       canAddWarrior={totalWarriors < warbandCap}
                       onToggleWargear={(option, cost, delta) =>

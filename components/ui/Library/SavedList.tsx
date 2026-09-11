@@ -1,5 +1,6 @@
 import { ListItem } from "@rneui/themed";
 import TouchableScale from "react-native-touchable-scale";
+import React from "react";
 
 import { useThemeColor } from "@/hooks/useThemeColor";
 
@@ -25,13 +26,16 @@ export default function SavedList({
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");
   const buttonColor = useThemeColor({}, "button");
+  const touchableScaleProps = {
+    Component: TouchableScale as unknown as typeof React.Component,
+    friction: 90,
+    tension: 100,
+    activeScale: 0.95,
+  };
 
   return (
     <ListItem
-      Component={TouchableScale}
-      friction={90}
-      tension={100}
-      activeScale={0.95}
+      {...touchableScaleProps}
       onPress={onEdit}
       containerStyle={{ backgroundColor }}
     >

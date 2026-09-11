@@ -2,8 +2,9 @@ import { ColorPalettes } from "@/constants/ColorPalettes";
 import * as FileSystem from "expo-file-system";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-type Palette = keyof typeof ColorPalettes;
-type Mode = "light" | "dark";
+export type Palette = keyof typeof ColorPalettes;
+export type Mode = "light" | "dark";
+export type ThemeColors = (typeof ColorPalettes)[Palette][Mode];
 
 type ThemeContextType = {
   palette: Palette;
@@ -12,7 +13,7 @@ type ThemeContextType = {
   setMode: (mode: Mode) => void;
   toggleMode: () => void;
   palettes: Palette[];
-  themeColors: (typeof ColorPalettes)[Palette][Mode];
+  themeColors: ThemeColors;
 };
 
 const palettes = Object.keys(ColorPalettes) as Palette[];

@@ -3,11 +3,11 @@
  * https://docs.expo.dev/guides/color-schemes/
  */
 
-import { useTheme } from "@/components/ThemeContext";
+import { ThemeColors, useTheme } from "@/components/ThemeContext";
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
-  colorName: string
+  colorName: keyof ThemeColors,
 ) {
   const { themeColors, mode } = useTheme();
 

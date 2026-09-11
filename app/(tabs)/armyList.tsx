@@ -7,6 +7,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ListItem } from "@rneui/themed";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import TouchableScale from "react-native-touchable-scale";
+import React from "react";
 
 import { useThemeColor } from "@/hooks/useThemeColor";
 
@@ -25,13 +26,26 @@ import otherGoodArmy from "../data/good/other_good.json";
 import rohan from "../data/good/rohan.json";
 
 export default function ArmyLists() {
-  const { armyType } = useLocalSearchParams();
+  const { armyType: armyTypeParam } = useLocalSearchParams<{
+    armyType?: string | string[];
+  }>();
+  const armyType = Array.isArray(armyTypeParam)
+    ? armyTypeParam[0]
+    : armyTypeParam;
   const router = useRouter();
 
   // Get themed colors
   const goodColor = useThemeColor({}, "buttonEvil");
   const buttontextColor = useThemeColor({}, "buttonText");
-  const evilArmy = [
+  const touchableScaleProps = {
+    Component: TouchableScale as unknown as typeof React.Component,
+    friction: 90,
+    tension: 100,
+    activeScale: 0.95,
+  };
+  type ArmySummary = { name: string };
+  type ArmyGroup = [ArmySummary[], string];
+  const evilArmy: ArmyGroup[] = [
     [mordorAndSauronAligned, "Mordor & Sauron-Aligned"],
     [dolGuldurAndMirkwoodEvil, "Dol Guldur & Mirkwood Evil"],
     [isengardAndAllies, "Isengard & Allies"],
@@ -41,7 +55,7 @@ export default function ArmyLists() {
     [shireInvaders, "Shire Invaders"],
   ];
 
-  const goodArmy = [
+  const goodArmy: ArmyGroup[] = [
     [dwarves, "Dwarves"],
     [elves, "Elves"],
     [men, "Men of the West"],
@@ -79,10 +93,7 @@ export default function ArmyLists() {
               <View key={idx} style={styles.stepContainer}>
                 <ListItem
                   key={`${army.name}-${idx}`}
-                  Component={TouchableScale}
-                  friction={90}
-                  tension={100}
-                  activeScale={0.95}
+                  {...touchableScaleProps}
                   onPress={() =>
                     router.push({
                       pathname: "/armyBuilder",

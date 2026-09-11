@@ -47,30 +47,64 @@ type ActiveArmy = {
   name: string;
   faction: string;
   heroes: ActiveHero[];
-  warbandOptions: ActiveWarriorOption[];
+  warbandOptions?: ActiveWarriorOption[];
 };
 
+type CatalogueWargear = { name: string; cost: number };
+type CatalogueWarrior = {
+  name: string;
+  baseCost: number;
+  legacy?: boolean;
+  availableWargear: CatalogueWargear[];
+};
+type CatalogueHero = {
+  name: string;
+  points: number;
+  tier: ActiveHero["tier"];
+  legacy?: boolean;
+  mustBeLeader?: boolean;
+  wargear: CatalogueWargear[];
+};
+type CatalogueArmy = {
+  name: string;
+  faction: string;
+  heroes: CatalogueHero[];
+  warbandOptions: CatalogueWarrior[];
+};
+
+const firstParam = (value: string | string[] | undefined) =>
+  Array.isArray(value) ? value[0] : value;
+
+const catalogue = (value: unknown) => value as CatalogueArmy[];
+
 export default function HomeScreen() {
-  const { savedArmyIdx, armyName, armyType } = useLocalSearchParams();
+  const params = useLocalSearchParams<{
+    savedArmyIdx?: string | string[];
+    armyName?: string | string[];
+    armyType?: string | string[];
+  }>();
+  const savedArmyIdx = firstParam(params.savedArmyIdx);
+  const armyName = firstParam(params.armyName);
+  const armyType = firstParam(params.armyType);
   const { settings } = useSettings();
   const [activeArmy, setActiveArmy] = useState<ActiveArmy | null>(null);
   const [loading, setLoading] = useState(true);
   const [point, setPoints] = useState(0);
   const [editableArmyName, setEditableArmyName] = useState("");
-  const arrayarry = {
-    dwarves: dwarfArmy,
-    elves: elfArmy,
-    hobbits_and_the_shire: hobbitArmy,
-    "Men of the West": menArmy,
-    rohan: rohanArmy,
-    other_good: otherGoodArmy,
-    "Mordor & Sauron-Aligned": mordorAndSauronAligned,
-    "Dol Guldur & Mirkwood Evil": dolGuldurAndMirkwoodEvil,
-    isenguard: isenguard,
-    "Angmar & Northern Evil": angmar,
-    "Harad, Umbar, Khand, East": haradUmbarKhandEast,
-    "Gundabad, Moria, Goblins, and Orcs": gundabadMoriaGoblinsAndOrcs,
-    "Shire Invaders": shireInvaders,
+  const armyCatalogues: Record<string, CatalogueArmy[]> = {
+    dwarves: catalogue(dwarfArmy),
+    elves: catalogue(elfArmy),
+    hobbits_and_the_shire: catalogue(hobbitArmy),
+    "Men of the West": catalogue(menArmy),
+    rohan: catalogue(rohanArmy),
+    other_good: catalogue(otherGoodArmy),
+    "Mordor & Sauron-Aligned": catalogue(mordorAndSauronAligned),
+    "Dol Guldur & Mirkwood Evil": catalogue(dolGuldurAndMirkwoodEvil),
+    isenguard: catalogue(isenguard),
+    "Angmar & Northern Evil": catalogue(angmar),
+    "Harad, Umbar, Khand, East": catalogue(haradUmbarKhandEast),
+    "Gundabad, Moria, Goblins, and Orcs": catalogue(gundabadMoriaGoblinsAndOrcs),
+    "Shire Invaders": catalogue(shireInvaders),
   };
 
   const primaryColor = useThemeColor({}, "button");
@@ -224,10 +258,13 @@ export default function HomeScreen() {
   }
 
   // Find the correct army template
-  const armyList = arrayarry[getArmyCategory(armyName)] || [];
+  const armyList = armyName
+    ? armyCatalogues[getArmyCategory(armyName)] || []
+    : [];
 
   const selectedArmy = armyList.find((a) => a.name === armyName);
-  const templateArmy = selectedArmy || armyList[0] || goodArmies[0];
+  const templateArmy =
+    selectedArmy || armyList[0] || catalogue(dwarfArmy)[0];
 
   // Load army on mount
   useEffect(() => {
@@ -239,7 +276,7 @@ export default function HomeScreen() {
         if (fileInfo.exists) {
           const content = await FileSystem.readAsStringAsync(fileUri);
           const armies = JSON.parse(content);
-          const idx = parseInt(savedArmyIdx as string, 10);
+          const idx = parseInt(savedArmyIdx, 10);
           if (!isNaN(idx) && armies[idx]) {
             setActiveArmy(armies[idx]);
             setEditableArmyName(armies[idx].name);
@@ -343,7 +380,7 @@ export default function HomeScreen() {
     );
   }, [settings.legacyProfilesEnabled, activeArmy]);
 
-  function createActiveArmyFromTemplate(template: typeof templateArmy) {
+  function createActiveArmyFromTemplate(template: CatalogueArmy): ActiveArmy {
     const filteredHeroes = settings.legacyProfilesEnabled
       ? template.heroes
       : template.heroes.filter((hero) => !hero.legacy);
@@ -440,7 +477,7 @@ export default function HomeScreen() {
 
       // Check if we're editing an existing army
       if (savedArmyIdx !== undefined) {
-        const idx = parseInt(savedArmyIdx as string, 10);
+        const idx = parseInt(savedArmyIdx, 10);
         if (!isNaN(idx) && armies[idx]) {
           // Update existing army
           armies[idx] = {
@@ -463,7 +500,7 @@ export default function HomeScreen() {
       }
 
       // Check for duplicate names (only for new armies)
-      if (armies.some((army) => army.name === editableArmyName)) {
+      if (armies.some((army: ActiveArmy) => army.name === editableArmyName)) {
         Alert.alert(
           "Army Workshop",
           "This army name already exists! Please change name, or edit existing army. ",
@@ -668,9 +705,9 @@ export default function HomeScreen() {
             selectedHeroes.some((h) => h.name === hero.name && h !== hero);
 
           // Sort wargear by cost (least to greatest), banners always last
-          const sortedWargear = [...hero.wargear]
-            .filter((wg: any) => wg.cost !== 0)
-            .sort((a: any, b: any) => {
+          const sortedWargear: [string, number][] = [...hero.wargear]
+            .filter((wg) => wg.cost !== 0)
+            .sort((a, b) => {
               const aIsBanner = a.name.toLowerCase().includes("banner");
               const bIsBanner = b.name.toLowerCase().includes("banner");
 
@@ -681,7 +718,7 @@ export default function HomeScreen() {
               // Otherwise sort by cost (cheapest first)
               return a.cost - b.cost;
             })
-            .map((wg: any) => [wg.name, wg.cost]);
+            .map((wg): [string, number] => [wg.name, wg.cost]);
 
           return (
             <Hero
@@ -691,7 +728,11 @@ export default function HomeScreen() {
               checked={hero.selected}
               wargear={sortedWargear}
               wargearChecks={hero.wargearChecks}
-              armyUpdate={setActiveArmy}
+              armyUpdate={(updater) =>
+                setActiveArmy((previous) =>
+                  previous ? (updater(previous) as ActiveArmy) : previous,
+                )
+              }
               setPoints={setPoints}
               warbandNumber={warbandNumber}
               tier={hero.tier}
